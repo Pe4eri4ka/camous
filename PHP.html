@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml">
+    <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1251">
+    <meta name="keywords" http-equiv="keywords" content="">
+    <meta name="description" content="">
+    <meta name="classification" content="Education, High school, Campus, Kyiv">
+    <meta http-equiv="Cache-Control" content="no-cache"><meta http-equiv="Pragma" content="no-cache">
+    <meta name="revisit" content="7 days"><meta name="revisit-after" content="7 days"><meta name="robots" content="index, follow">
+    <meta name="distribution" content="Global"><meta name="allow-search" content="yes">
+    <meta http-equiv="reply-to" content="info@campus.kpi.ua">
+    <meta name="document-state" content="dynamic">
+    <meta name="author" content="Design, web-architecture and programming by 3SunS. Data and DB support provided by KBIS and KPI subdivisions">
+
+    <link type="image/ico" href="images/icon.ico" rel="SHORTCUT ICON">
+
+    <style>
+
+        li{
+                list-style-type: none;
+
+                
+        }
+    </style>
+    <script type="text/javascript" language="JavaScript" src="js/jquery/jquery.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/jquery/jquery.tablesorter.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/jquery/jquery.pngfix.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/register0.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/common_g.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/jquery/floating_panel.jquery.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/common.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/panels.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/wz_jsgraphics.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/jquery/jquery.form.js"></script>
+    
+    <script language="JavaScript" src="js/jquery/ui/jquery-ui.min.js"></script>
+    <script language="javascript" src="js/jquery/grid/grid.locale-en.js"></script>
+    <script language="JavaScript" src="js/jquery/grid/grid.locale-ua.js"></script>
+    <script language="JavaScript" src="js/jquery/grid/jquery.jqgrid.min.js"></script>
+    <script>
+    var ra = "student/";
+    if (!empty(base_url)) ra = base_url + ra;
+    </script>
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="js/jquery/ui/smoothness/jquery-ui.custom.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="js/jquery/grid/ui.jqgrid.css">
+    
+    </head>
+    <body><div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+    <script type="text/javascript" language="JavaScript" src="classes/overlib.js"></script>
+    <a name="top"></a>
+    
+    <table cellpadding="0" cellspacing="0" border="0" width="100%" class="main_tbl">
+        <tbody><tr nowrap="nowrap">
+            <!--левая боковая-->
+            <th class="left_clmn" valign="top" rowspan="3"></th>
+            <!--центральная (контентная) -->
+            <td valign="top" class="header" nowrap="nowrap">
+                
+                
+                <!--шапка с лого и контролами-->
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tbody><tr>
+                        <td class="content_left logo"><li><a href="osnova.html"><img src="https://campus.kpi.ua/images/logo.png" alt="е-Кампус КПІ"></a></li>
+                        </td>
+                        <td class="content_area">
+                            <table cellpadding="0" cellspacing="0" border="0" class="profile">
+                                <tbody><tr>
+                                    <td class="title"><span>Вітаємо, </span>  Катренич Дмитро Вікторович!</td>
+                                    <td class="switch">
+                                        <select id="role_switch" disabled="disabled">
+                                            <option value="">.: змінити роль :.</option>
+                                                                                    
+                                        </select>
+                                    </td>
+                                    <td class="ctrl"><a href="student/index.php?mode=logout" title="Вихід"><img src="https://campus.kpi.ua/images/ctrl/exit.png" alt="[X]" border="0" title="Вихід"></a>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                            <form action="student/index.php?mode=search" method="post" name="search_form">
+                            <table cellpadding="0" cellspacing="0" border="0" class="searchBox">
+                                <tbody><tr>
+                                    <!--<td class="title"></td>-->
+                                    <td>
+                                    </td>
+                                    <td class="advance">
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                            </form>
+    
+                            <table cellpadding="0" cellspacing="0" border="0" class="navigation">
+                                <tbody><tr>
+                                    <td><li><a href="osnova.html" title="">Головна</a></li>
+                                                                  
+                                  
+                                                                          </td>
+                                </tr>
+                            </tbody></table>
+                                                    <div class="pageHead" style="background-image:url(images/page/kodeks.png);">Кодекс честі</div>
+                                                </td>
+                    </tr>
+                </tbody></table>
+                
+                        </td>
+            
+            
+            <!--правая боковая-->
+            <th class="right_clmn" valign="top" rowspan="3"></th>
+        </tr>
+        
+    
+        <tr>
+            <td class="centre_clmn2">
+            
+                <!--контентная часть страницы-->
+                <table cellpadding="0" cellspacing="0" border="0" width="100%" height="100%">
+                    <tbody><tr valign="top">
+                         <!--навигационное меню-->
+                         <td class="menu" nowrap="">
+                            <table cellpadding="0" cellspacing="3" border="0" width="100%">
+                                    
+        
+                                    <tbody><tr class="lm_item mi_common">
+                                            <td>
+                                                    <li><a href="MyProf.html">Мій профіль</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>							
+        
+                                    <tr class="lm_item mi_common">
+                                            <td>
+                                                    <li><a href="contacti.html">Контакти</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>							
+        
+                                    <tr class="lm_item mi_common">
+                                            <td>
+                                                    <li><a href="dovidka.html" target="_blank">Довідка</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>							
+        
+                                    <tr class="lm_item_active mi_common">
+                                            <td>
+                                                    <li><a href="codex.html">Кодекс честі</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>							
+        <tr><td class="spacer spacer_between"></td></tr>
+    
+        
+                                    <tr class="lm_item">
+                                            <td>
+                                                   <li><a href="povidomlenya.html">Повідомлення</a></li> 
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>	
+                                    <tr class="lm_item">
+                                            <td>
+                                                    <li><a href="curator.html">Куратор</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>	
+                                    <tr class="lm_item">
+                                            <td>
+                                                    <li><a href="PHP.html">РНП</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>	
+                                    <tr class="lm_item">
+                                            <td>
+                                                    <li><a href="medotZab.html">Метод.забезпечення</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>	
+                                    <tr class="lm_item">
+                                            <td>
+                                                    <li><a href="potControl.html">Поточний контроль</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>	
+                                    <tr class="lm_item">
+                                            <td>
+                                                    <li><a href="Opituvanie.html">Опитування</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>	
+                                    <tr class="lm_item">
+                                            <td>
+                                                    <li><a href="RectorControl.html">Ректорський контроль</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>	
+                                    <tr class="lm_item">
+                                            <td>
+                                                    <li><a href="Sesion.html">Сесія</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>	
+                                    <tr class="lm_item">
+                                            <td>
+                                                    <li><a href="Vstup2024mag.html">Вступ 2024 (магістратура)</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>	
+                                    <tr class="lm_item">
+                                            <td>
+                                                    <li><a href="DocumentsStud.html">Документи (студ.)</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>	
+                                    <tr class="lm_item">
+                                            <td>
+                                                    <li><a href="ResAtest.html">Результати атестації</a></li>
+                                            </td>
+                                    </tr>
+    
+                                    <tr><td class="spacer"></td></tr>
+                            </tbody></table>
+                         </td>
+                        <td valign="top">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tbody><tr>
+                                   <td class="cntnt" valign="top" colspan="2">
+                                      
+              <!-- -=- -=- -=- -=- -=- -=- -=- -=- -=- content  -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -->
+                                                    
+    <script type="text/javascript">
+    $(document).ready(function(){
+            // ** init Form
+            // * okr 
+            $("#okr").bind("change", function(){
+    //			$("#rnp_form").submit();return;
+                tmp = $("#okr").val();
+                if (tmp==1) {
+                    $(".okr_bachelor").show();
+                    $(".okr_other").hide();
+    //				$("#study_direction").attr('disabled', 0);
+    //				$("#study_program").attr('disabled', 1);
+                } else {
+                    $(".okr_bachelor").hide();
+                    $(".okr_other").show();
+                }
+    //						alert(tmp);
+            });
+            $("#okr").change();
+    
+            $("#study_form, #study_direction, #okr, #cafedra, #year, #rnp_id_forced").bind("change", function(){
+    //			train = $("#study_direction").val();
+                train = true;
+                study_form = $("#study_form").val();
+                if (!empty(train)) { // !empty(study_form) && 
+                    $("#rnp_form").submit();				
+                }			
+            });
+                
+    
+    });
+    
+    </script>
+    
+    <form action="student/index.php?mode=rnp" method="post" name="rnp_form" id="rnp_form">
+    <table cellpadding="0" cellspacing="0" class="rnp_selector">
+      <tbody><tr>
+        <th>Навчальний рік</th>
+        <td><select name="year" id="year">
+        <option label="2012-2013" value="2">2012-2013</option>
+    <option label="2013-2014" value="3">2013-2014</option>
+    <option label="2014-2015" value="4">2014-2015</option>
+    <option label="2015-2016" value="5">2015-2016</option>
+    <option label="2016-2017" value="6">2016-2017</option>
+    <option label="2017-2018" value="7">2017-2018</option>
+    <option label="2018-2019" value="8">2018-2019</option>
+    <option label="2019-2020" value="9">2019-2020</option>
+    <option label="2020-2021" value="10">2020-2021</option>
+    <option label="2021-2022" value="11">2021-2022</option>
+    <option label="2022-2023" value="12">2022-2023</option>
+    <option label="2023-2024" value="13">2023-2024</option>
+    <option label="2024-2025" value="14" selected="selected">2024-2025</option>
+    
+        <!--<option value="2011">2011-2012</option>-->
+        </select></td>
+      </tr>
+      <tr>
+        <th>Навчальна група</th>
+        <td><u style=" font-weight:normal; white-space:pre">                         Всі  </u></td>
+      </tr>
+    </tbody></table>
+    </form>
+    
+    
+    
+    <!--        <script src="rnp/tpl/js/i18n/grid.locale-en.js" type="text/javascript"></script>-->
+    <!--        <script src="../rnp/tpl/js/jquery.jqGrid.src.js" type="text/javascript"></script>-->
+    
+    
+            <link rel="stylesheet" type="text/css" media="screen" href="rnp/tpl/css/ui-lightness/jquery-ui-1.8.16.custom.css">
+            <link rel="stylesheet" type="text/css" media="screen" href="rnp/tpl/css/ui.jqgrid.css">
+    
+            <style type="text/css">
+                .li{
+                        list-style-type: none;
+
+                        
+                }
+                .rnp_head th, .rnp_head td, .rnp_selector th{
+                    text-align:left;
+                    width:180px;
+                }
+                .rnp_selector th{
+                    width:270px;
+                }
+                .rnp_selector {
+                    border-bottom:1px dotted #999999;
+                    padding-bottom:5px;
+                    margin-bottom:5px;
+                }
+                .rnp_head td  {
+                    width:250px;
+                    text-align:justify;
+                }
+                .warnMsg {
+                    font-size:180%;
+                }
+    /*			.rnpButtons a {
+                    display:block;
+                    border:1px solid #000000;
+                    background-color:#eeeeee;
+                    padding:2px;
+                    padding-left:10px;
+                    padding-right:10px;
+                    margin-right:5px;
+                }
+    .rnpButtons a.active{
+        background-color:#fffcdd;
+        
+    } 
+                
+        */		
+            
+                .ui-jqgrid .ui-jqgrid-htable th.ui-th-column-header {
+                    text-align: center;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    padding-top: 1px;
+                    height: 19px;
+                    vertical-align:middle;
+                }
+                .ui-jqgrid .jqgrow a {
+                    color:#0000FF;
+                }
+                .ui-jqgrid .jqgrow a:visited {
+                    color:#9900FF;
+                }
+                .ui-jqgrid .jqgrow a:active {
+                    font-weight:bold;
+                }
+                .ui-jqgrid .jqgrow a:hover {
+                    color:#EF991D;
+                }		
+                .rotate
+                {
+                    /* Safari */
+                    -webkit-transform: rotate(-90deg);
+                    /* Firefox */
+                    -moz-transform: rotate(-90deg);
+                    /*transform: rotate(-90deg);*/
+                    /* Opera 10.50 */
+                    -o-transform: rotate(-90deg);
+                    /* Internet Explorer */
+                    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+                    transform:rotate(-90deg);
+                }
+            </style>
+    
+            <script type="text/javascript">
+    
+    // Here we set a globally the altRows option
+    jQuery.extend(jQuery.jgrid.defaults, { 
+        datatype:"json", 	
+    //	datatype: !empty(debug_mode)?"text":"json", 	
+    //	autowidth: true,
+        rowList: [10,20,50,100],
+           viewrecords: true,
+           mtype: "GET",
+    //	rownumbers: true,
+        rownumWidth: 40,
+        rowNum:100,
+        gridview: true,
+        
+        groupingView : {
+                groupColumnShow : [false]
+                ,groupDataSorted : true 
+        },
+        
+        
+        loadError: function(xhr,  status,  error){ 
+            alert(status + error);
+           }
+        ,loadComplete: function(data){
+            if (!empty(data))  {
+                if (!empty(data.debug))
+                    $("#debug").html(data.debug).show();
+    //			alert(data.debug);
+            }
+    //		alert(status + error);
+           }
+        
+     });	
+      var grid_params = "sm=auditory";
+      if (!empty(grid_params)) grid_params = "?" + grid_params; //	alert(params);
+         
+            
+                $.jgrid.formatter.integer.thousandsSeparator = ',';
+                $.jgrid.formatter.number.thousandsSeparator = ',';
+                $.jgrid.formatter.currency.thousandsSeparator = ',';
+                $(document).ready(function(){
+                    //'use strict';
+                    /*
+                    var mydata = [
+                        {id: "1", col_0: "1", col_1: "Історія України", kaf: "Історії", col_2: "3", col_3: "108", col_4: "36", col_5: "26", col_6: "10", col_7: "0", col_8: "72", col_9: "Цикл гуманiтарної та соцiально-економiчної підготовки"},
+                        {id: "2", col_0: "1", col_1: "Правознавство", kaf:  "Інформаційного та підприємницького права", col_2: "2", col_3: "72", col_4: "32", col_5: "16", col_6: "16", col_7: "0", col_8: "40", col_9: "Цикл гуманiтарної та соцiально-економiчної підготовки"},
+                        {id: "3", col_0: "2", col_1: "Історія Української культури", kaf:  "Української мови, літератури та культури", col_2: "2", col_3: "72", col_4: "36", col_5: "18", col_6: "18", col_7: "0", col_8: "36", col_9: "Цикл гуманiтарної та соцiально-економiчної підготовки"},
+                        {id: "4", col_0: "2", col_1: "Політологія", kaf:  "Політології, соціології та соціальної роботи", col_2: "2", col_3: "54", col_4: "24", col_5: "16", col_6: "8", col_7: "0", col_8: "30", col_9: "Цикл гуманiтарної та соцiально-економiчної підготовки"},
+                        {id: "5", col_0: "3", col_1: "Філософія", kaf:  "Філософії", col_2: "3", col_3: "108", col_4: "54", col_5: "36", col_6: "18", col_7: "0", col_8: "54", col_9: "Цикл гуманiтарної та соцiально-економiчної підготовки"},
+                        {id: "6", col_0: "4", col_1: "Українська мова", kaf:  "Української мови, літератури та культури", col_2: "2", col_3: "72", col_4: "36", col_5: "8", col_6: "28", col_7: "0", col_8: "36", col_9: "Цикл гуманiтарної та соцiально-економiчної підготовки"},
+                        {id: "7", col_0: "5", col_1: "Екологія", kaf: "Інженерної екології", col_2: "2", col_3: "72", col_4: "36", col_5: "18", col_6: "18", col_7: "0", col_8: "36", col_9: "Цикл математичної та природничо-наукової підготовки"},
+                        {id: "15", col_0: "5", col_1: "Порівняльна стилістика", kaf: "Теорії, приктики та перекладу англійської мови", col_2: "2.5", col_3: "90", col_4: "48", col_5: "32", col_6: "16", col_7: "0", col_8: "42", col_9: "Цикл математичної та природничо-наукової підготовки"},
+                        {id: "16", col_0: "6", col_1: "Вища математика", kaf: "Математичної фізики", col_2: "1", col_3: "36", col_4: "18", col_5: "0", col_6: "18", col_7: "0", col_8: "18", col_9: "Цикл математичної та природничо-наукової підготовки"},
+                        {id: "17", col_0: "7", col_1: "Фізика", kaf: "Загальної та теоретичної фізики", col_2: "1", col_3: "36", col_4: "18", col_5: "9", col_6: "9", col_7: "0", col_8: "18", col_9: "Цикл математичної та природничо-наукової підготовки"},
+                        {id: "14", col_0: "5", col_1: "<a href=\""+ra+"/index.php?mode=mob\">Основи програмування</a>", kaf: "Автоматизованих систем обробки iнформацiї та управлiння", col_2: "5", col_3: "200", col_4: "55", col_5: "36", col_6: "18", col_7: "0", col_8: "54", col_9: "Цикл професiйної та практичної підготовки"},
+                        {id: "8", col_0: "6", col_1: "Об'єктно-орієнтоване програмування-1", kaf: "Обчислювальної технiки", col_2: "3", col_3: "4", col_4: "55", col_5: "36", col_6: "18", col_7: "0", col_8: "54", col_9: "Цикл професiйної та практичної підготовки"},
+                        {id: "13", col_0: "5", col_1: "Професійна практика програмної інженерії", kaf: "Обчислювальної технiки", col_2: "1", col_3: "0", col_4: "55", col_5: "36", col_6: "18", col_7: "0", col_8: "54", col_9: "Цикл дисципліни за вибором ВНЗ"}
+                        
+                        
+                    ];*/
+                    
+    
+                                    
+                    var grid = jQuery('#list').jqGrid({
+                        url: "ajax/grid/rnp.grid.php" + grid_params,
+    //					datatype:"json", 	
+    //                    datatype: 'local',
+    //                    data: mydata,
+    //				   	mtype: "GET",
+                        colNames: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'],
+                        colModel: [
+                            {
+                                name: 'col_0',
+                                index: 'col_0',
+                                width: 20,
+                                align: 'center',
+                                sortable: false
+                            },
+                            {
+                                name: 'col_1',
+                                index: 'col_1',
+                                width: 250,
+    //                            align: 'center',
+                                sortable: false
+                            },
+                            {
+                                name: 'kaf',
+                                index: 'kaf',
+                                width: 200,
+    //                            align: 'center',
+                                sortable: false
+                            },
+                            {
+                                name: 'col_2',
+                                index: 'col_2',
+                                width: 35,
+                                sortable: false
+                            },
+                            {
+                                name: 'col_3',
+                                index: 'col_3',
+                                width: 35,
+                                sortable: false
+                            },
+                            {
+                                name: 'col_4',
+                                index: 'col_4',
+                                width: 35,
+                                sortable: false
+                            },
+                            {
+                                name: 'col_5',
+                                index: 'col_5',
+                                width: 35,
+                                sortable: false
+                            },
+                            {
+                                name: 'col_6',
+                                index: 'col_6',
+                                width: 40,
+                                sortable: false
+                            },
+                            {
+                                name: 'col_7',
+                                index: 'col_7',
+                                width: 40,
+                                sortable: false
+                            },
+                            {
+                                name: 'col_8',
+                                index: 'col_8',
+                                width: 45,
+                                sortable: false
+                            },
+                            {
+                                name: 'col_9',
+                                index: 'col_9',
+                                width: 18,
+                                sortable: false
+                            }
+                        ],
+                        //rowNum: 10,
+                        //rowList: [5, 10, 20],
+                //pager: '#pager',
+                        gridview: true,
+                        rownumbers: false,
+                        shrinkToFit: false,
+                        viewrecords: true,
+                        caption: 'Аудиторні години',
+                        height: '350',
+                        //width: '690',
+                        grouping:true,
+                        groupingView : {
+                                groupField : ['col_9'],
+                                groupColumnShow : [false]
+                        }
+                        /*
+                        ,onCellSelect: function(rowid, iCol, cellcontent, e){
+    //						alert(rowid + "col: " +  iCol + 'cnt: ' + cellcontent);
+                            if (iCol==1) 
+                            if (rowid==14) {
+                                location.href = ra+'index.php?mode=mob&mid1=' + rowid;
+                            } else alert('Метод.забеспечення не знайдено!');
+                            
+                           }*/
+    
+                    });
+                    
+                        jQuery("#list").jqGrid('setGroupHeaders', {
+                            useColSpanStyle: false, 
+                            groupHeaders:[
+                                {startColumnName: 'col_0', numberOfColumns: 10, titleText: 'temporary'}
+                            ]
+                        });
+                        
+                        var secondHeaderRow = $("table.ui-jqgrid-htable thead tr.jqg-second-row-header");
+                        var appendedRow = "<tr class=\"ui-jqgrid-labels jqg-second-row-header\" role=\"rowheader\">" +
+                                                "<th rowspan=\"2\" role=\"columnheader\" class=\"ui-state-default ui-th-column-header ui-th-ltr\" rotate=\"rotate\" style=\"height: 30px; border-top-width: 0px; border-top-style: none; border-top-color: initial; \"><div class=\"ui-jqgrid-sortable \" >№ п/п</div></th>" +
+                                                "<th rowspan=\"2\" role=\"columnheader\" class=\"ui-state-default ui-th-column-header ui-th-ltr\" style=\"height: 30px; border-top-width: 0px; border-top-style: none; border-top-color: initial; \">Найменування кредитного модулю</th>" +
+                                                "<th rowspan=\"2\" role=\"columnheader\" class=\"ui-state-default ui-th-column-header ui-th-ltr\" style=\"height: 30px; border-top-width: 0px; border-top-style: none; border-top-color: initial; \">Назва кафедри</th>" +
+                                                "<th colspan=\"2\" role=\"columnheader\" class=\"ui-state-default ui-th-column-header ui-th-ltr\" style=\"height: 30px; border-top-width: 0px; border-top-style: none; border-top-color: initial; \">Обсяг <br>дисциплін</th>" +
+                                                "<th colspan=\"4\" role=\"columnheader\" class=\"ui-state-default ui-th-column-header ui-th-ltr\" style=\"height: 30px; border-top-width: 0px; border-top-style: none; border-top-color: initial; \">Аудиторні години</th>" +
+                                                "<th rowspan=\"2\" role=\"columnheader\" class=\"ui-state-default ui-th-column-header ui-th-ltr\" style=\"height: 30px; border-top-width: 0px; border-top-style: none; border-top-color: initial; \"><div class=\"ui-jqgrid-sortable \" ><img alt=\"\" style=\"border:none;\" src='rnp/tpl/images/samost.png' /></div></th>" +
+                                                //"<th rowspan=\"2\" role=\"columnheader\" class=\"ui-state-default ui-th-column-header ui-th-ltr\" rotate=\"rotate\" style=\"height: 30px; border-top-width: 0px; border-top-style: none; border-top-color: initial; \"><div class=\"ui-jqgrid-sortable \" >Номер циклу</div></th>" +
+                                            "</tr>" +
+                                            "<tr class=\"ui-jqgrid-labels jqg-second-row-header\" role=\"rowheader\">" +
+                                                "<th role=\"columnheader\" class=\"ui-state-default ui-th-column-header ui-th-ltr\" style=\"height: 120px; border-top-width: 0px; border-top-style: none; border-top-color: initial; \"><div class=\"ui-jqgrid-sortable \" ><img alt=\"\" style=\"border:none;\" src='rnp/tpl/images/kred_ects.png' /></div></th>" +
+                                                "<th role=\"columnheader\" class=\"ui-state-default ui-th-column-header ui-th-ltr\" style=\"height: 120px; border-top-width: 0px; border-top-style: none; border-top-color: initial; \"><div class=\"ui-jqgrid-sortable \" ><img alt=\"\" style=\"border:none;\" src='rnp/tpl/images/godin.png' /></div></th>" +
+                                                "<th role=\"columnheader\" class=\"ui-state-default ui-th-column-header ui-th-ltr\" style=\"height: 120px; border-top-width: 0px; border-top-style: none; border-top-color: initial; \"><div class=\"ui-jqgrid-sortable \" ><img alt=\"\" style=\"border:none;\" src='rnp/tpl/images/vsogo.png' /></div></th>" +
+                                                "<th role=\"columnheader\" class=\"ui-state-default ui-th-column-header ui-th-ltr\" style=\"height: 120px; border-top-width: 0px; border-top-style: none; border-top-color: initial; \"><div class=\"ui-jqgrid-sortable \" ><img alt=\"\" style=\"border:none;\" src='rnp/tpl/images/lect.png' /></div></th>" +
+                                                "<th role=\"columnheader\" class=\"ui-state-default ui-th-column-header ui-th-ltr\" style=\"height: 120px; border-top-width: 0px; border-top-style: none; border-top-color: initial; \"><div class=\"ui-jqgrid-sortable \" ><img alt=\"\" style=\"border:none;\" src='rnp/tpl/images/pract.png' /></div></th>" +
+                                                "<th role=\"columnheader\" class=\"ui-state-default ui-th-column-header ui-th-ltr\" style=\"height: 120px; border-top-width: 0px; border-top-style: none; border-top-color: initial; \"><div class=\"ui-jqgrid-sortable \" ><img alt=\"\" style=\"border:none;\" src='rnp/tpl/images/lab.png' /></div></th>" +
+                                            "</tr>";
+                
+    
+                    
+                
+                        secondHeaderRow.after(appendedRow);
+                        secondHeaderRow.remove();
+                    
+                        var processRows = $("tr.jqg-second-row-header");
+                        //alert(processRows.length);
+                        for(var i=0; i<processRows.length; ++i)
+                        {
+                            var rowHeight = $("th:first",processRows.eq(i)).height();
+                            var cellArray = $("th",processRows.eq(i));
+                            
+                            //alert("cells found: " + cellArray.length);
+                            for(var j=0; j<cellArray.length; ++j)
+                            {
+                                if(cellArray.eq(j).attr('rotate') !== undefined)
+                                {
+                                    //alert("rotate cell found");
+                                    //we found a cell which needs to be rotated
+                                    var headDiv = $("div", cellArray.eq(j));
+                                    headDiv.width(rowHeight).addClass("rotate");
+                                    if (!$.browser.msie)
+                                    {	
+                                        if ($.browser.mozilla || $.browser.opera)
+                                            headDiv.css("left", (cellArray.eq(j).width() - rowHeight) / 2 + 3).css("bottom", 7);
+                                        else
+                                            headDiv.css("left", (cellArray.eq(j).width() - rowHeight) / 2);
+                                    }
+                                    else
+                                    {
+                                        var ieVer = jQuery.browser.version.substr(0, 3);
+                                        // Internet Explorer
+                                        if (ieVer != "6.0" && ieVer != "7.0")
+                                        {
+                                            headDiv.css("left", cellArray.eq(j).width() / 2 - 4).css("bottom", rowHeight / 2 - 3);
+                                            $("span", headDiv).css("left", 0);
+                                        }
+                                        else
+                                            headDiv.css("left", 3);
+                                    }
+                                }
+                            }
+                        }
+                        
+                        //$(".ui-jqgrid-sortable").css('white-space', 'normal').css('height', 'auto').css('margin-bottom','10px').css('margin-top','5px').css('text-indent','5px');
+                        $(".ui-jqgrid-sortable").css('white-space', 'normal').css('height', 'auto').css('margin-bottom','0px').css('margin-top','0px').css('text-indent','0px');
+                        
+                });
+                
+    
+            </script>
+    
+    
+    
+    <table border="0" cellspacing="3" cellpadding="0" class="rnp_head">
+    <!--  <tr>
+        <th>Напрям підготовки (код і назва)</th>
+        <td>6.050103 Програмна інженерія</td>
+        <th>Факультет (інститут)</th>
+        <td>Інформатики та обчислювальної технiки</td>
+      </tr>
+      
+      <tr>
+        <th>Програма професійного спрямування</th>
+        <td>6.080400 Програмне забезпечення автоматизованих систем</td>
+        <th>Форма навчання</th>
+        <td>заочна</td>
+      </tr>
+      <tr>
+        <th>Освітньо-кваліфікаційний рівень</th>
+        <td>бакалавр</td>
+        <th>Термін навчання</th>
+        <td>4,5 роки</td>
+      </tr>
+      <tr>
+        <th>Випускова кафедра</th>
+        <td>Обчислювальної технiки</td>
+        <th>Кваліфікація</th>
+        <td>бакалавр 3121 фахівець з розробки та тестування програмного забезпечення</td>
+      </tr>-->
+      <tbody><tr>
+        <td class="rnpButtons" colspan="4" style="width:100%; min-width:600px;">
+        <a href="student//index.php?mode=rnp&amp;auditory" class="active">Аудиторні години</a>
+        <a href="student//index.php?mode=rnp&amp;control">Контрольні заходи та їх розподіл за семестрами</a>
+        <div class="groups">Кількість годин аудиторних занять за семестрами <br><br>
+    
+            <a href="student//index.php?mode=rnp&amp;hours_by_semester&amp;id_group=13403">АЛ-41</a>
+                </div>
+    
+        <!--<a href="student//index.php?mode=rnp&hours_by_semester" >Кількість годин аудиторних занять за семестрами</a>-->
+        </td>
+    <!--    <th></th>
+        <td></td>-->
+      </tr>
+    </tbody></table>
+    
+            
+        <div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_list" dir="ltr" style="width: 753px;"><div class="ui-widget-overlay jqgrid-overlay" id="lui_list"></div><div class="loading ui-state-default ui-state-active" id="load_list" style="display: none;">Завантаження...</div><div class="ui-jqgrid-view" id="gview_list" style="width: 753px;"><div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix"><a role="link" href="javascript:void(0)" class="ui-jqgrid-titlebar-close HeaderButton" style="right: 0px;"><span class="ui-icon ui-icon-circle-triangle-n"></span></a><span class="ui-jqgrid-title">Аудиторні години</span></div><div class="ui-state-default ui-jqgrid-hdiv" style="width: 753px;"><div class="ui-jqgrid-hbox"><table class="ui-jqgrid-htable" style="width: 735px;" role="grid" aria-labelledby="gbox_list" cellspacing="0" cellpadding="0" border="0"><thead><tr role="row" aria-hidden="true" class="jqg-first-row-header" style="height: auto;"><th role="gridcell" class="ui-first-th-ltr" style="height: 0px; width: 20px;"></th><th role="gridcell" class="ui-first-th-ltr" style="height: 0px; width: 250px;"></th><th role="gridcell" class="ui-first-th-ltr" style="height: 0px; width: 200px;"></th><th role="gridcell" class="ui-first-th-ltr" style="height: 0px; width: 35px;"></th><th role="gridcell" class="ui-first-th-ltr" style="height: 0px; width: 35px;"></th><th role="gridcell" class="ui-first-th-ltr" style="height: 0px; width: 35px;"></th><th role="gridcell" class="ui-first-th-ltr" style="height: 0px; width: 35px;"></th><th role="gridcell" class="ui-first-th-ltr" style="height: 0px; width: 40px;"></th><th role="gridcell" class="ui-first-th-ltr" style="height: 0px; width: 40px;"></th><th role="gridcell" class="ui-first-th-ltr" style="height: 0px; width: 45px;"></th><th role="gridcell" class="ui-first-th-ltr" style="height: 0px; width: 18px; display: none;"></th></tr><tr class="ui-jqgrid-labels jqg-second-row-header" role="rowheader"><th rowspan="2" role="columnheader" class="ui-state-default ui-th-column-header ui-th-ltr" rotate="rotate" style="height: 30px; border-top-width: 0px; border-top-style: none; border-top-color: initial; "><div class="ui-jqgrid-sortable  rotate" style="width: 152px; left: -66px; white-space: normal; height: auto; margin-bottom: 0px; margin-top: 0px; text-indent: 0px;">№ п/п</div></th><th rowspan="2" role="columnheader" class="ui-state-default ui-th-column-header ui-th-ltr" style="height: 30px; border-top-width: 0px; border-top-style: none; border-top-color: initial; ">Найменування кредитного модулю</th><th rowspan="2" role="columnheader" class="ui-state-default ui-th-column-header ui-th-ltr" style="height: 30px; border-top-width: 0px; border-top-style: none; border-top-color: initial; ">Назва кафедри</th><th colspan="2" role="columnheader" class="ui-state-default ui-th-column-header ui-th-ltr" style="height: 30px; border-top-width: 0px; border-top-style: none; border-top-color: initial; ">Обсяг <br>дисциплін</th><th colspan="4" role="columnheader" class="ui-state-default ui-th-column-header ui-th-ltr" style="height: 30px; border-top-width: 0px; border-top-style: none; border-top-color: initial; ">Аудиторні години</th><th rowspan="2" role="columnheader" class="ui-state-default ui-th-column-header ui-th-ltr" style="height: 30px; border-top-width: 0px; border-top-style: none; border-top-color: initial; "><div class="ui-jqgrid-sortable " style="white-space: normal; height: auto; margin-bottom: 0px; margin-top: 0px; text-indent: 0px;"><img alt="" style="border:none;" src="rnp/tpl/images/samost.png"></div></th></tr><tr class="ui-jqgrid-labels jqg-second-row-header" role="rowheader"><th role="columnheader" class="ui-state-default ui-th-column-header ui-th-ltr" style="height: 120px; border-top-width: 0px; border-top-style: none; border-top-color: initial; "><div class="ui-jqgrid-sortable " style="white-space: normal; height: auto; margin-bottom: 0px; margin-top: 0px; text-indent: 0px;"><img alt="" style="border:none;" src="rnp/tpl/images/kred_ects.png"></div></th><th role="columnheader" class="ui-state-default ui-th-column-header ui-th-ltr" style="height: 120px; border-top-width: 0px; border-top-style: none; border-top-color: initial; "><div class="ui-jqgrid-sortable " style="white-space: normal; height: auto; margin-bottom: 0px; margin-top: 0px; text-indent: 0px;"><img alt="" style="border:none;" src="rnp/tpl/images/godin.png"></div></th><th role="columnheader" class="ui-state-default ui-th-column-header ui-th-ltr" style="height: 120px; border-top-width: 0px; border-top-style: none; border-top-color: initial; "><div class="ui-jqgrid-sortable " style="white-space: normal; height: auto; margin-bottom: 0px; margin-top: 0px; text-indent: 0px;"><img alt="" style="border:none;" src="rnp/tpl/images/vsogo.png"></div></th><th role="columnheader" class="ui-state-default ui-th-column-header ui-th-ltr" style="height: 120px; border-top-width: 0px; border-top-style: none; border-top-color: initial; "><div class="ui-jqgrid-sortable " style="white-space: normal; height: auto; margin-bottom: 0px; margin-top: 0px; text-indent: 0px;"><img alt="" style="border:none;" src="rnp/tpl/images/lect.png"></div></th><th role="columnheader" class="ui-state-default ui-th-column-header ui-th-ltr" style="height: 120px; border-top-width: 0px; border-top-style: none; border-top-color: initial; "><div class="ui-jqgrid-sortable " style="white-space: normal; height: auto; margin-bottom: 0px; margin-top: 0px; text-indent: 0px;"><img alt="" style="border:none;" src="rnp/tpl/images/pract.png"></div></th><th role="columnheader" class="ui-state-default ui-th-column-header ui-th-ltr" style="height: 120px; border-top-width: 0px; border-top-style: none; border-top-color: initial; "><div class="ui-jqgrid-sortable " style="white-space: normal; height: auto; margin-bottom: 0px; margin-top: 0px; text-indent: 0px;"><img alt="" style="border:none;" src="rnp/tpl/images/lab.png"></div></th></tr><tr role="rowheader" class="ui-jqgrid-labels jqg-third-row-header"><th id="list_col_0" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style=""><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_list_col_0" class="ui-jqgrid-sortable" style="white-space: normal; height: auto; margin-bottom: 0px; margin-top: 0px; text-indent: 0px;">1<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="list_col_1" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style=""><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_list_col_1" class="ui-jqgrid-sortable" style="white-space: normal; height: auto; margin-bottom: 0px; margin-top: 0px; text-indent: 0px;">2<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="list_kaf" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style=""><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_list_kaf" class="ui-jqgrid-sortable" style="white-space: normal; height: auto; margin-bottom: 0px; margin-top: 0px; text-indent: 0px;">3<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="list_col_2" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style=""><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_list_col_2" class="ui-jqgrid-sortable" style="white-space: normal; height: auto; margin-bottom: 0px; margin-top: 0px; text-indent: 0px;">4<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="list_col_3" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style=""><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_list_col_3" class="ui-jqgrid-sortable" style="white-space: normal; height: auto; margin-bottom: 0px; margin-top: 0px; text-indent: 0px;">5<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="list_col_4" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style=""><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_list_col_4" class="ui-jqgrid-sortable" style="white-space: normal; height: auto; margin-bottom: 0px; margin-top: 0px; text-indent: 0px;">6<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="list_col_5" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style=""><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_list_col_5" class="ui-jqgrid-sortable" style="white-space: normal; height: auto; margin-bottom: 0px; margin-top: 0px; text-indent: 0px;">7<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="list_col_6" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style=""><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_list_col_6" class="ui-jqgrid-sortable" style="white-space: normal; height: auto; margin-bottom: 0px; margin-top: 0px; text-indent: 0px;">8<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="list_col_7" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style=""><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_list_col_7" class="ui-jqgrid-sortable" style="white-space: normal; height: auto; margin-bottom: 0px; margin-top: 0px; text-indent: 0px;">9<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="list_col_8" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style=""><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_list_col_8" class="ui-jqgrid-sortable" style="white-space: normal; height: auto; margin-bottom: 0px; margin-top: 0px; text-indent: 0px;">10<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="list_col_9" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="display: none;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_list_col_9" class="ui-jqgrid-sortable" style="white-space: normal; height: auto; margin-bottom: 0px; margin-top: 0px; text-indent: 0px;">11<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th></tr></thead></table></div></div><div class="ui-jqgrid-bdiv" style="height: 350px; width: 753px;"><div style="position:relative;"><div></div><table id="list" tabindex="1" cellspacing="0" cellpadding="0" border="0" role="grid" aria-multiselectable="false" aria-labelledby="gbox_list" class="ui-jqgrid-btable" style="width: 735px;"><tbody><tr class="jqgfirstrow" role="row" style="height:auto"><td role="gridcell" style="height:0px;width:20px;"></td><td role="gridcell" style="height:0px;width:250px;"></td><td role="gridcell" style="height:0px;width:200px;"></td><td role="gridcell" style="height:0px;width:35px;"></td><td role="gridcell" style="height:0px;width:35px;"></td><td role="gridcell" style="height:0px;width:35px;"></td><td role="gridcell" style="height:0px;width:35px;"></td><td role="gridcell" style="height:0px;width:40px;"></td><td role="gridcell" style="height:0px;width:40px;"></td><td role="gridcell" style="height:0px;width:45px;"></td><td role="gridcell" style="height: 0px; width: 18px; display: none;"></td></tr><tr id="listghead_0" role="row" class="ui-widget-content jqgroup ui-row-ltr"><td colspan="11"><span style="cursor:pointer;" class="ui-icon ui-icon-circlesmall-minus tree-wrap-ltr" onclick="jQuery('#list').jqGrid('groupingToggle','listghead_0');return false;"></span>Обов’язкові компоненти циклу загальної підготовки</td></tr><tr id="1" tabindex="-1" role="row" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="text-align:center;" title="1" aria-describedby="list_col_0">1</td><td role="gridcell" style="" title="Історія науки і техніки" aria-describedby="list_col_1">Історія науки і техніки</td><td role="gridcell" style="" title=" історії ФСП" aria-describedby="list_kaf"> історії ФСП</td><td role="gridcell" style="" title="2" aria-describedby="list_col_2">2</td><td role="gridcell" style="" title="60" aria-describedby="list_col_3">60</td><td role="gridcell" style="" title="36" aria-describedby="list_col_4">36</td><td role="gridcell" style="" title="18" aria-describedby="list_col_5">18</td><td role="gridcell" style="" title="18" aria-describedby="list_col_6">18</td><td role="gridcell" style="" title="--" aria-describedby="list_col_7">--</td><td role="gridcell" style="" title="24" aria-describedby="list_col_8">24</td><td role="gridcell" style="display:none;" title="Обов’язкові компоненти циклу загальної підготовки" aria-describedby="list_col_9">Обов’язкові компоненти циклу загальної підготовки</td></tr><tr id="2" tabindex="-1" role="row" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="text-align:center;" title="2" aria-describedby="list_col_0">2</td><td role="gridcell" style="" title="Основи здорового способу життя. Частина 1" aria-describedby="list_col_1">Основи здорового способу життя. Частина 1</td><td role="gridcell" style="" title=" технологій оздоровлення і спорту ФБМІ" aria-describedby="list_kaf"> технологій оздоровлення і спорту ФБМІ</td><td role="gridcell" style="" title="1.5" aria-describedby="list_col_2">1.5</td><td role="gridcell" style="" title="45" aria-describedby="list_col_3">45</td><td role="gridcell" style="" title="36" aria-describedby="list_col_4">36</td><td role="gridcell" style="" title="18" aria-describedby="list_col_5">18</td><td role="gridcell" style="" title="18" aria-describedby="list_col_6">18</td><td role="gridcell" style="" title="--" aria-describedby="list_col_7">--</td><td role="gridcell" style="" title="9" aria-describedby="list_col_8">9</td><td role="gridcell" style="display:none;" title="Обов’язкові компоненти циклу загальної підготовки" aria-describedby="list_col_9">Обов’язкові компоненти циклу загальної підготовки</td></tr><tr id="3" tabindex="-1" role="row" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="text-align:center;" title="3" aria-describedby="list_col_0">3</td><td role="gridcell" style="" title="Основи здорового способу життя. Частина 2" aria-describedby="list_col_1">Основи здорового способу життя. Частина 2</td><td role="gridcell" style="" title=" технологій оздоровлення і спорту ФБМІ" aria-describedby="list_kaf"> технологій оздоровлення і спорту ФБМІ</td><td role="gridcell" style="" title="1.5" aria-describedby="list_col_2">1.5</td><td role="gridcell" style="" title="45" aria-describedby="list_col_3">45</td><td role="gridcell" style="" title="36" aria-describedby="list_col_4">36</td><td role="gridcell" style="" title="--" aria-describedby="list_col_5">--</td><td role="gridcell" style="" title="36" aria-describedby="list_col_6">36</td><td role="gridcell" style="" title="--" aria-describedby="list_col_7">--</td><td role="gridcell" style="" title="9" aria-describedby="list_col_8">9</td><td role="gridcell" style="display:none;" title="Обов’язкові компоненти циклу загальної підготовки" aria-describedby="list_col_9">Обов’язкові компоненти циклу загальної підготовки</td></tr><tr id="4" tabindex="-1" role="row" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="text-align:center;" title="4" aria-describedby="list_col_0">4</td><td role="gridcell" style="" title="Практичний курс іноземної мови. Частина 1" aria-describedby="list_col_1"><a href="student/index.php?mode=mob&amp;cm=70810&amp;rcms=267971">Практичний курс іноземної мови. Частина 1</a></td><td role="gridcell" style="" title=" англійської мови технічного спрямування №2 ФЛ" aria-describedby="list_kaf"> англійської мови технічного спрямування №2 ФЛ</td><td role="gridcell" style="" title="3" aria-describedby="list_col_2">3</td><td role="gridcell" style="" title="90" aria-describedby="list_col_3">90</td><td role="gridcell" style="" title="72" aria-describedby="list_col_4">72</td><td role="gridcell" style="" title="--" aria-describedby="list_col_5">--</td><td role="gridcell" style="" title="72" aria-describedby="list_col_6">72</td><td role="gridcell" style="" title="--" aria-describedby="list_col_7">--</td><td role="gridcell" style="" title="18" aria-describedby="list_col_8">18</td><td role="gridcell" style="display:none;" title="Обов’язкові компоненти циклу загальної підготовки" aria-describedby="list_col_9">Обов’язкові компоненти циклу загальної підготовки</td></tr><tr id="5" tabindex="-1" role="row" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="text-align:center;" title="5" aria-describedby="list_col_0">5</td><td role="gridcell" style="" title="Українська мова за професійним спрямуванням" aria-describedby="list_col_1">Українська мова за професійним спрямуванням</td><td role="gridcell" style="" title=" української мови, літератури та культури ФЛ" aria-describedby="list_kaf"> української мови, літератури та культури ФЛ</td><td role="gridcell" style="" title="2" aria-describedby="list_col_2">2</td><td role="gridcell" style="" title="60" aria-describedby="list_col_3">60</td><td role="gridcell" style="" title="36" aria-describedby="list_col_4">36</td><td role="gridcell" style="" title="18" aria-describedby="list_col_5">18</td><td role="gridcell" style="" title="18" aria-describedby="list_col_6">18</td><td role="gridcell" style="" title="--" aria-describedby="list_col_7">--</td><td role="gridcell" style="" title="24" aria-describedby="list_col_8">24</td><td role="gridcell" style="display:none;" title="Обов’язкові компоненти циклу загальної підготовки" aria-describedby="list_col_9">Обов’язкові компоненти циклу загальної підготовки</td></tr><tr id="listghead_1" role="row" class="ui-widget-content jqgroup ui-row-ltr"><td colspan="11"><span style="cursor:pointer;" class="ui-icon ui-icon-circlesmall-minus tree-wrap-ltr" onclick="jQuery('#list').jqGrid('groupingToggle','listghead_1');return false;"></span>Обов’язкові компоненти циклу професійної підготовки</td></tr><tr id="6" tabindex="-1" role="row" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="text-align:center;" title="6" aria-describedby="list_col_0">6</td><td role="gridcell" style="" title="Вища математика. Частина 1. Диференційні числення. Аналітична геометрія. Лінійна алгебра" aria-describedby="list_col_1">Вища математика. Частина 1. Диференційні числення. Аналітична геометрія. Лінійна алгебра</td><td role="gridcell" style="" title=" математичного аналізу та теорії ймовірностей ФМФ" aria-describedby="list_kaf"> математичного аналізу та теорії ймовірностей ФМФ</td><td role="gridcell" style="" title="6" aria-describedby="list_col_2">6</td><td role="gridcell" style="" title="180" aria-describedby="list_col_3">180</td><td role="gridcell" style="" title="108" aria-describedby="list_col_4">108</td><td role="gridcell" style="" title="54" aria-describedby="list_col_5">54</td><td role="gridcell" style="" title="54" aria-describedby="list_col_6">54</td><td role="gridcell" style="" title="--" aria-describedby="list_col_7">--</td><td role="gridcell" style="" title="72" aria-describedby="list_col_8">72</td><td role="gridcell" style="display:none;" title="Обов’язкові компоненти циклу професійної підготовки" aria-describedby="list_col_9">Обов’язкові компоненти циклу професійної підготовки</td></tr><tr id="7" tabindex="-1" role="row" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="text-align:center;" title="7" aria-describedby="list_col_0">7</td><td role="gridcell" style="" title="Вища математика. Частина 2. Інтегральні числення" aria-describedby="list_col_1">Вища математика. Частина 2. Інтегральні числення</td><td role="gridcell" style="" title=" математичного аналізу та теорії ймовірностей ФМФ" aria-describedby="list_kaf"> математичного аналізу та теорії ймовірностей ФМФ</td><td role="gridcell" style="" title="7" aria-describedby="list_col_2">7</td><td role="gridcell" style="" title="210" aria-describedby="list_col_3">210</td><td role="gridcell" style="" title="108" aria-describedby="list_col_4">108</td><td role="gridcell" style="" title="54" aria-describedby="list_col_5">54</td><td role="gridcell" style="" title="54" aria-describedby="list_col_6">54</td><td role="gridcell" style="" title="--" aria-describedby="list_col_7">--</td><td role="gridcell" style="" title="102" aria-describedby="list_col_8">102</td><td role="gridcell" style="display:none;" title="Обов’язкові компоненти циклу професійної підготовки" aria-describedby="list_col_9">Обов’язкові компоненти циклу професійної підготовки</td></tr><tr id="8" tabindex="-1" role="row" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="text-align:center;" title="8" aria-describedby="list_col_0">8</td><td role="gridcell" style="" title="Інженерна та комп’ютерна графіка" aria-describedby="list_col_1">Інженерна та комп’ютерна графіка</td><td role="gridcell" style="" title=" нарисної геометрії, інженерної та комп'ютерної графіки ФМФ" aria-describedby="list_kaf"> нарисної геометрії, інженерної та комп'ютерної графіки ФМФ</td><td role="gridcell" style="" title="4" aria-describedby="list_col_2">4</td><td role="gridcell" style="" title="120" aria-describedby="list_col_3">120</td><td role="gridcell" style="" title="72" aria-describedby="list_col_4">72</td><td role="gridcell" style="" title="36" aria-describedby="list_col_5">36</td><td role="gridcell" style="" title="18" aria-describedby="list_col_6">18</td><td role="gridcell" style="" title="18" aria-describedby="list_col_7">18</td><td role="gridcell" style="" title="48" aria-describedby="list_col_8">48</td><td role="gridcell" style="display:none;" title="Обов’язкові компоненти циклу професійної підготовки" aria-describedby="list_col_9">Обов’язкові компоненти циклу професійної підготовки</td></tr><tr id="9" tabindex="-1" role="row" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="text-align:center;" title="9" aria-describedby="list_col_0">9</td><td role="gridcell" style="" title="Інженерні основи авіації і космонавтики" aria-describedby="list_col_1">Інженерні основи авіації і космонавтики</td><td role="gridcell" style="" title=" авіа- та ракетобудування ІАТ" aria-describedby="list_kaf"> авіа- та ракетобудування ІАТ</td><td role="gridcell" style="" title="4" aria-describedby="list_col_2">4</td><td role="gridcell" style="" title="120" aria-describedby="list_col_3">120</td><td role="gridcell" style="" title="54" aria-describedby="list_col_4">54</td><td role="gridcell" style="" title="36" aria-describedby="list_col_5">36</td><td role="gridcell" style="" title="18" aria-describedby="list_col_6">18</td><td role="gridcell" style="" title="--" aria-describedby="list_col_7">--</td><td role="gridcell" style="" title="66" aria-describedby="list_col_8">66</td><td role="gridcell" style="display:none;" title="Обов’язкові компоненти циклу професійної підготовки" aria-describedby="list_col_9">Обов’язкові компоненти циклу професійної підготовки</td></tr><tr id="10" tabindex="-1" role="row" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="text-align:center;" title="10" aria-describedby="list_col_0">10</td><td role="gridcell" style="" title="Інформаційні технології та загальні методи розробки прикладного ПЗ. Частина 1. Інформаційні технології" aria-describedby="list_col_1">Інформаційні технології та загальні методи розробки прикладного ПЗ. Частина 1. Інформаційні технології</td><td role="gridcell" style="" title=" авіа- та ракетобудування ІАТ" aria-describedby="list_kaf"> авіа- та ракетобудування ІАТ</td><td role="gridcell" style="" title="3" aria-describedby="list_col_2">3</td><td role="gridcell" style="" title="90" aria-describedby="list_col_3">90</td><td role="gridcell" style="" title="54" aria-describedby="list_col_4">54</td><td role="gridcell" style="" title="18" aria-describedby="list_col_5">18</td><td role="gridcell" style="" title="--" aria-describedby="list_col_6">--</td><td role="gridcell" style="" title="36" aria-describedby="list_col_7">36</td><td role="gridcell" style="" title="36" aria-describedby="list_col_8">36</td><td role="gridcell" style="display:none;" title="Обов’язкові компоненти циклу професійної підготовки" aria-describedby="list_col_9">Обов’язкові компоненти циклу професійної підготовки</td></tr><tr id="11" tabindex="-1" role="row" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="text-align:center;" title="11" aria-describedby="list_col_0">11</td><td role="gridcell" style="" title="Інформаційні технології та загальні методи розробки прикладного ПЗ. Частина 2. Основи промислового програмування" aria-describedby="list_col_1">Інформаційні технології та загальні методи розробки прикладного ПЗ. Частина 2. Основи промислового програмування</td><td role="gridcell" style="" title=" космічної інженерії ІАТ" aria-describedby="list_kaf"> космічної інженерії ІАТ</td><td role="gridcell" style="" title="3" aria-describedby="list_col_2">3</td><td role="gridcell" style="" title="90" aria-describedby="list_col_3">90</td><td role="gridcell" style="" title="54" aria-describedby="list_col_4">54</td><td role="gridcell" style="" title="18" aria-describedby="list_col_5">18</td><td role="gridcell" style="" title="--" aria-describedby="list_col_6">--</td><td role="gridcell" style="" title="36" aria-describedby="list_col_7">36</td><td role="gridcell" style="" title="36" aria-describedby="list_col_8">36</td><td role="gridcell" style="display:none;" title="Обов’язкові компоненти циклу професійної підготовки" aria-describedby="list_col_9">Обов’язкові компоненти циклу професійної підготовки</td></tr><tr id="12" tabindex="-1" role="row" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="text-align:center;" title="12" aria-describedby="list_col_0">12</td><td role="gridcell" style="" title="Нарисна геометрія" aria-describedby="list_col_1">Нарисна геометрія</td><td role="gridcell" style="" title=" нарисної геометрії, інженерної та комп'ютерної графіки ФМФ" aria-describedby="list_kaf"> нарисної геометрії, інженерної та комп'ютерної графіки ФМФ</td><td role="gridcell" style="" title="4" aria-describedby="list_col_2">4</td><td role="gridcell" style="" title="120" aria-describedby="list_col_3">120</td><td role="gridcell" style="" title="72" aria-describedby="list_col_4">72</td><td role="gridcell" style="" title="36" aria-describedby="list_col_5">36</td><td role="gridcell" style="" title="36" aria-describedby="list_col_6">36</td><td role="gridcell" style="" title="--" aria-describedby="list_col_7">--</td><td role="gridcell" style="" title="48" aria-describedby="list_col_8">48</td><td role="gridcell" style="display:none;" title="Обов’язкові компоненти циклу професійної підготовки" aria-describedby="list_col_9">Обов’язкові компоненти циклу професійної підготовки</td></tr><tr id="13" tabindex="-1" role="row" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="text-align:center;" title="13" aria-describedby="list_col_0">13</td><td role="gridcell" style="" title="Теоретична механіка. Частина 1. Статика. Кінематика" aria-describedby="list_col_1">Теоретична механіка. Частина 1. Статика. Кінематика</td><td role="gridcell" style="" title=" космічної інженерії ІАТ" aria-describedby="list_kaf"> космічної інженерії ІАТ</td><td role="gridcell" style="" title="5" aria-describedby="list_col_2">5</td><td role="gridcell" style="" title="150" aria-describedby="list_col_3">150</td><td role="gridcell" style="" title="72" aria-describedby="list_col_4">72</td><td role="gridcell" style="" title="54" aria-describedby="list_col_5">54</td><td role="gridcell" style="" title="18" aria-describedby="list_col_6">18</td><td role="gridcell" style="" title="--" aria-describedby="list_col_7">--</td><td role="gridcell" style="" title="78" aria-describedby="list_col_8">78</td><td role="gridcell" style="display:none;" title="Обов’язкові компоненти циклу професійної підготовки" aria-describedby="list_col_9">Обов’язкові компоненти циклу професійної підготовки</td></tr><tr id="14" tabindex="-1" role="row" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="text-align:center;" title="14" aria-describedby="list_col_0">14</td><td role="gridcell" style="" title="Фізика. Частина 1.Механіка. Молекулярна фізика" aria-describedby="list_col_1"><a href="student/index.php?mode=mob&amp;cm=76514&amp;rcms=267974">Фізика. Частина 1.Механіка. Молекулярна фізика</a></td><td role="gridcell" style="" title=" загальної фізики та моделювання фізичних процесів ФМФ" aria-describedby="list_kaf"> загальної фізики та моделювання фізичних процесів ФМФ</td><td role="gridcell" style="" title="5" aria-describedby="list_col_2">5</td><td role="gridcell" style="" title="150" aria-describedby="list_col_3">150</td><td role="gridcell" style="" title="90" aria-describedby="list_col_4">90</td><td role="gridcell" style="" title="36" aria-describedby="list_col_5">36</td><td role="gridcell" style="" title="36" aria-describedby="list_col_6">36</td><td role="gridcell" style="" title="18" aria-describedby="list_col_7">18</td><td role="gridcell" style="" title="60" aria-describedby="list_col_8">60</td><td role="gridcell" style="display:none;" title="Обов’язкові компоненти циклу професійної підготовки" aria-describedby="list_col_9">Обов’язкові компоненти циклу професійної підготовки</td></tr><tr id="15" tabindex="-1" role="row" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="text-align:center;" title="15" aria-describedby="list_col_0">15</td><td role="gridcell" style="" title="Фізика. Частина 2. Електромагнетизм. Оптика. Атомна фізика" aria-describedby="list_col_1"><a href="student/index.php?mode=mob&amp;cm=70815&amp;rcms=267975">Фізика. Частина 2. Електромагнетизм. Оптика. Атомна фізика</a></td><td role="gridcell" style="" title=" загальної фізики та моделювання фізичних процесів ФМФ" aria-describedby="list_kaf"> загальної фізики та моделювання фізичних процесів ФМФ</td><td role="gridcell" style="" title="5" aria-describedby="list_col_2">5</td><td role="gridcell" style="" title="150" aria-describedby="list_col_3">150</td><td role="gridcell" style="" title="90" aria-describedby="list_col_4">90</td><td role="gridcell" style="" title="36" aria-describedby="list_col_5">36</td><td role="gridcell" style="" title="36" aria-describedby="list_col_6">36</td><td role="gridcell" style="" title="18" aria-describedby="list_col_7">18</td><td role="gridcell" style="" title="60" aria-describedby="list_col_8">60</td><td role="gridcell" style="display:none;" title="Обов’язкові компоненти циклу професійної підготовки" aria-describedby="list_col_9">Обов’язкові компоненти циклу професійної підготовки</td></tr><tr id="16" tabindex="-1" role="row" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="text-align:center;" title="16" aria-describedby="list_col_0">16</td><td role="gridcell" style="" title="Хімія" aria-describedby="list_col_1"><a href="student/index.php?mode=mob&amp;cm=47839&amp;rcms=267976">Хімія</a></td><td role="gridcell" style="" title=" загальної та неорганічної хімії ХТФ" aria-describedby="list_kaf"> загальної та неорганічної хімії ХТФ</td><td role="gridcell" style="" title="4" aria-describedby="list_col_2">4</td><td role="gridcell" style="" title="120" aria-describedby="list_col_3">120</td><td role="gridcell" style="" title="54" aria-describedby="list_col_4">54</td><td role="gridcell" style="" title="36" aria-describedby="list_col_5">36</td><td role="gridcell" style="" title="--" aria-describedby="list_col_6">--</td><td role="gridcell" style="" title="18" aria-describedby="list_col_7">18</td><td role="gridcell" style="" title="66" aria-describedby="list_col_8">66</td><td role="gridcell" style="display:none;" title="Обов’язкові компоненти циклу професійної підготовки" aria-describedby="list_col_9">Обов’язкові компоненти циклу професійної підготовки</td></tr></tbody></table></div></div></div><div class="ui-jqgrid-resize-mark" id="rs_mlist">&nbsp;</div></div> 
+        <div id="pager"></div> 
+    
+        
+    
+    <div id="debug" style="display:none"></div>												<br><br>
+                                                    <span style="color:#CCCCCC; font-size:95%"></span>
+              
+                                            <!-- -=- -=- -=- -=- -=- -=- -=- -=- -=- eof content  -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -->
+                                      
+                                  </td>
+                                </tr>
+                            </tbody></table>
+    
+                        </td>
+                        
+                    </tr>
+                </tbody></table>
+                        
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="vertical-align:bottom" class="footer">
+                <!--нижняя часть страницы-->
+                <table cellpadding="0" cellspacing="0" border="0" width="100%" class="footer">
+                    <tbody><tr>
+                        <td>						Національний технічний університет України "КПІ ім. Ігоря Сікорського" © 2011-2024<br>
+                            Усі права застережено. <a href="https://ecampus.kpi.ua/privacy">Правила використання інформації сайту</a>.<br>
+                            Інформаційна підтримка: тел. +38 (044) 204 80 06, e-mail:· ecampus@kpi.ua<br>
+                                </td>
+                        <td class="socials">
+    
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+        
+        
+    </tbody></table>
+    
+    
+    <script type="text/javascript" language="JavaScript" src="js/init_panels.js"></script>
+    <!--<script type="text/javascript" language="JavaScript" src="js/timer.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/ajax/test_check.js"></script>-->
+    </body></html>

@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="keywords" http-equiv="keywords" content="">
+        <meta name="description" content="">
+        <meta name="classification" content="Education, High school, Campus, Kyiv">
+        <meta http-equiv="Cache-Control" content="no-cache"><meta http-equiv="Pragma" content="no-cache">
+        <meta name="revisit" content="7 days"><meta name="revisit-after" content="7 days"><meta name="robots" content="index, follow">
+        <meta name="distribution" content="Global"><meta name="allow-search" content="yes">
+        <meta http-equiv="reply-to" content="info@campus.kpi.ua">
+        <meta name="document-state" content="dynamic">
+        <meta name="author" content="Design, web-architecture and programming by 3SunS. Data and DB support provided by KBIS and KPI subdivisions">
+
+        <link type="image/ico" href="images/icon.ico" rel="SHORTCUT ICON">
+
+        
+       
+        
+        
+        
+
+
+        <style>
+
+                .li{
+                        list-style-type: none;
+
+                        
+                }
+
+.rc_del {
+	color:#CC0000;
+}
+/*
+.stuBoxA {
+	visibility:hidden;
+	height:40px;	
+}
+*/
+.box4list {
+	width:98%; color:#999999; border:1px solid #bbb; padding:3px;
+	min-height:40px;
+}
+.accordion div {
+	margin:0px;
+	padding:0px;
+}
+.addRecipientBtn {
+	margin:5px;
+}
+.addRecipientBtn b {
+	color:#009933;
+	font-size:120%;
+}
+.recipientBox {
+	background-color:#FAFAFA;
+}
+
+/***	greyTbl		***/
+.greyTbl {
+	padding:0px;
+	background-color:#999;
+	margin-top:12px;
+}
+.greyTbl th, .greyTbl td {
+	background-color:#FFFFFF;
+	padding:3px;
+}
+.greyTbl th {
+	background-color:#eee;
+}
+
+.greyTbl caption {
+	padding:4px;
+	font-weight:bold;
+	color:#555;
+	text-align:left;
+/*	background-color:#999999;
+	border:1px solid #CCCCCC;
+	border-bottom:none;
+*/
+	
+}
+
+
+/***		Campus	CSS		***/
+
+.box_gen {
+	border:1px solid #7f9db9;
+	background-image:url(../images/campus/box/bg_blue.png);
+	background-position:bottom;
+	background-repeat:repeat-x;
+	padding:10px;
+	margin-bottom:10px;
+}
+.box_gen, .box_gen h1, .box_gen table {
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+.box_gen h1 {
+	font-style:italic;
+	font-size:15pt;
+	font-weight:normal;
+	padding:0px;
+	margin-top:0px;
+}
+
+.bb_head {
+	font-style:italic;
+}
+
+
+.box_info {
+	border:1px solid #b5b5b5;
+	background-image:url(../images/campus/box/bg_orange.png);
+	background-position:bottom;
+	background-repeat:repeat-x;
+	padding:10px;
+	margin-bottom:10px;
+	cursor:default;
+}
+.box_info .dt{
+	font-weight:bold;
+	padding-right:20px;
+	color:#999999
+}
+.box_info hr{
+	color:#b5b5b5;
+	width:100%;
+	border:0px;
+	border:0px;
+	border-bottom:1px;
+	border-style:solid;
+}
+.box_info .body {
+	cursor:text;
+}
+
+.genBox .box_info {
+	max-width:610px;
+	width:580px;
+}
+
+/* Common CSS Styles Document */
+
+br.h3{
+	line-height: 3px;
+}
+br.h7{
+	line-height: 7px;
+}
+
+.block{
+display:block;
+}
+.hidden {
+	display:none;
+}
+.c_def{
+	cursor:default;
+}
+.t90{
+font-size:90%;
+}
+.t110{
+font-size:110%;
+}
+.hand{
+	cursor:pointer;
+}
+
+a.no_under{
+	text-decoration: none;
+}
+
+
+.w100 {
+	width:100%;
+}
+.bg_norepeat {
+	background-position:left;
+	background-repeat:no-repeat;
+}
+
+form {
+	padding:0px;
+	margin:0px;
+}
+
+/* -=-=-=-=-=-=-=-=-=	Color styles  =-=-=-=-=-=-=-=-=-=-=-=-=-=-= */	
+.white{
+	color:white;
+}	
+.red{
+	color:#FF0000;
+}	
+.violet{
+	color:#000088;
+}	
+.green{
+	color:green;
+}	
+.orange{
+	color:orange;
+}
+.blue{
+	color:#336699;
+}
+
+.bg-white{
+	background-color:#FFFFFF;
+}	
+.bg-violet{
+	background-color:#000088;
+}
+.bg-grey{
+	background-color:#D7D7D7;
+}
+.bg-lightgrey{
+	background-color:#F7F7F7;
+}
+
+.bg-lightblue{
+	background-color:#f4f5f7;
+}
+.bg-darkblue{
+	background-color:#edf0f3;
+}
+
+.error{
+	color:#E00;
+}
+
+.error .white{
+	color:#ccc;
+}
+
+/* -=-=-=-=-=-=-=-=-=	Input styles  =-=-=-=-=-=-=-=-=-=-=-=-=-=-= */	
+.input_hl{
+	background-color:#FFEE99;
+	border-style:solid;
+}
+
+input.wide,textarea.wide{
+	width:97%;
+	font-size:12px;
+}
+input.small{
+	width:40px;
+	font-size:12px;
+}
+
+
+/* -=-=-=-=-=-=-=-=-=	Calendar styles  =-=-=-=-=-=-=-=-=-=-=-=-=-=-= */	
+.cl_sel { font:xx-small Verdana;   background-color:#dddddd; }
+.cl_wek { font:bold xx-small Verdana; color:black; width:100%; height:12px; }
+.cl_day { font:bold xx-small verdana; color:black; width:100%; height:12px; text-decoration:none; cursor:pointer; }
+.cl_day:hover {
+	cursor:pointer;
+	text-decoration:none;
+	color:red;
+}
+.cl_dayns4 { font:bold x-small verdana;   color:black; text-decoration:none; }
+.cl_in { border:inset 1px; padding:0px; font-weight:normal; background-color: #cccccc; width:18px; height:14px; }
+
+.cl_out { border:outset 1px; padding:0px; font-weight:bold; background-color: #cccccc; width:18px; height:14px; 
+}
+
+/**
+.cl_day{
+	cursor:pointer;
+	text-decoration:none;
+}
+
+.cl_day:hover{
+cursor:pointer;
+text-decoration:none;
+color:red;
+}
+.cl_dayns4{
+cursor:pointer;
+text-decoration:none;
+}
+.cl_dayns4:hover{
+cursor:pointer;
+text-decoration:none;
+color:red;
+}
+.cl_out{
+cursor:default;
+}
+
+**/
+
+
+/***
+ ***		Navigation styles
+ ***/
+
+.more{
+	border:outset 1px;
+	color:#555555;
+	
+	padding:3px;
+	padding-left:7px;
+	padding-right:7px;
+	
+	font-weight:normal; 
+	background-color: #e0e0e0; 
+	height:21px;
+	text-decoration:none;
+}
+.more:hover{
+	border:outset 1px;
+	color:#555555;
+
+	padding:3px;
+	padding-left:7px;
+	padding-right:7px;
+	
+	background-color: #f0f0f0;
+	height:21px;
+	text-decoration:none;
+}
+
+.more_dis{
+	border:outset 1px;
+	color:#aaaaaa;
+	
+	padding:3px;
+	padding-left:7px;
+	padding-right:7px;
+	
+	font-weight:normal; 
+	background-color: #e0e0e0; 
+	height:21px;
+	text-decoration:none;
+	cursor:default;
+}
+
+.dialog_modal {
+	display:none;
+}
+
+
+/***		Quick search results 		***/
+/*** 		jquery.suggest.css			**/
+
+  .ac_results {
+	  border: 1px solid gray;
+	  background-color: #F8F7F5;
+	  background-image:url(../images/find/qsr.bg.png);
+	  background-repeat:repeat-x;
+	  background-position:top;
+	  padding: 0;
+	  margin: 0;
+	  list-style: none;
+	  position: absolute;
+	  z-index: 10000;
+	  display: none;
+/*
+	width:200px;
+	  height:200px;
+	  top:10px;
+	  left:20px;
+	  */
+  }
+  
+  .ac_results li {
+	font-size:10pt;
+	padding: 2px 5px;
+	white-space: nowrap;
+	color:#111;
+	text-align: left;
+  }
+
+  .ac_results li a{
+	color:#111;
+	text-decoration:none;
+}
+.ac_results li.cc {
+	background-color:#333;
+	color:#FFF;
+	cursor:default;
+	text-align:right;
+}
+.ac_results li.cc .count {
+/*	display:none;*/
+}
+.ac_results li.cc .count tt {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:80%;
+}
+.ac_results li.cc .btnClose {
+	font-weight:bold;
+	cursor:pointer;
+}
+
+
+.ac_over {
+	  cursor: pointer;
+	  background-color: #FFF0C8;
+  }
+  
+  .ac_match {
+	  border-bottom:1px #000 dotted;
+	  font-style:normal;
+	  font-weight:normal;
+/*	  color: black;*/
+  } 
+
+.dc_a a, .dc_a a:visited{
+ font-size:10pt;
+ color:#3399FF;
+}
+.dc_a span {
+ font-size:8pt;
+ color:#009933;
+}
+
+/* CSS Document */
+
+
+html, body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eee;
+
+}
+
+.main_tbl {
+    height: 100%;
+}
+
+/*--------Старт боковые колонки-----------------*/
+.left_clmn {
+    width: 10%;
+}
+
+
+/*----------Левая боковая колонка---------------*/
+
+/*----------Правая боковая колонка---------------*/
+.right_clmn {
+    width: 10%;
+}
+
+/*--------Конец боковые колонки-----------------*/
+
+
+table, table tr, table td {
+    vertical-align: top;
+}
+
+.content_area {
+    width: 100%;
+}
+
+img {
+    border-width: 0px;
+}
+
+.clAdmin, .clPrep {
+    color: #3a6ecb;
+    text-transform: capitalize;
+}
+
+
+/*--------Старт центральная колонка-----------------*/
+.header {
+    min-width: 1000px;
+    width: 80%;
+    background-image: url(../images/head/bg.png);
+    background-repeat: repeat-x;
+    background-color: #FFFFFF;
+    height: 160px;
+}
+
+.content_left {
+    width: 182px !important;
+}
+
+.header .logo img {
+    margin-left: -25px;
+    z-index: 1000;
+}
+
+/***		Profile Mgmt			***/
+.header .profile {
+    width: 100%;
+    height: 40px;
+    padding-bottom: 3px;
+}
+
+.header .profile td {
+    vertical-align: bottom;
+}
+
+.header .profile .title {
+    text-align: center;
+    /*	font-style:italic;*/
+    padding-bottom: 4px;
+    font-size: 14px;
+    color: #5F5F5F;
+}
+
+/*.header .profile .title span{
+	color:#215F7C;
+}*/
+
+.header .profile .switch {
+    width: 170px;
+}
+
+.header .profile .ctrl {
+    width: 40px;
+    text-align: right;
+}
+
+/***		searchBox			***/
+.header .searchBox {
+    padding-top: 4px;
+    padding-left: 18px;
+    width: 100%;
+    height: 34px;
+}
+
+.header .searchBox .title {
+    width: 75px;
+    vertical-align: baseline;
+    padding-bottom: 3px;
+    font-size: 14px;
+    color: #5F5F5F;
+}
+
+.header .searchBox input {
+    width: 360px;
+    /*	border:1px solid #999;*/
+}
+
+.header .searchBox button {
+    border: 1px solid #999;
+    background-color: #eeeeee;
+    margin-left: 5px;
+}
+
+.header .searchBox .advance {
+    text-align: left;
+    width: 210px;
+    vertical-align: baseline;
+    padding-bottom: 5px;
+}
+
+.header .searchBox .advance img {
+    padding-right: 3px;
+    margin-bottom: -2px;
+}
+
+.header a {
+    color: #2B6885;
+}
+
+.header a:hover {
+    color: #EF991D;
+}
+
+.header .searchBox .advance a {
+    font-size: 12px;
+}
+
+.pageHead {
+    margin: 2px;
+    margin-top: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    /*	margin-left:28px;*/
+    padding: 5px;
+    padding-left: 70px;
+    vertical-align: bottom;
+    /*	border:1px solid #c3c3c3;
+        border-right:0px;
+        background-color:#f5f5f5;
+        font-style:italic;
+    */
+    background-image: url(../images/page/default.png);
+    background-position: 18px 1px;
+    background-repeat: no-repeat;
+    font-size: 22px;
+    color: #336699; /*595959*/
+}
+
+/***		navigation			***/
+.navigation {
+    /*	font-style:italic;*/
+    height: 36px;
+    font-size: 12px;
+    padding-left: 18px;
+}
+
+.navigation td {
+    vertical-align: middle;
+    color: #EF991D;
+}
+
+.navigation img {
+    padding-left: 3px;
+    padding-right: 5px;
+    vertical-align: middle;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #2B6885;
+}
+
+.centre_clmn2 {
+    width: 1002px !important;
+    min-width: 1000px;
+    max-width: 1004px;
+    background-color: #FFFFFF;
+    min-height: 60%;
+    height: 70%;
+}
+
+/*-------------------------*/
+/*table.head{
+	background-image:url(../images/head/head_bg.jpg);
+	background-color:#669933;
+	background-repeat:no-repeat;
+	background-position:left;
+	height:222px;
+}*/
+/***		Menu		***/
+.menu {
+    width: 182px;
+    padding-left: 9px;
+    height: 100%;
+}
+
+.menu table {
+}
+
+.menu table td {
+
+}
+
+.menu td {
+    font-size: 12px;
+    cursor: default;
+}
+
+.menu .spacer {
+    height: 16px;
+}
+
+.menu .spacer_between {
+    /*	border-top:1px solid #C4D3ED;*/
+    background-image: url(../images/menu/spacer.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.lmi_delim {
+    /*	background-image:url(images/lmi_delim_bg.png);*/
+    height: 0px;
+    display: none;
+}
+
+
+.lm_item td, .lm_item_active td, .mi_common td {
+    /*	background-color:#faf9f8;*/
+    font-size: 14px;
+    vertical-align: bottom;
+    /*	border:1px solid #e2e2e2;*/
+    /*	border-bottom:1px solid #000000;
+        border-top:1px solid #873e3e;*/
+}
+
+.lm_item_active td {
+    border-left: 0px;
+    background-color: #FFFFFF;
+    background-image: url(../images/menu/mi_bullet.png);
+    background-repeat: no-repeat;
+    background-position: 2px 8px;
+}
+
+.mi_common td {
+    /*	background-color:#f2fff0;*/
+}
+
+.lm_item td a, .mi_common td a, .lm_item_active td a {
+    color: #2B6885;
+    /*	background: url(images/lmi_bullet.png) no-repeat top 0px;  */
+    text-align: left;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    height: 15px;
+    vertical-align: bottom;
+    display: block;
+}
+
+.mi_common td a {
+    /*	color:#0048cb;*//*7c917a*/
+}
+
+.lm_item td a:hover, .mi_common td a:hover {
+    background: url(images/lmi_bullet_active.png) no-repeat bottom 0px;
+
+    /*	text-decoration: underline;*/
+    color: #EF991D;
+}
+
+.lm_item a.dis, .lm_item a.dis:hover {
+    color: #CCCCCC;
+    text-decoration: none;
+}
+
+.lmi {
+    color: #f3f3f3;
+}
+
+.menu A, .menu A:link, .menu A:visited, .menu A:active {
+    text-decoration: none;
+    /*    COLOR: #edd;*/
+}
+
+
+/*-------------------------*/
+/*.btn_active,.btn_passive{
+	display:block;
+	width:200px;
+	height:45px;
+	margin-left:17px;
+	line-height:45px;
+	padding-left:23px;
+	font-family:"Arial Narrow", Arial, Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	text-decoration:none;
+	color:#000000;
+	background-repeat:no-repeat;
+}
+
+.btn_active{
+	background-image:url(../images/nav_menu/btn_active.png);
+}
+.btn_passive{
+	background-image:url(../images/nav_menu/btn_passive.png);
+}
+.btn_passive:hover{
+	background-image:url(../images/nav_menu/btn_hover.png);
+}
+*/
+/*-------------------------*/
+/*
+div.sub_menu{
+	padding-top:12px;
+	padding-bottom:12px;
+	padding-left:13px;
+	margin-top:1px;
+	margin-left:13px;
+	background-image:url(../images/nav_menu/bg_sub_menu.png);
+	background-repeat:no-repeat;
+	
+}
+.sub_pssv, .sub_pssv2{
+	padding-left:13px;
+	display:block;
+	font-family:"Arial Narrow", Arial, Helvetica, sans-serif;
+	font-size:16px;
+	text-decoration:none;
+	color:#5b5b5b;
+	background-image:url(../images/nav_menu/sub_point_pssv.png);
+	background-repeat:no-repeat;
+	background-position:left center;
+}
+.sub_pssv:hover, .sub_pssv2:hover {
+	background-image:url(../images/nav_menu/sub_point_actv.png);
+}
+.sub_pssv2 {
+	padding-left:25px;
+	background-position:11px 8px;
+}
+*/
+/*-------------------------*/
+/*--------Конец блока меню -----------------*/
+
+/* ///// START Module List Styles ///// */
+.listOddBold {
+    BACKGROUND-COLOR: #DCDCDC;
+    COLOR: #000000;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN: left;
+    VERTICAL-ALIGN: top
+}
+
+.listOddBold A:link {
+    COLOR: #336699;
+    FONT-WEIGHT: bold
+}
+
+.listOddBold A:visited {
+    COLOR: #336699;
+    FONT-WEIGHT: bold
+}
+
+.listOddBold A:active {
+    COLOR: #336699;
+    FONT-WEIGHT: bold
+}
+
+.listOddBold A:hover {
+    COLOR: #000033;
+    FONT-WEIGHT: bold
+}
+
+.listEvenBold {
+    BACKGROUND-COLOR: #ffffff;
+    COLOR: #000000;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN: left;
+    VERTICAL-ALIGN: top
+}
+
+.listEvenBold A:link {
+    COLOR: #336699;
+    FONT-WEIGHT: bold
+}
+
+.listEvenBold A:visited {
+    COLOR: #336699;
+    FONT-WEIGHT: bold
+}
+
+.listEvenBold A:active {
+    COLOR: #336699;
+    FONT-WEIGHT: bold
+}
+
+.listEvenBold A:hover {
+    COLOR: #000033;
+    FONT-WEIGHT: bold
+}
+
+.listSelected {
+    background-color: #008A8C;
+    color: White;
+}
+
+.listSelected A:link {
+    color: White;
+}
+
+.listOdd {
+    BACKGROUND-COLOR: #DCDCDC;
+    COLOR: #000000;
+    VERTICAL-ALIGN: top;
+    cursor: default;
+}
+
+.listEven {
+    BACKGROUND-COLOR: #EEEEEE;
+    COLOR: #000000;
+    VERTICAL-ALIGN: top;
+    cursor: default;
+}
+
+.ListGrant {
+    BACKGROUND-COLOR: #EEF9EE;
+    COLOR: #000000;
+    VERTICAL-ALIGN: top;
+    cursor: default;
+}
+
+.ListDeny {
+    BACKGROUND-COLOR: #FFEEEE;
+    COLOR: #000000;
+    VERTICAL-ALIGN: top;
+    cursor: default;
+}
+
+.listOdd A:link, .listOdd A:visited, .listOdd A:active, .listEven A:link, .listEven A:visited, .listEven A:active,
+.ListGrant A:link, .ListGrant A:visited, .ListGrant A:active,
+.ListDeny A:link, .ListDeny A:visited, .ListDeny A:active {
+    COLOR: #700000;
+}
+
+.subListOdd {
+    BACKGROUND-COLOR: #D5D5DF;
+    COLOR: #000000;
+    VERTICAL-ALIGN: top
+}
+
+.subListEven {
+    BACKGROUND-COLOR: #E7E7EF;
+    COLOR: #000000;
+    VERTICAL-ALIGN: top
+}
+
+.subListOdd A, .subListEven A {
+    COLOR: #2255B0
+}
+
+.listOdd A:hover, .listEven A:hover, .subListOdd A:hover, .subListEven A:hover {
+    COLOR: #000033
+}
+
+.ListOdd img, .ListEven img, .subListOdd img, .subListEven img {
+    vertical-align: middle;
+    border: 0;
+    padding-right: 5px;
+    padding-left: 2px;
+
+
+}
+
+/* ///// END Module List Styles ///// */
+
+
+/*--------content -----------------*/
+.cntnt {
+    padding-right: 15px;
+    padding-left: 8px;
+    padding-top: 0px;
+    text-align: justify;
+    font-family: Verdana;
+    font-size: 12px;
+    color: #353535;
+    min-height: 500;
+    color: #555;
+}
+
+.cntnt h2 {
+    /*	color:#7c916b;*/
+    font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    margin: 0px;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.cntnt .foto {
+    margin: 5px;
+    padding-bottom: 1px;
+    padding-right: 1px;
+    border-bottom: 1px #eeeeee solid;
+    border-right: 1px #eeeeee solid;
+    float: left;
+}
+
+/*-------------------------*/
+
+td.footer {
+    height: 62px;
+    background-color: #FFFFFF;
+
+}
+
+table.footer {
+    height: 62px;
+    padding-left: 22px;
+    font-size: 13px;
+    border-top: 2px solid #208944;
+    padding-top: 15px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    min-height: 100px;
+}
+
+.footer td {
+    vertical-align: middle;
+}
+
+.footer a {
+    color: #208944;
+    text-decoration: none;
+}
+
+.footer .socials {
+    text-align: right;
+    padding-right: 24px;
+}
+
+.footer .socials a {
+    padding-left: 7px;
+}
+
+a.docs {
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+}
+
+
+/***		Msgs
+ ***/
+.genBox, .msgsBox {
+    width: 100%;
+    /*	background-color:#996600*/
+}
+
+.msgsBox .mainFrame {
+    width: 820px;
+    /*	background-color:#FF0000*/
+}
+
+.genBox button, .msgsBox button, .rnpButtons a {
+    border: 1px solid #000000;
+    background-color: #eeeeee;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 5px;
+    color: #000000;
+    margin-bottom: 3px;
+    text-decoration: none;
+
+}
+
+.genBox button.active, .msgsBox button.active, .rnpButtons a.active {
+    background-color: #fffcdd;
+    color: #000000;
+}
+
+.rnpButtons a {
+    display: block;
+}
+
+.rnpButtons .groups br {
+    line-height: 9px;
+}
+
+.rnpButtons .groups a {
+    display: inline;
+}
+
+/***	Filter Box	***/
+.genBox .filterBox img, .msgsBox .filterBox img {
+    margin-bottom: -3px;
+    padding-right: 4px;
+}
+
+.genBox .filterBox, .msgsBox .filterBox {
+    padding-left: 9px;
+    width: 170px;
+}
+
+.genBox .filterBox h2, .msgsBox .filterBox h2 {
+    font-size: 14pt;
+    font-weight: bold;
+    color: #3f3f3f;
+    text-align: left;
+    padding-bottom: 0px;
+    margin-bottom: 9px;
+}
+
+.genBox .filterBox button, .msgsBox .filterBox button {
+    width: 162px;
+    text-align: center;
+    height: 42px;
+    margin-bottom: 5px;
+
+}
+
+
+.genBox .ctrl, .msgsBox .ctrl {
+    padding-bottom: 10px;
+}
+
+.genBox label, .msgsBox label {
+    font-weight: bold;
+}
+
+.msgBox {
+    padding: 5px;
+    border: 1px solid #CCCCCC;
+}
+
+.msgBox button {
+    margin: 5px;
+}
+
+.msgBody {
+    padding: 10px;
+    background-color: #f2f2f2;
+    width: 96%;
+    border: 1px dotted #333333;
+    margin-top: 5px;
+}
+
+.msgIsEmpty {
+    font-size: 200%;
+    color: #aaa;
+}
+
+.msg_form, .msg_form .formBox {
+    width: 100%;
+}
+
+.msg_form textarea {
+    width: 90%;
+}
+
+.msg_form .body {
+    height: 300px;
+}
+
+.recipientBox {
+    padding: 3px;
+    background-color: #EEE;
+    border: 1px solid #aaa;
+}
+
+.recipientBox .eduStructBox {
+    padding-bottom: 5px;
+    margin-bottom: 7px;
+    border-bottom: 1px dotted #333333;
+}
+
+.recipientBox th {
+    text-align: left;
+}
+
+.rc_del {
+    color: #CC0000;
+}
+
+.listDyn {
+    width: 98%;
+    color: #999999;
+    border: 1px solid #bbb;
+    padding: 3px;
+    min-height: 40px;
+    background-color: #FAFAFA
+}
+
+.bbBox .subject {
+    font-weight: bold;
+}
+
+.bbBox .delBtn {
+    text-decoration: none;
+    color: #0066CC;
+    padding-right: 3px;
+    font-family: Verdana, Arial, Helvetica, sans-serif
+}
+
+@import url("common.css");
+@import url("desktop.css");
+@import url("campus.css");
+@import url("boxes.css");
+
+/***	Plugin styles	***/
+@import url("../js/jquery/tablesorter/style.css");
+
+
+
+
+        </style>
+        
+        </head>
+<body><div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+<script type="text/javascript" language="JavaScript" src="classes/overlib.js"></script>
+<a name="top"></a>
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="main_tbl">
+    <tbody><tr nowrap="nowrap">
+        <!--левая боковая-->
+        <th class="left_clmn" valign="top" rowspan="3"></th>
+        <!--центральная (контентная) -->
+        <td valign="top" class="header" nowrap="nowrap">
+			
+            
+            <!--шапка с лого и контролами-->
+            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tbody><tr>
+                    <td class="content_left logo"><li><a href="osnova.html"><img src="https://campus.kpi.ua/images/logo.png" alt="е-Кампус КПІ"></a></li>
+                    </td>
+                    <td class="content_area">
+                        <table cellpadding="0" cellspacing="0" border="0" class="profile">
+                            <tbody><tr>
+                                <td class="title"><span>Вітаємо, </span>  Катренич Дмитро Вікторович!</td>
+                                <td class="switch">
+                                    <select id="role_switch" disabled="disabled">
+                                        <option value="">.: змінити роль :.</option>
+                                                                                
+                                    </select>
+                                </td>
+                                <td class="ctrl"><a href="student/index.php?mode=logout" title="Вихід"><img src="https://campus.kpi.ua/images/ctrl/exit.png" alt="[X]" border="0" title="Вихід"></a>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        <form action="student/index.php?mode=search" method="post" name="search_form">
+                        <table cellpadding="0" cellspacing="0" border="0" class="searchBox">
+                            <tbody><tr>
+                                <!--<td class="title"></td>-->
+                                <td>
+                                </td>
+                                <td class="advance">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        </form>
+
+                        <table cellpadding="0" cellspacing="0" border="0" class="navigation">
+                            <tbody><tr>
+                                <td><li><a href="osnova.html" title="">Головна</a></li>
+                                                              
+                              
+                                                              		</td>
+                            </tr>
+                        </tbody></table>
+                                                <div class="pageHead" style="background-image:url(images/page/kodeks.png);">Кодекс честі</div>
+                                            </td>
+                </tr>
+            </tbody></table>
+            
+                    </td>
+        
+        
+        <!--правая боковая-->
+        <th class="right_clmn" valign="top" rowspan="3"></th>
+    </tr>
+    
+
+    <tr>
+        <td class="centre_clmn2">
+        
+            <!--контентная часть страницы-->
+            <table cellpadding="0" cellspacing="0" border="0" width="100%" height="100%">
+                <tbody><tr valign="top">
+                     <!--навигационное меню-->
+                     <td class="menu" nowrap="">
+                        <table cellpadding="0" cellspacing="3" border="0" width="100%">
+                                
+    
+                                <tbody><tr class="lm_item mi_common">
+                                        <td>
+                                                <li><a href="MyProf.html">Мій профіль</a></li>
+                                        </td>
+                                </tr>
+
+    <tr class="lmi_delim"><td></td></tr>							
+    
+                                <tr class="lm_item mi_common">
+                                        <td>
+                                                <li><a href="contacti.html">Контакти</a></li>
+                                        </td>
+                                </tr>
+
+    <tr class="lmi_delim"><td></td></tr>							
+    
+                                <tr class="lm_item mi_common">
+                                        <td>
+                                                <li><a href="dovidka.html" target="_blank">Довідка</a></li>
+                                        </td>
+                                </tr>
+
+    <tr class="lmi_delim"><td></td></tr>							
+    
+                                <tr class="lm_item_active mi_common">
+                                        <td>
+                                                <li><a href="codex.html">Кодекс честі</a></li>
+                                        </td>
+                                </tr>
+
+    <tr class="lmi_delim"><td></td></tr>							
+    <tr><td class="spacer spacer_between"></td></tr>
+
+    
+                                <tr class="lm_item">
+                                        <td>
+                                               <li><a href="povidomlenya.html">Повідомлення</a></li> 
+                                        </td>
+                                </tr>
+
+    <tr class="lmi_delim"><td></td></tr>	
+                                <tr class="lm_item">
+                                        <td>
+                                                <li><a href="curator.html">Куратор</a></li>
+                                        </td>
+                                </tr>
+
+    <tr class="lmi_delim"><td></td></tr>	
+                                <tr class="lm_item">
+                                        <td>
+                                                <li><a href="PHP.html">РНП</a></li>
+                                        </td>
+                                </tr>
+
+    <tr class="lmi_delim"><td></td></tr>	
+                                <tr class="lm_item">
+                                        <td>
+                                                <li><a href="medotZab.html">Метод.забезпечення</a></li>
+                                        </td>
+                                </tr>
+
+    <tr class="lmi_delim"><td></td></tr>	
+                                <tr class="lm_item">
+                                        <td>
+                                                <li><a href="potControl.html">Поточний контроль</a></li>
+                                        </td>
+                                </tr>
+
+    <tr class="lmi_delim"><td></td></tr>	
+                                <tr class="lm_item">
+                                        <td>
+                                                <li><a href="Opituvanie.html">Опитування</a></li>
+                                        </td>
+                                </tr>
+
+    <tr class="lmi_delim"><td></td></tr>	
+                                <tr class="lm_item">
+                                        <td>
+                                                <li><a href="RectorControl.html">Ректорський контроль</a></li>
+                                        </td>
+                                </tr>
+
+    <tr class="lmi_delim"><td></td></tr>	
+                                <tr class="lm_item">
+                                        <td>
+                                                <li><a href="Sesion.html">Сесія</a></li>
+                                        </td>
+                                </tr>
+
+    <tr class="lmi_delim"><td></td></tr>	
+                                <tr class="lm_item">
+                                        <td>
+                                                <li><a href="Vstup2024mag.html">Вступ 2024 (магістратура)</a></li>
+                                        </td>
+                                </tr>
+
+    <tr class="lmi_delim"><td></td></tr>	
+                                <tr class="lm_item">
+                                        <td>
+                                                <li><a href="DocumentsStud.html">Документи (студ.)</a></li>
+                                        </td>
+                                </tr>
+
+    <tr class="lmi_delim"><td></td></tr>	
+                                <tr class="lm_item">
+                                        <td>
+                                                <li><a href="ResAtest.html">Результати атестації</a></li>
+                                        </td>
+                                </tr>
+
+                                <tr><td class="spacer"></td></tr>
+                        </tbody></table>
+                     </td>
+                    <td valign="top">
+                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                            <tbody><tr>
+                               <td class="cntnt" valign="top" colspan="2">
+                                  
+          <!-- -=- -=- -=- -=- -=- -=- -=- -=- -=- content  -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -->
+                                                <div style="width:90%;">
+	<h2>Вітаємо Вас у системі «Електронний Кампус» КПІ ім. Ігоря Сікорського!</h2>
+
+	<b><p>Шановні відвідувачі системи Електронний кампус!</p></b>
+
+	<p>Автоматизована система «Електронний Кампус» (АС ЕК) - це унікальне віртуальне середовище, в якому взаємодіють всі учасники освітнього процесу КПІ ім. Ігоря Сікорського. Тут можна знайти методичне забезпечення до навчальних дисциплін, результати поточного контролю, новини навчального процесу та іншу важливу інформацію.</p>
+
+	<ul><b>Корисні посилання:</b>
+		<li>розклад занять: <a href="http://schedule.kpi.ua" target="_blank">schedule.kpi.ua</a>;</li>
+		<li>питання щодо навчання:  <a href="https://t.me/DNVR_team_bot" target="_blank">бот Департаменту навчально-виховної роботи (Телеграм)</a>;</li>
+		<li>форма скарг та пропозицій АС ЕК: <a href="https://ecampus.kpi.ua/feedback" target="_blank">https://ecampus.kpi.ua/feedback</a> або <a href="mailto:ecampus@kpi.ua">ecampus@kpi.ua</a>.</li>
+	</ul>
+
+	<p>Бажаємо Вам натхнення, наснаги у навчанні й відкриття нових горизонтів успіху!</p>
+	
+	<h4><p>З повагою, Команда Конструкторського бюро інформаційних систем КПІ ім. Ігоря Сікорського</p></h4>
+	
+	<hr>
+
+				<div style="padding: 10px 30px; text-align:center; background-color: #b6e9e8; border-radius: 20px 20px 20px 20px; ">
+				<h2><b>Календарний контроль</b></h2>
+				<p style="font-size:14pt; color:blue;"> <b>Триває 2-й календарний контроль (2024-12-02 - 2024-12-14).</b></p>				
+
+											</div>
+			<br>
+		
+
+		
+	
+		
+
+	
+	
+			
+			
+	<!---->
+	<style type="text/css">
+		div.note{
+			padding:5px; padding-left:0px; color:#999999;
+		}
+	</style>
+
+	<!---->
+
+
+	<ul>
+	<li>Будь-яке навмисне пошкодження роботи системи та використання інших логінів є порушенням законодавства України.</li>
+	<li>Для корректної роботи системи використовуйте будь-ласка найсвіжішу версію браузера!</li>
+	<li>Просимо завантажувати файли не більше 2МБ, а назву файлу задавати латиницею без додаткових символів (“пробіл”, “тире”, “двокрапка”, тощо).</li>
+	</ul>
+
+	<hr>
+</div>	
+<div id="debug" style="display:none"></div>												<br><br>
+												<span style="color:#CCCCCC; font-size:95%"></span>
+		  
+                                        <!-- -=- -=- -=- -=- -=- -=- -=- -=- -=- eof content  -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -->
+                                  
+                              </td>
+                            </tr>
+                        </tbody></table>
+
+                    </td>
+                    
+                </tr>
+            </tbody></table>
+					
+        </td>
+    </tr>
+    
+    <tr>
+        <td style="vertical-align:bottom" class="footer">
+            <!--нижняя часть страницы-->
+            <table cellpadding="0" cellspacing="0" border="0" width="100%" class="footer">
+                <tbody><tr>
+                    <td>						Національний технічний університет України "КПІ ім. Ігоря Сікорського" © 2011-2024<br>
+						Усі права застережено. <a href="https://ecampus.kpi.ua/privacy">Правила використання інформації сайту</a>.<br>
+						Інформаційна підтримка: тел. +38 (044) 204 80 06, e-mail:· ecampus@kpi.ua<br>
+		                    </td>
+					<td class="socials">
+
+					</td>
+                </tr>
+            </tbody></table>
+        </td>
+    </tr>
+    
+    
+</tbody></table>
+
+
+<script type="text/javascript" language="JavaScript" src="js/init_panels.js"></script>
+<!--<script type="text/javascript" language="JavaScript" src="js/timer.js"></script>
+<script type="text/javascript" language="JavaScript" src="js/ajax/test_check.js"></script>-->
+</body>
+</html>

@@ -1,0 +1,3471 @@
+<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml"><head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1251">
+    <meta name="keywords" http-equiv="keywords" content="">
+    <meta name="description" content="">
+    <meta name="classification" content="Education, High school, Campus, Kyiv">
+    <meta http-equiv="Cache-Control" content="no-cache"><meta http-equiv="Pragma" content="no-cache">
+    <meta name="revisit" content="7 days"><meta name="revisit-after" content="7 days"><meta name="robots" content="index, follow">
+    <meta name="distribution" content="Global"><meta name="allow-search" content="yes">
+    <meta http-equiv="reply-to" content="info@campus.kpi.ua">
+    <meta name="document-state" content="dynamic">
+    <meta name="author" content="Design, web-architecture and programming by 3SunS. Data and DB support provided by KBIS and KPI subdivisions">
+    <link type="image/ico" href="images/icon.ico" rel="SHORTCUT ICON">
+    
+    <style>
+.rc_del {
+color:#CC0000;
+}
+/*
+.stuBoxA {
+visibility:hidden;
+height:40px;
+}
+*/
+.box4list {
+width:98%; color:#999999; border:1px solid #bbb; padding:3px;
+min-height:40px;
+}
+.accordion div {
+margin:0px;
+padding:0px;
+}
+.addRecipientBtn {
+margin:5px;
+}
+.addRecipientBtn b {
+color:#009933;
+font-size:120%;
+}
+.recipientBox {
+background-color:#FAFAFA;
+}
+
+/*** greyTbl ***/
+.greyTbl {
+padding:0px;
+background-color:#999;
+margin-top:12px;
+}
+.greyTbl th, .greyTbl td {
+background-color:#FFFFFF;
+padding:3px;
+}
+.greyTbl th {
+background-color:#eee;
+}
+
+.greyTbl caption {
+padding:4px;
+font-weight:bold;
+color:#555;
+text-align:left;
+/* background-color:#999999;
+border:1px solid #CCCCCC;
+border-bottom:none;
+*/
+
+}
+
+
+/*** Campus CSS ***/
+
+.box_gen {
+border:1px solid #7f9db9;
+background-image:url(../images/campus/box/bg_blue.png);
+background-position:bottom;
+background-repeat:repeat-x;
+padding:10px;
+margin-bottom:10px;
+}
+.box_gen, .box_gen h1, .box_gen table {
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.box_gen h1 {
+font-style:italic;
+font-size:15pt;
+font-weight:normal;
+padding:0px;
+margin-top:0px;
+}
+
+.bb_head {
+font-style:italic;
+}
+
+
+.box_info {
+border:1px solid #b5b5b5;
+background-image:url(../images/campus/box/bg_orange.png);
+background-position:bottom;
+background-repeat:repeat-x;
+padding:10px;
+margin-bottom:10px;
+cursor:default;
+}
+.box_info .dt{
+font-weight:bold;
+padding-right:20px;
+color:#999999
+}
+.box_info hr{
+color:#b5b5b5;
+width:100%;
+border:0px;
+border:0px;
+border-bottom:1px;
+border-style:solid;
+}
+.box_info .body {
+cursor:text;
+}
+
+.genBox .box_info {
+max-width:610px;
+width:580px;
+}
+
+
+/* Common CSS Styles Document */
+
+br.h3{
+line-height: 3px;
+}
+br.h7{
+line-height: 7px;
+}
+
+.block{
+display:block;
+}
+.hidden {
+display:none;
+}
+.c_def{
+cursor:default;
+}
+.t90{
+font-size:90%;
+}
+.t110{
+font-size:110%;
+}
+.hand{
+cursor:pointer;
+}
+
+a.no_under{
+text-decoration: none;
+}
+
+
+.w100 {
+width:100%;
+}
+.bg_norepeat {
+background-position:left;
+background-repeat:no-repeat;
+}
+
+form {
+padding:0px;
+margin:0px;
+}
+
+/* -=-=-=-=-=-=-=-=-= Color styles  =-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+.white{
+color:white;
+}
+.red{
+color:#FF0000;
+}
+.violet{
+color:#000088;
+}
+.green{
+color:green;
+}
+.orange{
+color:orange;
+}
+.blue{
+color:#336699;
+}
+
+.bg-white{
+background-color:#FFFFFF;
+}
+.bg-violet{
+background-color:#000088;
+}
+.bg-grey{
+background-color:#D7D7D7;
+}
+.bg-lightgrey{
+background-color:#F7F7F7;
+}
+
+.bg-lightblue{
+background-color:#f4f5f7;
+}
+.bg-darkblue{
+background-color:#edf0f3;
+}
+
+.error{
+color:#E00;
+}
+
+.error .white{
+color:#ccc;
+}
+
+/* -=-=-=-=-=-=-=-=-= Input styles  =-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+.input_hl{
+background-color:#FFEE99;
+border-style:solid;
+}
+
+input.wide,textarea.wide{
+width:97%;
+font-size:12px;
+}
+input.small{
+width:40px;
+font-size:12px;
+}
+
+
+/* -=-=-=-=-=-=-=-=-= Calendar styles  =-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+.cl_sel { font:xx-small Verdana;   background-color:#dddddd; }
+.cl_wek { font:bold xx-small Verdana; color:black; width:100%; height:12px; }
+.cl_day { font:bold xx-small verdana; color:black; width:100%; height:12px; text-decoration:none; cursor:pointer; }
+.cl_day:hover {
+cursor:pointer;
+text-decoration:none;
+color:red;
+}
+.cl_dayns4 { font:bold x-small verdana;   color:black; text-decoration:none; }
+.cl_in { border:inset 1px; padding:0px; font-weight:normal; background-color: #cccccc; width:18px; height:14px; }
+
+.cl_out { border:outset 1px; padding:0px; font-weight:bold; background-color: #cccccc; width:18px; height:14px;
+}
+
+/**
+.cl_day{
+cursor:pointer;
+text-decoration:none;
+}
+
+.cl_day:hover{
+cursor:pointer;
+text-decoration:none;
+color:red;
+}
+.cl_dayns4{
+cursor:pointer;
+text-decoration:none;
+}
+.cl_dayns4:hover{
+cursor:pointer;
+text-decoration:none;
+color:red;
+}
+.cl_out{
+cursor:default;
+}
+
+**/
+
+
+/***
+ *** Navigation styles
+ ***/
+
+.more{
+border:outset 1px;
+color:#555555;
+
+padding:3px;
+padding-left:7px;
+padding-right:7px;
+
+font-weight:normal;
+background-color: #e0e0e0;
+height:21px;
+text-decoration:none;
+}
+.more:hover{
+border:outset 1px;
+color:#555555;
+
+padding:3px;
+padding-left:7px;
+padding-right:7px;
+
+background-color: #f0f0f0;
+height:21px;
+text-decoration:none;
+}
+
+.more_dis{
+border:outset 1px;
+color:#aaaaaa;
+
+padding:3px;
+padding-left:7px;
+padding-right:7px;
+
+font-weight:normal;
+background-color: #e0e0e0;
+height:21px;
+text-decoration:none;
+cursor:default;
+}
+
+.dialog_modal {
+display:none;
+}
+
+
+/*** Quick search results ***/
+/*** jquery.suggest.css **/
+
+  .ac_results {
+ border: 1px solid gray;
+ background-color: #F8F7F5;
+ background-image:url(../images/find/qsr.bg.png);
+ background-repeat:repeat-x;
+ background-position:top;
+ padding: 0;
+ margin: 0;
+ list-style: none;
+ position: absolute;
+ z-index: 10000;
+ display: none;
+/*
+width:200px;
+ height:200px;
+ top:10px;
+ left:20px;
+ */
+  }
+ 
+  .ac_results li {
+font-size:10pt;
+padding: 2px 5px;
+white-space: nowrap;
+color:#111;
+text-align: left;
+  }
+
+  .ac_results li a{
+color:#111;
+text-decoration:none;
+}
+.ac_results li.cc {
+background-color:#333;
+color:#FFF;
+cursor:default;
+text-align:right;
+}
+.ac_results li.cc .count {
+/* display:none;*/
+}
+.ac_results li.cc .count tt {
+font-family:Verdana, Geneva, sans-serif;
+font-size:80%;
+}
+.ac_results li.cc .btnClose {
+font-weight:bold;
+cursor:pointer;
+}
+
+
+.ac_over {
+ cursor: pointer;
+ background-color: #FFF0C8;
+  }
+ 
+  .ac_match {
+ border-bottom:1px #000 dotted;
+ font-style:normal;
+ font-weight:normal;
+/*  color: black;*/
+  }
+
+.dc_a a, .dc_a a:visited{
+ font-size:10pt;
+ color:#3399FF;
+}
+.dc_a span {
+ font-size:8pt;
+ color:#009933;
+}
+
+
+/* CSS Document */
+
+
+html, body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eee;
+
+}
+
+.main_tbl {
+    height: 100%;
+}
+
+/*--------Старт боковые колонки-----------------*/
+.left_clmn {
+    width: 10%;
+}
+
+
+/*----------Левая боковая колонка---------------*/
+
+/*----------Правая боковая колонка---------------*/
+.right_clmn {
+    width: 10%;
+}
+
+/*--------Конец боковые колонки-----------------*/
+
+
+table, table tr, table td {
+    vertical-align: top;
+}
+
+.content_area {
+    width: 100%;
+}
+
+img {
+    border-width: 0px;
+}
+
+.clAdmin, .clPrep {
+    color: #3a6ecb;
+    text-transform: capitalize;
+}
+
+
+/*--------Старт центральная колонка-----------------*/
+.header {
+    min-width: 1000px;
+    width: 80%;
+    background-image: url(../images/head/bg.png);
+    background-repeat: repeat-x;
+    background-color: #FFFFFF;
+    height: 160px;
+}
+
+.content_left {
+    width: 182px !important;
+}
+
+.header .logo img {
+    margin-left: -25px;
+    z-index: 1000;
+}
+
+/*** Profile Mgmt ***/
+.header .profile {
+    width: 100%;
+    height: 40px;
+    padding-bottom: 3px;
+}
+
+.header .profile td {
+    vertical-align: bottom;
+}
+
+.header .profile .title {
+    text-align: center;
+    /* font-style:italic;*/
+    padding-bottom: 4px;
+    font-size: 14px;
+    color: #5F5F5F;
+}
+
+/*.header .profile .title span{
+color:#215F7C;
+}*/
+
+.header .profile .switch {
+    width: 170px;
+}
+
+.header .profile .ctrl {
+    width: 40px;
+    text-align: right;
+}
+
+/*** searchBox ***/
+.header .searchBox {
+    padding-top: 4px;
+    padding-left: 18px;
+    width: 100%;
+    height: 34px;
+}
+
+.header .searchBox .title {
+    width: 75px;
+    vertical-align: baseline;
+    padding-bottom: 3px;
+    font-size: 14px;
+    color: #5F5F5F;
+}
+
+.header .searchBox input {
+    width: 360px;
+    /* border:1px solid #999;*/
+}
+
+.header .searchBox button {
+    border: 1px solid #999;
+    background-color: #eeeeee;
+    margin-left: 5px;
+}
+
+.header .searchBox .advance {
+    text-align: left;
+    width: 210px;
+    vertical-align: baseline;
+    padding-bottom: 5px;
+}
+
+.header .searchBox .advance img {
+    padding-right: 3px;
+    margin-bottom: -2px;
+}
+
+.header a {
+    color: #2B6885;
+}
+
+.header a:hover {
+    color: #EF991D;
+}
+
+.header .searchBox .advance a {
+    font-size: 12px;
+}
+
+.pageHead {
+    margin: 2px;
+    margin-top: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    /* margin-left:28px;*/
+    padding: 5px;
+    padding-left: 70px;
+    vertical-align: bottom;
+    /* border:1px solid #c3c3c3;
+        border-right:0px;
+        background-color:#f5f5f5;
+        font-style:italic;
+    */
+    background-image: url(../images/page/default.png);
+    background-position: 18px 1px;
+    background-repeat: no-repeat;
+    font-size: 22px;
+    color: #336699; /*595959*/
+}
+
+/*** navigation ***/
+.navigation {
+    /* font-style:italic;*/
+    height: 36px;
+    font-size: 12px;
+    padding-left: 18px;
+}
+
+.navigation td {
+    vertical-align: middle;
+    color: #EF991D;
+}
+
+.navigation img {
+    padding-left: 3px;
+    padding-right: 5px;
+    vertical-align: middle;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #2B6885;
+}
+
+.centre_clmn2 {
+    width: 1002px !important;
+    min-width: 1000px;
+    max-width: 1004px;
+    background-color: #FFFFFF;
+    min-height: 60%;
+    height: 70%;
+}
+
+/*-------------------------*/
+/*table.head{
+background-image:url(../images/head/head_bg.jpg);
+background-color:#669933;
+background-repeat:no-repeat;
+background-position:left;
+height:222px;
+}*/
+/*** Menu ***/
+.menu {
+    width: 182px;
+    padding-left: 9px;
+    height: 100%;
+}
+
+.menu table {
+}
+
+.menu table td {
+
+}
+
+.menu td {
+    font-size: 12px;
+    cursor: default;
+}
+
+.menu .spacer {
+    height: 16px;
+}
+
+.menu .spacer_between {
+    /* border-top:1px solid #C4D3ED;*/
+    background-image: url(../images/menu/spacer.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.lmi_delim {
+    /* background-image:url(images/lmi_delim_bg.png);*/
+    height: 0px;
+    display: none;
+}
+
+
+.lm_item td, .lm_item_active td, .mi_common td {
+    /* background-color:#faf9f8;*/
+    font-size: 14px;
+    vertical-align: bottom;
+    /* border:1px solid #e2e2e2;*/
+    /* border-bottom:1px solid #000000;
+        border-top:1px solid #873e3e;*/
+}
+
+.lm_item_active td {
+    border-left: 0px;
+    background-color: #FFFFFF;
+    background-image: url(../images/menu/mi_bullet.png);
+    background-repeat: no-repeat;
+    background-position: 2px 8px;
+}
+
+.mi_common td {
+    /* background-color:#f2fff0;*/
+}
+
+.lm_item td a, .mi_common td a, .lm_item_active td a {
+    color: #2B6885;
+    /* background: url(images/lmi_bullet.png) no-repeat top 0px;  */
+    text-align: left;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    height: 15px;
+    vertical-align: bottom;
+    display: block;
+}
+
+.mi_common td a {
+    /* color:#0048cb;*//*7c917a*/
+}
+
+.lm_item td a:hover, .mi_common td a:hover {
+    background: url(images/lmi_bullet_active.png) no-repeat bottom 0px;
+
+    /* text-decoration: underline;*/
+    color: #EF991D;
+}
+
+.lm_item a.dis, .lm_item a.dis:hover {
+    color: #CCCCCC;
+    text-decoration: none;
+}
+
+.lmi {
+    color: #f3f3f3;
+}
+
+.menu A, .menu A:link, .menu A:visited, .menu A:active {
+    text-decoration: none;
+    /*    COLOR: #edd;*/
+}
+
+
+/*-------------------------*/
+/*.btn_active,.btn_passive{
+display:block;
+width:200px;
+height:45px;
+margin-left:17px;
+line-height:45px;
+padding-left:23px;
+font-family:"Arial Narrow", Arial, Helvetica, sans-serif;
+font-size:16px;
+font-weight:bold;
+text-decoration:none;
+color:#000000;
+background-repeat:no-repeat;
+}
+
+.btn_active{
+background-image:url(../images/nav_menu/btn_active.png);
+}
+.btn_passive{
+background-image:url(../images/nav_menu/btn_passive.png);
+}
+.btn_passive:hover{
+background-image:url(../images/nav_menu/btn_hover.png);
+}
+*/
+/*-------------------------*/
+/*
+div.sub_menu{
+padding-top:12px;
+padding-bottom:12px;
+padding-left:13px;
+margin-top:1px;
+margin-left:13px;
+background-image:url(../images/nav_menu/bg_sub_menu.png);
+background-repeat:no-repeat;
+
+}
+.sub_pssv, .sub_pssv2{
+padding-left:13px;
+display:block;
+font-family:"Arial Narrow", Arial, Helvetica, sans-serif;
+font-size:16px;
+text-decoration:none;
+color:#5b5b5b;
+background-image:url(../images/nav_menu/sub_point_pssv.png);
+background-repeat:no-repeat;
+background-position:left center;
+}
+.sub_pssv:hover, .sub_pssv2:hover {
+background-image:url(../images/nav_menu/sub_point_actv.png);
+}
+.sub_pssv2 {
+padding-left:25px;
+background-position:11px 8px;
+}
+*/
+/*-------------------------*/
+/*--------Конец блока меню -----------------*/
+
+/* ///// START Module List Styles ///// */
+.listOddBold {
+    BACKGROUND-COLOR: #DCDCDC;
+    COLOR: #000000;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN: left;
+    VERTICAL-ALIGN: top
+}
+
+.listOddBold A:link {
+    COLOR: #336699;
+    FONT-WEIGHT: bold
+}
+
+.listOddBold A:visited {
+    COLOR: #336699;
+    FONT-WEIGHT: bold
+}
+
+.listOddBold A:active {
+    COLOR: #336699;
+    FONT-WEIGHT: bold
+}
+
+.listOddBold A:hover {
+    COLOR: #000033;
+    FONT-WEIGHT: bold
+}
+
+.listEvenBold {
+    BACKGROUND-COLOR: #ffffff;
+    COLOR: #000000;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN: left;
+    VERTICAL-ALIGN: top
+}
+
+.listEvenBold A:link {
+    COLOR: #336699;
+    FONT-WEIGHT: bold
+}
+
+.listEvenBold A:visited {
+    COLOR: #336699;
+    FONT-WEIGHT: bold
+}
+
+.listEvenBold A:active {
+    COLOR: #336699;
+    FONT-WEIGHT: bold
+}
+
+.listEvenBold A:hover {
+    COLOR: #000033;
+    FONT-WEIGHT: bold
+}
+
+.listSelected {
+    background-color: #008A8C;
+    color: White;
+}
+
+.listSelected A:link {
+    color: White;
+}
+
+.listOdd {
+    BACKGROUND-COLOR: #DCDCDC;
+    COLOR: #000000;
+    VERTICAL-ALIGN: top;
+    cursor: default;
+}
+
+.listEven {
+    BACKGROUND-COLOR: #EEEEEE;
+    COLOR: #000000;
+    VERTICAL-ALIGN: top;
+    cursor: default;
+}
+
+.ListGrant {
+    BACKGROUND-COLOR: #EEF9EE;
+    COLOR: #000000;
+    VERTICAL-ALIGN: top;
+    cursor: default;
+}
+
+.ListDeny {
+    BACKGROUND-COLOR: #FFEEEE;
+    COLOR: #000000;
+    VERTICAL-ALIGN: top;
+    cursor: default;
+}
+
+.listOdd A:link, .listOdd A:visited, .listOdd A:active, .listEven A:link, .listEven A:visited, .listEven A:active,
+.ListGrant A:link, .ListGrant A:visited, .ListGrant A:active,
+.ListDeny A:link, .ListDeny A:visited, .ListDeny A:active {
+    COLOR: #700000;
+}
+
+.subListOdd {
+    BACKGROUND-COLOR: #D5D5DF;
+    COLOR: #000000;
+    VERTICAL-ALIGN: top
+}
+
+.subListEven {
+    BACKGROUND-COLOR: #E7E7EF;
+    COLOR: #000000;
+    VERTICAL-ALIGN: top
+}
+
+.subListOdd A, .subListEven A {
+    COLOR: #2255B0
+}
+
+.listOdd A:hover, .listEven A:hover, .subListOdd A:hover, .subListEven A:hover {
+    COLOR: #000033
+}
+
+.ListOdd img, .ListEven img, .subListOdd img, .subListEven img {
+    vertical-align: middle;
+    border: 0;
+    padding-right: 5px;
+    padding-left: 2px;
+
+
+}
+
+/* ///// END Module List Styles ///// */
+
+
+/*--------content -----------------*/
+.cntnt {
+    padding-right: 15px;
+    padding-left: 8px;
+    padding-top: 0px;
+    text-align: justify;
+    font-family: Verdana;
+    font-size: 12px;
+    color: #353535;
+    min-height: 500;
+    color: #555;
+}
+
+.cntnt h2 {
+    /* color:#7c916b;*/
+    font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    margin: 0px;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.cntnt .foto {
+    margin: 5px;
+    padding-bottom: 1px;
+    padding-right: 1px;
+    border-bottom: 1px #eeeeee solid;
+    border-right: 1px #eeeeee solid;
+    float: left;
+}
+
+/*-------------------------*/
+
+td.footer {
+    height: 62px;
+    background-color: #FFFFFF;
+
+}
+
+table.footer {
+    height: 62px;
+    padding-left: 22px;
+    font-size: 13px;
+    border-top: 2px solid #208944;
+    padding-top: 15px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    min-height: 100px;
+}
+
+.footer td {
+    vertical-align: middle;
+}
+
+.footer a {
+    color: #208944;
+    text-decoration: none;
+}
+
+.footer .socials {
+    text-align: right;
+    padding-right: 24px;
+}
+
+.footer .socials a {
+    padding-left: 7px;
+}
+
+a.docs {
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+}
+
+
+/*** Msgs
+ ***/
+.genBox, .msgsBox {
+    width: 100%;
+    /* background-color:#996600*/
+}
+
+.msgsBox .mainFrame {
+    width: 820px;
+    /* background-color:#FF0000*/
+}
+
+.genBox button, .msgsBox button, .rnpButtons a {
+    border: 1px solid #000000;
+    background-color: #eeeeee;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 5px;
+    color: #000000;
+    margin-bottom: 3px;
+    text-decoration: none;
+
+}
+
+.genBox button.active, .msgsBox button.active, .rnpButtons a.active {
+    background-color: #fffcdd;
+    color: #000000;
+}
+
+.rnpButtons a {
+    display: block;
+}
+
+.rnpButtons .groups br {
+    line-height: 9px;
+}
+
+.rnpButtons .groups a {
+    display: inline;
+}
+
+/*** Filter Box ***/
+.genBox .filterBox img, .msgsBox .filterBox img {
+    margin-bottom: -3px;
+    padding-right: 4px;
+}
+
+.genBox .filterBox, .msgsBox .filterBox {
+    padding-left: 9px;
+    width: 170px;
+}
+
+.genBox .filterBox h2, .msgsBox .filterBox h2 {
+    font-size: 14pt;
+    font-weight: bold;
+    color: #3f3f3f;
+    text-align: left;
+    padding-bottom: 0px;
+    margin-bottom: 9px;
+}
+
+.genBox .filterBox button, .msgsBox .filterBox button {
+    width: 162px;
+    text-align: center;
+    height: 42px;
+    margin-bottom: 5px;
+
+}
+
+
+.genBox .ctrl, .msgsBox .ctrl {
+    padding-bottom: 10px;
+}
+
+.genBox label, .msgsBox label {
+    font-weight: bold;
+}
+
+.msgBox {
+    padding: 5px;
+    border: 1px solid #CCCCCC;
+}
+
+.msgBox button {
+    margin: 5px;
+}
+
+.msgBody {
+    padding: 10px;
+    background-color: #f2f2f2;
+    width: 96%;
+    border: 1px dotted #333333;
+    margin-top: 5px;
+}
+
+.msgIsEmpty {
+    font-size: 200%;
+    color: #aaa;
+}
+
+.msg_form, .msg_form .formBox {
+    width: 100%;
+}
+
+.msg_form textarea {
+    width: 90%;
+}
+
+.msg_form .body {
+    height: 300px;
+}
+
+.recipientBox {
+    padding: 3px;
+    background-color: #EEE;
+    border: 1px solid #aaa;
+}
+
+.recipientBox .eduStructBox {
+    padding-bottom: 5px;
+    margin-bottom: 7px;
+    border-bottom: 1px dotted #333333;
+}
+
+.recipientBox th {
+    text-align: left;
+}
+
+.rc_del {
+    color: #CC0000;
+}
+
+.listDyn {
+    width: 98%;
+    color: #999999;
+    border: 1px solid #bbb;
+    padding: 3px;
+    min-height: 40px;
+    background-color: #FAFAFA
+}
+
+.bbBox .subject {
+    font-weight: bold;
+}
+
+.bbBox .delBtn {
+    text-decoration: none;
+    color: #0066CC;
+    padding-right: 3px;
+    font-family: Verdana, Arial, Helvetica, sans-serif
+}
+
+@import url("common.css");
+@import url("desktop.css");
+@import url("campus.css");
+@import url("boxes.css");
+
+/*** Plugin styles ***/
+@import url("../js/jquery/tablesorter/style.css");
+
+
+/*! jQuery UI - v1.8.22 - 2012-07-24
+* https://github.com/jquery/jquery-ui
+* Includes: jquery.ui.core.css, jquery.ui.accordion.css, jquery.ui.autocomplete.css, jquery.ui.button.css, jquery.ui.datepicker.css, jquery.ui.dialog.css, jquery.ui.progressbar.css, jquery.ui.resizable.css, jquery.ui.selectable.css, jquery.ui.slider.css, jquery.ui.tabs.css, jquery.ui.theme.css
+* Copyright (c) 2012 AUTHORS.txt; Licensed MIT, GPL */
+.ui-helper-hidden {
+    display: none
+}
+
+.ui-helper-hidden-accessible {
+    position: absolute!important;
+    clip: rect(1px);
+    clip: rect(1px,1px,1px,1px)
+}
+
+.ui-helper-reset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    line-height: 1.3;
+    text-decoration: none;
+    font-size: 100%;
+    list-style: none
+}
+
+.ui-helper-clearfix:before,.ui-helper-clearfix:after {
+    content: "";
+    display: table
+}
+
+.ui-helper-clearfix:after {
+    clear: both
+}
+
+.ui-helper-clearfix {
+    zoom:1}
+
+.ui-helper-zfix {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    opacity: 0;
+    filter: Alpha(Opacity=0)
+}
+
+.ui-state-disabled {
+    cursor: default!important
+}
+
+.ui-icon {
+    display: block;
+    text-indent: -99999px;
+    overflow: hidden;
+    background-repeat: no-repeat
+}
+
+.ui-widget-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.ui-accordion {
+    width: 100%
+}
+
+.ui-accordion .ui-accordion-header {
+    cursor: pointer;
+    position: relative;
+    margin-top: 1px;
+    zoom:1}
+
+.ui-accordion .ui-accordion-li-fix {
+    display: inline
+}
+
+.ui-accordion .ui-accordion-header-active {
+    border-bottom: 0!important
+}
+
+.ui-accordion .ui-accordion-header a {
+    display: block;
+    font-size: 1em;
+    padding: .5em .5em .5em .7em
+}
+
+.ui-accordion-icons .ui-accordion-header a {
+    padding-left: 2.2em
+}
+
+.ui-accordion .ui-accordion-header .ui-icon {
+    position: absolute;
+    left: .5em;
+    top: 50%;
+    margin-top: -8px
+}
+
+.ui-accordion .ui-accordion-content {
+    padding: 1em 2.2em;
+    border-top: 0;
+    margin-top: -2px;
+    position: relative;
+    top: 1px;
+    margin-bottom: 2px;
+    overflow: auto;
+    display: none;
+    zoom:1}
+
+.ui-accordion .ui-accordion-content-active {
+    display: block
+}
+
+.ui-autocomplete {
+    position: absolute;
+    cursor: default
+}
+
+* html .ui-autocomplete {
+    width: 1px
+}
+
+.ui-menu {
+    list-style: none;
+    padding: 2px;
+    margin: 0;
+    display: block;
+    float: left
+}
+
+.ui-menu .ui-menu {
+    margin-top: -3px
+}
+
+.ui-menu .ui-menu-item {
+    margin: 0;
+    padding: 0;
+    zoom:1;float: left;
+    clear: left;
+    width: 100%
+}
+
+.ui-menu .ui-menu-item a {
+    text-decoration: none;
+    display: block;
+    padding: .2em .4em;
+    line-height: 1.5;
+    zoom:1}
+
+.ui-menu .ui-menu-item a.ui-state-hover,.ui-menu .ui-menu-item a.ui-state-active {
+    font-weight: normal;
+    margin: -1px
+}
+
+.ui-button {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    margin-right: .1em;
+    text-decoration: none!important;
+    cursor: pointer;
+    text-align: center;
+    zoom:1;overflow: visible
+}
+
+.ui-button-icon-only {
+    width: 2.2em
+}
+
+button.ui-button-icon-only {
+    width: 2.4em
+}
+
+.ui-button-icons-only {
+    width: 3.4em
+}
+
+button.ui-button-icons-only {
+    width: 3.7em
+}
+
+.ui-button .ui-button-text {
+    display: block;
+    line-height: 1.4
+}
+
+.ui-button-text-only .ui-button-text {
+    padding: .4em 1em
+}
+
+.ui-button-icon-only .ui-button-text,.ui-button-icons-only .ui-button-text {
+    padding: .4em;
+    text-indent: -9999999px
+}
+
+.ui-button-text-icon-primary .ui-button-text,.ui-button-text-icons .ui-button-text {
+    padding: .4em 1em .4em 2.1em
+}
+
+.ui-button-text-icon-secondary .ui-button-text,.ui-button-text-icons .ui-button-text {
+    padding: .4em 2.1em .4em 1em
+}
+
+.ui-button-text-icons .ui-button-text {
+    padding-left: 2.1em;
+    padding-right: 2.1em
+}
+
+input.ui-button {
+    padding: .4em 1em
+}
+
+.ui-button-icon-only .ui-icon,.ui-button-text-icon-primary .ui-icon,.ui-button-text-icon-secondary .ui-icon,.ui-button-text-icons .ui-icon,.ui-button-icons-only .ui-icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -8px
+}
+
+.ui-button-icon-only .ui-icon {
+    left: 50%;
+    margin-left: -8px
+}
+
+.ui-button-text-icon-primary .ui-button-icon-primary,.ui-button-text-icons .ui-button-icon-primary,.ui-button-icons-only .ui-button-icon-primary {
+    left: .5em
+}
+
+.ui-button-text-icon-secondary .ui-button-icon-secondary,.ui-button-text-icons .ui-button-icon-secondary,.ui-button-icons-only .ui-button-icon-secondary {
+    right: .5em
+}
+
+.ui-button-text-icons .ui-button-icon-secondary,.ui-button-icons-only .ui-button-icon-secondary {
+    right: .5em
+}
+
+.ui-buttonset {
+    margin-right: 7px
+}
+
+.ui-buttonset .ui-button {
+    margin-left: 0;
+    margin-right: -.3em
+}
+
+button.ui-button::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+
+.ui-datepicker {
+    width: 17em;
+    padding: .2em .2em 0;
+    display: none
+}
+
+.ui-datepicker .ui-datepicker-header {
+    position: relative;
+    padding: .2em 0
+}
+
+.ui-datepicker .ui-datepicker-prev,.ui-datepicker .ui-datepicker-next {
+    position: absolute;
+    top: 2px;
+    width: 1.8em;
+    height: 1.8em
+}
+
+.ui-datepicker .ui-datepicker-prev-hover,.ui-datepicker .ui-datepicker-next-hover {
+    top: 1px
+}
+
+.ui-datepicker .ui-datepicker-prev {
+    left: 2px
+}
+
+.ui-datepicker .ui-datepicker-next {
+    right: 2px
+}
+
+.ui-datepicker .ui-datepicker-prev-hover {
+    left: 1px
+}
+
+.ui-datepicker .ui-datepicker-next-hover {
+    right: 1px
+}
+
+.ui-datepicker .ui-datepicker-prev span,.ui-datepicker .ui-datepicker-next span {
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -8px;
+    top: 50%;
+    margin-top: -8px
+}
+
+.ui-datepicker .ui-datepicker-title {
+    margin: 0 2.3em;
+    line-height: 1.8em;
+    text-align: center
+}
+
+.ui-datepicker .ui-datepicker-title select {
+    font-size: 1em;
+    margin: 1px 0
+}
+
+.ui-datepicker select.ui-datepicker-month-year {
+    width: 100%
+}
+
+.ui-datepicker select.ui-datepicker-month,.ui-datepicker select.ui-datepicker-year {
+    width: 49%
+}
+
+.ui-datepicker table {
+    width: 100%;
+    font-size: .9em;
+    border-collapse: collapse;
+    margin: 0 0 .4em
+}
+
+.ui-datepicker th {
+    padding: .7em .3em;
+    text-align: center;
+    font-weight: bold;
+    border: 0
+}
+
+.ui-datepicker td {
+    border: 0;
+    padding: 1px
+}
+
+.ui-datepicker td span,.ui-datepicker td a {
+    display: block;
+    padding: .2em;
+    text-align: right;
+    text-decoration: none
+}
+
+.ui-datepicker .ui-datepicker-buttonpane {
+    background-image: none;
+    margin: .7em 0 0 0;
+    padding: 0 .2em;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0
+}
+
+.ui-datepicker .ui-datepicker-buttonpane button {
+    float: right;
+    margin: .5em .2em .4em;
+    cursor: pointer;
+    padding: .2em .6em .3em .6em;
+    width: auto;
+    overflow: visible
+}
+
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+    float: left
+}
+
+.ui-datepicker.ui-datepicker-multi {
+    width: auto
+}
+
+.ui-datepicker-multi .ui-datepicker-group {
+    float: left
+}
+
+.ui-datepicker-multi .ui-datepicker-group table {
+    width: 95%;
+    margin: 0 auto .4em
+}
+
+.ui-datepicker-multi-2 .ui-datepicker-group {
+    width: 50%
+}
+
+.ui-datepicker-multi-3 .ui-datepicker-group {
+    width: 33.3%
+}
+
+.ui-datepicker-multi-4 .ui-datepicker-group {
+    width: 25%
+}
+
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header {
+    border-left-width: 0
+}
+
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
+    border-left-width: 0
+}
+
+.ui-datepicker-multi .ui-datepicker-buttonpane {
+    clear: left
+}
+
+.ui-datepicker-row-break {
+    clear: both;
+    width: 100%;
+    font-size: 0em
+}
+
+.ui-datepicker-rtl {
+    direction: rtl
+}
+
+.ui-datepicker-rtl .ui-datepicker-prev {
+    right: 2px;
+    left: auto
+}
+
+.ui-datepicker-rtl .ui-datepicker-next {
+    left: 2px;
+    right: auto
+}
+
+.ui-datepicker-rtl .ui-datepicker-prev:hover {
+    right: 1px;
+    left: auto
+}
+
+.ui-datepicker-rtl .ui-datepicker-next:hover {
+    left: 1px;
+    right: auto
+}
+
+.ui-datepicker-rtl .ui-datepicker-buttonpane {
+    clear: right
+}
+
+.ui-datepicker-rtl .ui-datepicker-buttonpane button {
+    float: left
+}
+
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current {
+    float: right
+}
+
+.ui-datepicker-rtl .ui-datepicker-group {
+    float: right
+}
+
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header {
+    border-right-width: 0;
+    border-left-width: 1px
+}
+
+.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
+    border-right-width: 0;
+    border-left-width: 1px
+}
+
+.ui-datepicker-cover {
+    position: absolute;
+    z-index: -1;
+    filter: mask();
+    top: -4px;
+    left: -4px;
+    width: 200px;
+    height: 200px
+}
+
+.ui-dialog {
+    position: absolute;
+    padding: .2em;
+    width: 300px;
+    overflow: hidden
+}
+
+.ui-dialog .ui-dialog-titlebar {
+    padding: .4em 1em;
+    position: relative
+}
+
+.ui-dialog .ui-dialog-title {
+    float: left;
+    margin: .1em 16px .1em 0
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+    position: absolute;
+    right: .3em;
+    top: 50%;
+    width: 19px;
+    margin: -10px 0 0 0;
+    padding: 1px;
+    height: 18px
+}
+
+.ui-dialog .ui-dialog-titlebar-close span {
+    display: block;
+    margin: 1px
+}
+
+.ui-dialog .ui-dialog-titlebar-close:hover,.ui-dialog .ui-dialog-titlebar-close:focus {
+    padding: 0
+}
+
+.ui-dialog .ui-dialog-content {
+    position: relative;
+    border: 0;
+    padding: .5em 1em;
+    background: none;
+    overflow: auto;
+    zoom:1}
+
+.ui-dialog .ui-dialog-buttonpane {
+    text-align: left;
+    border-width: 1px 0 0 0;
+    background-image: none;
+    margin: .5em 0 0 0;
+    padding: .3em 1em .5em .4em
+}
+
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+    float: right
+}
+
+.ui-dialog .ui-dialog-buttonpane button {
+    margin: .5em .4em .5em 0;
+    cursor: pointer
+}
+
+.ui-dialog .ui-resizable-se {
+    width: 14px;
+    height: 14px;
+    right: 3px;
+    bottom: 3px
+}
+
+.ui-draggable .ui-dialog-titlebar {
+    cursor: move
+}
+
+.ui-progressbar {
+    height: 2em;
+    text-align: left;
+    overflow: hidden
+}
+
+.ui-progressbar .ui-progressbar-value {
+    margin: -1px;
+    height: 100%
+}
+
+.ui-resizable {
+    position: relative
+}
+
+.ui-resizable-handle {
+    position: absolute;
+    font-size: 0.1px;
+    display: block
+}
+
+.ui-resizable-disabled .ui-resizable-handle,.ui-resizable-autohide .ui-resizable-handle {
+    display: none
+}
+
+.ui-resizable-n {
+    cursor: n-resize;
+    height: 7px;
+    width: 100%;
+    top: -5px;
+    left: 0
+}
+
+.ui-resizable-s {
+    cursor: s-resize;
+    height: 7px;
+    width: 100%;
+    bottom: -5px;
+    left: 0
+}
+
+.ui-resizable-e {
+    cursor: e-resize;
+    width: 7px;
+    right: -5px;
+    top: 0;
+    height: 100%
+}
+
+.ui-resizable-w {
+    cursor: w-resize;
+    width: 7px;
+    left: -5px;
+    top: 0;
+    height: 100%
+}
+
+.ui-resizable-se {
+    cursor: se-resize;
+    width: 12px;
+    height: 12px;
+    right: 1px;
+    bottom: 1px
+}
+
+.ui-resizable-sw {
+    cursor: sw-resize;
+    width: 9px;
+    height: 9px;
+    left: -5px;
+    bottom: -5px
+}
+
+.ui-resizable-nw {
+    cursor: nw-resize;
+    width: 9px;
+    height: 9px;
+    left: -5px;
+    top: -5px
+}
+
+.ui-resizable-ne {
+    cursor: ne-resize;
+    width: 9px;
+    height: 9px;
+    right: -5px;
+    top: -5px
+}
+
+.ui-selectable-helper {
+    position: absolute;
+    z-index: 100;
+    border: 1px dotted black
+}
+
+.ui-slider {
+    position: relative;
+    text-align: left
+}
+
+.ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 1.2em;
+    height: 1.2em;
+    cursor: default
+}
+
+.ui-slider .ui-slider-range {
+    position: absolute;
+    z-index: 1;
+    font-size: .7em;
+    display: block;
+    border: 0;
+    background-position: 0 0
+}
+
+.ui-slider-horizontal {
+    height: .8em
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+    top: -.3em;
+    margin-left: -.6em
+}
+
+.ui-slider-horizontal .ui-slider-range {
+    top: 0;
+    height: 100%
+}
+
+.ui-slider-horizontal .ui-slider-range-min {
+    left: 0
+}
+
+.ui-slider-horizontal .ui-slider-range-max {
+    right: 0
+}
+
+.ui-slider-vertical {
+    width: .8em;
+    height: 100px
+}
+
+.ui-slider-vertical .ui-slider-handle {
+    left: -.3em;
+    margin-left: 0;
+    margin-bottom: -.6em
+}
+
+.ui-slider-vertical .ui-slider-range {
+    left: 0;
+    width: 100%
+}
+
+.ui-slider-vertical .ui-slider-range-min {
+    bottom: 0
+}
+
+.ui-slider-vertical .ui-slider-range-max {
+    top: 0
+}
+
+.ui-tabs {
+    position: relative;
+    padding: .2em;
+    zoom:1}
+
+.ui-tabs .ui-tabs-nav {
+    margin: 0;
+    padding: .2em .2em 0
+}
+
+.ui-tabs .ui-tabs-nav li {
+    list-style: none;
+    float: left;
+    position: relative;
+    top: 1px;
+    margin: 0 .2em 1px 0;
+    border-bottom: 0!important;
+    padding: 0;
+    white-space: nowrap
+}
+
+.ui-tabs .ui-tabs-nav li a {
+    float: left;
+    padding: .5em 1em;
+    text-decoration: none
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+    margin-bottom: 0;
+    padding-bottom: 1px
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a,.ui-tabs .ui-tabs-nav li.ui-state-disabled a,.ui-tabs .ui-tabs-nav li.ui-state-processing a {
+    cursor: text
+}
+
+.ui-tabs .ui-tabs-nav li a,.ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {
+    cursor: pointer
+}
+
+.ui-tabs .ui-tabs-panel {
+    display: block;
+    border-width: 0;
+    padding: 1em 1.4em;
+    background: none
+}
+
+.ui-tabs .ui-tabs-hide {
+    display: none!important
+}
+
+.ui-widget {
+    font-family: Verdana,Arial,sans-serif;
+    font-size: 1.1em
+}
+
+.ui-widget .ui-widget {
+    font-size: 1em
+}
+
+.ui-widget input,.ui-widget select,.ui-widget textarea,.ui-widget button {
+    font-family: Verdana,Arial,sans-serif;
+    font-size: 1em
+}
+
+.ui-widget-content {
+    border: 1px solid #aaa;
+    background: #fff url(images/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x;
+    color: #222
+}
+
+.ui-widget-content a {
+    color: #222
+}
+
+.ui-widget-header {
+    border: 1px solid #aaa;
+    background: #ccc url(images/ui-bg_highlight-soft_75_cccccc_1x100.png) 50% 50% repeat-x;
+    color: #222;
+    font-weight: bold
+}
+
+.ui-widget-header a {
+    color: #222
+}
+
+.ui-state-default,.ui-widget-content .ui-state-default,.ui-widget-header .ui-state-default {
+    border: 1px solid #d3d3d3;
+    background: #e6e6e6 url(images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x;
+    font-weight: normal;
+    color: #555
+}
+
+.ui-state-default a,.ui-state-default a:link,.ui-state-default a:visited {
+    color: #555;
+    text-decoration: none
+}
+
+.ui-state-hover,.ui-widget-content .ui-state-hover,.ui-widget-header .ui-state-hover,.ui-state-focus,.ui-widget-content .ui-state-focus,.ui-widget-header .ui-state-focus {
+    border: 1px solid #999;
+    background: #dadada url(images/ui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x;
+    font-weight: normal;
+    color: #212121
+}
+
+.ui-state-hover a,.ui-state-hover a:hover {
+    color: #212121;
+    text-decoration: none
+}
+
+.ui-state-active,.ui-widget-content .ui-state-active,.ui-widget-header .ui-state-active {
+    border: 1px solid #aaa;
+    background: #fff url(images/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x;
+    font-weight: normal;
+    color: #212121
+}
+
+.ui-state-active a,.ui-state-active a:link,.ui-state-active a:visited {
+    color: #212121;
+    text-decoration: none
+}
+
+.ui-widget:active {
+    outline: none
+}
+
+.ui-state-highlight,.ui-widget-content .ui-state-highlight,.ui-widget-header .ui-state-highlight {
+    border: 1px solid #fcefa1;
+    background: #fbf9ee url(images/ui-bg_glass_55_fbf9ee_1x400.png) 50% 50% repeat-x;
+    color: #363636
+}
+
+.ui-state-highlight a,.ui-widget-content .ui-state-highlight a,.ui-widget-header .ui-state-highlight a {
+    color: #363636
+}
+
+.ui-state-error,.ui-widget-content .ui-state-error,.ui-widget-header .ui-state-error {
+    border: 1px solid #cd0a0a;
+    background: #fef1ec url(images/ui-bg_glass_95_fef1ec_1x400.png) 50% 50% repeat-x;
+    color: #cd0a0a
+}
+
+.ui-state-error a,.ui-widget-content .ui-state-error a,.ui-widget-header .ui-state-error a {
+    color: #cd0a0a
+}
+
+.ui-state-error-text,.ui-widget-content .ui-state-error-text,.ui-widget-header .ui-state-error-text {
+    color: #cd0a0a
+}
+
+.ui-priority-primary,.ui-widget-content .ui-priority-primary,.ui-widget-header .ui-priority-primary {
+    font-weight: bold
+}
+
+.ui-priority-secondary,.ui-widget-content .ui-priority-secondary,.ui-widget-header .ui-priority-secondary {
+    opacity: .7;
+    filter: Alpha(Opacity=70);
+    font-weight: normal
+}
+
+.ui-state-disabled,.ui-widget-content .ui-state-disabled,.ui-widget-header .ui-state-disabled {
+    opacity: .35;
+    filter: Alpha(Opacity=35);
+    background-image: none
+}
+
+.ui-icon {
+    width: 16px;
+    height: 16px;
+    background-image: url(images/ui-icons_222222_256x240.png)
+}
+
+.ui-widget-content .ui-icon {
+    background-image: url(images/ui-icons_222222_256x240.png)
+}
+
+.ui-widget-header .ui-icon {
+    background-image: url(images/ui-icons_222222_256x240.png)
+}
+
+.ui-state-default .ui-icon {
+    background-image: url(images/ui-icons_888888_256x240.png)
+}
+
+.ui-state-hover .ui-icon,.ui-state-focus .ui-icon {
+    background-image: url(images/ui-icons_454545_256x240.png)
+}
+
+.ui-state-active .ui-icon {
+    background-image: url(images/ui-icons_454545_256x240.png)
+}
+
+.ui-state-highlight .ui-icon {
+    background-image: url(images/ui-icons_2e83ff_256x240.png)
+}
+
+.ui-state-error .ui-icon,.ui-state-error-text .ui-icon {
+    background-image: url(images/ui-icons_cd0a0a_256x240.png)
+}
+
+.ui-icon-carat-1-n {
+    background-position: 0 0
+}
+
+.ui-icon-carat-1-ne {
+    background-position: -16px 0
+}
+
+.ui-icon-carat-1-e {
+    background-position: -32px 0
+}
+
+.ui-icon-carat-1-se {
+    background-position: -48px 0
+}
+
+.ui-icon-carat-1-s {
+    background-position: -64px 0
+}
+
+.ui-icon-carat-1-sw {
+    background-position: -80px 0
+}
+
+.ui-icon-carat-1-w {
+    background-position: -96px 0
+}
+
+.ui-icon-carat-1-nw {
+    background-position: -112px 0
+}
+
+.ui-icon-carat-2-n-s {
+    background-position: -128px 0
+}
+
+.ui-icon-carat-2-e-w {
+    background-position: -144px 0
+}
+
+.ui-icon-triangle-1-n {
+    background-position: 0 -16px
+}
+
+.ui-icon-triangle-1-ne {
+    background-position: -16px -16px
+}
+
+.ui-icon-triangle-1-e {
+    background-position: -32px -16px
+}
+
+.ui-icon-triangle-1-se {
+    background-position: -48px -16px
+}
+
+.ui-icon-triangle-1-s {
+    background-position: -64px -16px
+}
+
+.ui-icon-triangle-1-sw {
+    background-position: -80px -16px
+}
+
+.ui-icon-triangle-1-w {
+    background-position: -96px -16px
+}
+
+.ui-icon-triangle-1-nw {
+    background-position: -112px -16px
+}
+
+.ui-icon-triangle-2-n-s {
+    background-position: -128px -16px
+}
+
+.ui-icon-triangle-2-e-w {
+    background-position: -144px -16px
+}
+
+.ui-icon-arrow-1-n {
+    background-position: 0 -32px
+}
+
+.ui-icon-arrow-1-ne {
+    background-position: -16px -32px
+}
+
+.ui-icon-arrow-1-e {
+    background-position: -32px -32px
+}
+
+.ui-icon-arrow-1-se {
+    background-position: -48px -32px
+}
+
+.ui-icon-arrow-1-s {
+    background-position: -64px -32px
+}
+
+.ui-icon-arrow-1-sw {
+    background-position: -80px -32px
+}
+
+.ui-icon-arrow-1-w {
+    background-position: -96px -32px
+}
+
+.ui-icon-arrow-1-nw {
+    background-position: -112px -32px
+}
+
+.ui-icon-arrow-2-n-s {
+    background-position: -128px -32px
+}
+
+.ui-icon-arrow-2-ne-sw {
+    background-position: -144px -32px
+}
+
+.ui-icon-arrow-2-e-w {
+    background-position: -160px -32px
+}
+
+.ui-icon-arrow-2-se-nw {
+    background-position: -176px -32px
+}
+
+.ui-icon-arrowstop-1-n {
+    background-position: -192px -32px
+}
+
+.ui-icon-arrowstop-1-e {
+    background-position: -208px -32px
+}
+
+.ui-icon-arrowstop-1-s {
+    background-position: -224px -32px
+}
+
+.ui-icon-arrowstop-1-w {
+    background-position: -240px -32px
+}
+
+.ui-icon-arrowthick-1-n {
+    background-position: 0 -48px
+}
+
+.ui-icon-arrowthick-1-ne {
+    background-position: -16px -48px
+}
+
+.ui-icon-arrowthick-1-e {
+    background-position: -32px -48px
+}
+
+.ui-icon-arrowthick-1-se {
+    background-position: -48px -48px
+}
+
+.ui-icon-arrowthick-1-s {
+    background-position: -64px -48px
+}
+
+.ui-icon-arrowthick-1-sw {
+    background-position: -80px -48px
+}
+
+.ui-icon-arrowthick-1-w {
+    background-position: -96px -48px
+}
+
+.ui-icon-arrowthick-1-nw {
+    background-position: -112px -48px
+}
+
+.ui-icon-arrowthick-2-n-s {
+    background-position: -128px -48px
+}
+
+.ui-icon-arrowthick-2-ne-sw {
+    background-position: -144px -48px
+}
+
+.ui-icon-arrowthick-2-e-w {
+    background-position: -160px -48px
+}
+
+.ui-icon-arrowthick-2-se-nw {
+    background-position: -176px -48px
+}
+
+.ui-icon-arrowthickstop-1-n {
+    background-position: -192px -48px
+}
+
+.ui-icon-arrowthickstop-1-e {
+    background-position: -208px -48px
+}
+
+.ui-icon-arrowthickstop-1-s {
+    background-position: -224px -48px
+}
+
+.ui-icon-arrowthickstop-1-w {
+    background-position: -240px -48px
+}
+
+.ui-icon-arrowreturnthick-1-w {
+    background-position: 0 -64px
+}
+
+.ui-icon-arrowreturnthick-1-n {
+    background-position: -16px -64px
+}
+
+.ui-icon-arrowreturnthick-1-e {
+    background-position: -32px -64px
+}
+
+.ui-icon-arrowreturnthick-1-s {
+    background-position: -48px -64px
+}
+
+.ui-icon-arrowreturn-1-w {
+    background-position: -64px -64px
+}
+
+.ui-icon-arrowreturn-1-n {
+    background-position: -80px -64px
+}
+
+.ui-icon-arrowreturn-1-e {
+    background-position: -96px -64px
+}
+
+.ui-icon-arrowreturn-1-s {
+    background-position: -112px -64px
+}
+
+.ui-icon-arrowrefresh-1-w {
+    background-position: -128px -64px
+}
+
+.ui-icon-arrowrefresh-1-n {
+    background-position: -144px -64px
+}
+
+.ui-icon-arrowrefresh-1-e {
+    background-position: -160px -64px
+}
+
+.ui-icon-arrowrefresh-1-s {
+    background-position: -176px -64px
+}
+
+.ui-icon-arrow-4 {
+    background-position: 0 -80px
+}
+
+.ui-icon-arrow-4-diag {
+    background-position: -16px -80px
+}
+
+.ui-icon-extlink {
+    background-position: -32px -80px
+}
+
+.ui-icon-newwin {
+    background-position: -48px -80px
+}
+
+.ui-icon-refresh {
+    background-position: -64px -80px
+}
+
+.ui-icon-shuffle {
+    background-position: -80px -80px
+}
+
+.ui-icon-transfer-e-w {
+    background-position: -96px -80px
+}
+
+.ui-icon-transferthick-e-w {
+    background-position: -112px -80px
+}
+
+.ui-icon-folder-collapsed {
+    background-position: 0 -96px
+}
+
+.ui-icon-folder-open {
+    background-position: -16px -96px
+}
+
+.ui-icon-document {
+    background-position: -32px -96px
+}
+
+.ui-icon-document-b {
+    background-position: -48px -96px
+}
+
+.ui-icon-note {
+    background-position: -64px -96px
+}
+
+.ui-icon-mail-closed {
+    background-position: -80px -96px
+}
+
+.ui-icon-mail-open {
+    background-position: -96px -96px
+}
+
+.ui-icon-suitcase {
+    background-position: -112px -96px
+}
+
+.ui-icon-comment {
+    background-position: -128px -96px
+}
+
+.ui-icon-person {
+    background-position: -144px -96px
+}
+
+.ui-icon-print {
+    background-position: -160px -96px
+}
+
+.ui-icon-trash {
+    background-position: -176px -96px
+}
+
+.ui-icon-locked {
+    background-position: -192px -96px
+}
+
+.ui-icon-unlocked {
+    background-position: -208px -96px
+}
+
+.ui-icon-bookmark {
+    background-position: -224px -96px
+}
+
+.ui-icon-tag {
+    background-position: -240px -96px
+}
+
+.ui-icon-home {
+    background-position: 0 -112px
+}
+
+.ui-icon-flag {
+    background-position: -16px -112px
+}
+
+.ui-icon-calendar {
+    background-position: -32px -112px
+}
+
+.ui-icon-cart {
+    background-position: -48px -112px
+}
+
+.ui-icon-pencil {
+    background-position: -64px -112px
+}
+
+.ui-icon-clock {
+    background-position: -80px -112px
+}
+
+.ui-icon-disk {
+    background-position: -96px -112px
+}
+
+.ui-icon-calculator {
+    background-position: -112px -112px
+}
+
+.ui-icon-zoomin {
+    background-position: -128px -112px
+}
+
+.ui-icon-zoomout {
+    background-position: -144px -112px
+}
+
+.ui-icon-search {
+    background-position: -160px -112px
+}
+
+.ui-icon-wrench {
+    background-position: -176px -112px
+}
+
+.ui-icon-gear {
+    background-position: -192px -112px
+}
+
+.ui-icon-heart {
+    background-position: -208px -112px
+}
+
+.ui-icon-star {
+    background-position: -224px -112px
+}
+
+.ui-icon-link {
+    background-position: -240px -112px
+}
+
+.ui-icon-cancel {
+    background-position: 0 -128px
+}
+
+.ui-icon-plus {
+    background-position: -16px -128px
+}
+
+.ui-icon-plusthick {
+    background-position: -32px -128px
+}
+
+.ui-icon-minus {
+    background-position: -48px -128px
+}
+
+.ui-icon-minusthick {
+    background-position: -64px -128px
+}
+
+.ui-icon-close {
+    background-position: -80px -128px
+}
+
+.ui-icon-closethick {
+    background-position: -96px -128px
+}
+
+.ui-icon-key {
+    background-position: -112px -128px
+}
+
+.ui-icon-lightbulb {
+    background-position: -128px -128px
+}
+
+.ui-icon-scissors {
+    background-position: -144px -128px
+}
+
+.ui-icon-clipboard {
+    background-position: -160px -128px
+}
+
+.ui-icon-copy {
+    background-position: -176px -128px
+}
+
+.ui-icon-contact {
+    background-position: -192px -128px
+}
+
+.ui-icon-image {
+    background-position: -208px -128px
+}
+
+.ui-icon-video {
+    background-position: -224px -128px
+}
+
+.ui-icon-script {
+    background-position: -240px -128px
+}
+
+.ui-icon-alert {
+    background-position: 0 -144px
+}
+
+.ui-icon-info {
+    background-position: -16px -144px
+}
+
+.ui-icon-notice {
+    background-position: -32px -144px
+}
+
+.ui-icon-help {
+    background-position: -48px -144px
+}
+
+.ui-icon-check {
+    background-position: -64px -144px
+}
+
+.ui-icon-bullet {
+    background-position: -80px -144px
+}
+
+.ui-icon-radio-off {
+    background-position: -96px -144px
+}
+
+.ui-icon-radio-on {
+    background-position: -112px -144px
+}
+
+.ui-icon-pin-w {
+    background-position: -128px -144px
+}
+
+.ui-icon-pin-s {
+    background-position: -144px -144px
+}
+
+.ui-icon-play {
+    background-position: 0 -160px
+}
+
+.ui-icon-pause {
+    background-position: -16px -160px
+}
+
+.ui-icon-seek-next {
+    background-position: -32px -160px
+}
+
+.ui-icon-seek-prev {
+    background-position: -48px -160px
+}
+
+.ui-icon-seek-end {
+    background-position: -64px -160px
+}
+
+.ui-icon-seek-start {
+    background-position: -80px -160px
+}
+
+.ui-icon-seek-first {
+    background-position: -80px -160px
+}
+
+.ui-icon-stop {
+    background-position: -96px -160px
+}
+
+.ui-icon-eject {
+    background-position: -112px -160px
+}
+
+.ui-icon-volume-off {
+    background-position: -128px -160px
+}
+
+.ui-icon-volume-on {
+    background-position: -144px -160px
+}
+
+.ui-icon-power {
+    background-position: 0 -176px
+}
+
+.ui-icon-signal-diag {
+    background-position: -16px -176px
+}
+
+.ui-icon-signal {
+    background-position: -32px -176px
+}
+
+.ui-icon-battery-0 {
+    background-position: -48px -176px
+}
+
+.ui-icon-battery-1 {
+    background-position: -64px -176px
+}
+
+.ui-icon-battery-2 {
+    background-position: -80px -176px
+}
+
+.ui-icon-battery-3 {
+    background-position: -96px -176px
+}
+
+.ui-icon-circle-plus {
+    background-position: 0 -192px
+}
+
+.ui-icon-circle-minus {
+    background-position: -16px -192px
+}
+
+.ui-icon-circle-close {
+    background-position: -32px -192px
+}
+
+.ui-icon-circle-triangle-e {
+    background-position: -48px -192px
+}
+
+.ui-icon-circle-triangle-s {
+    background-position: -64px -192px
+}
+
+.ui-icon-circle-triangle-w {
+    background-position: -80px -192px
+}
+
+.ui-icon-circle-triangle-n {
+    background-position: -96px -192px
+}
+
+.ui-icon-circle-arrow-e {
+    background-position: -112px -192px
+}
+
+.ui-icon-circle-arrow-s {
+    background-position: -128px -192px
+}
+
+.ui-icon-circle-arrow-w {
+    background-position: -144px -192px
+}
+
+.ui-icon-circle-arrow-n {
+    background-position: -160px -192px
+}
+
+.ui-icon-circle-zoomin {
+    background-position: -176px -192px
+}
+
+.ui-icon-circle-zoomout {
+    background-position: -192px -192px
+}
+
+.ui-icon-circle-check {
+    background-position: -208px -192px
+}
+
+.ui-icon-circlesmall-plus {
+    background-position: 0 -208px
+}
+
+.ui-icon-circlesmall-minus {
+    background-position: -16px -208px
+}
+
+.ui-icon-circlesmall-close {
+    background-position: -32px -208px
+}
+
+.ui-icon-squaresmall-plus {
+    background-position: -48px -208px
+}
+
+.ui-icon-squaresmall-minus {
+    background-position: -64px -208px
+}
+
+.ui-icon-squaresmall-close {
+    background-position: -80px -208px
+}
+
+.ui-icon-grip-dotted-vertical {
+    background-position: 0 -224px
+}
+
+.ui-icon-grip-dotted-horizontal {
+    background-position: -16px -224px
+}
+
+.ui-icon-grip-solid-vertical {
+    background-position: -32px -224px
+}
+
+.ui-icon-grip-solid-horizontal {
+    background-position: -48px -224px
+}
+
+.ui-icon-gripsmall-diagonal-se {
+    background-position: -64px -224px
+}
+
+.ui-icon-grip-diagonal-se {
+    background-position: -80px -224px
+}
+
+.ui-corner-all,.ui-corner-top,.ui-corner-left,.ui-corner-tl {
+    -moz-border-radius-topleft: 4px;
+    -webkit-border-top-left-radius: 4px;
+    -khtml-border-top-left-radius: 4px;
+    border-top-left-radius: 4px
+}
+
+.ui-corner-all,.ui-corner-top,.ui-corner-right,.ui-corner-tr {
+    -moz-border-radius-topright: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -khtml-border-top-right-radius: 4px;
+    border-top-right-radius: 4px
+}
+
+.ui-corner-all,.ui-corner-bottom,.ui-corner-left,.ui-corner-bl {
+    -moz-border-radius-bottomleft: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -khtml-border-bottom-left-radius: 4px;
+    border-bottom-left-radius: 4px
+}
+
+.ui-corner-all,.ui-corner-bottom,.ui-corner-right,.ui-corner-br {
+    -moz-border-radius-bottomright: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -khtml-border-bottom-right-radius: 4px;
+    border-bottom-right-radius: 4px
+}
+
+.ui-widget-overlay {
+    background: #aaa url(images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x;
+    opacity: .3;
+    filter: Alpha(Opacity=30)
+}
+
+.ui-widget-shadow {
+    margin: -8px 0 0 -8px;
+    padding: 8px;
+    background: #aaa url(images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x;
+    opacity: .3;
+    filter: Alpha(Opacity=30);
+    -moz-border-radius: 8px;
+    -khtml-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px
+}
+
+
+.header_menu,
+.header_sub_menu,
+.header_groups_menu {
+    font-weight:bold;
+    font-size: 13px;
+    margin-right:20px;
+    padding-right:20px;
+    text-decoration: none;
+    color: #336699;
+    border-right: 1px solid black;
+}
+.header_sub_menu,
+.header_groups_menu {
+    display:inline-block;
+    margin-top:10px;
+    font-size: 11px;
+    color: black;
+}
+.header_groups_menu {
+    text-align:center;
+    width: 50px;
+    margin-right:10px;
+    padding-right:10px;
+}
+
+/*        #header_groups_menu_block{
+            margin-top:10px;
+        }*/
+
+
+#header_sub_menu_block,
+#header_groups_menu_block,
+.display-none{
+    display:none;
+}
+
+.header_menu:last-of-type,
+.header_sub_menu:last-of-type,
+.header_groups_menu:last-of-type
+{
+
+    border-right: none;
+}
+
+.header_menu:hover,
+.header_sub_menu:hover,
+.header_groups_menu:hover
+{
+    color: #ffa500;
+    text-decoration: underline;
+
+}
+.menu_active{
+    color: #ffa500;
+}
+
+.upper_block{
+    margin-bottom:20px;
+}
+.inline_block {
+    display:inline-block;
+    margin-right:10px;
+}
+
+.content_block {
+    padding-top:20px;
+}
+
+table.group_info {width:100%}
+
+table.group_info tr td:nth-child(1){
+    width:15%;
+}
+
+
+
+table.tablesorter-jui {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 2px;
+    margin: 10px 0 15px;
+    padding: 5px;
+    font-size: 0.9em;
+    background-color: #fff;
+    font-family: Verdana,Arial,sans-serif
+
+}
+
+table.tablesorter tbody tr.odd td {
+    background: #F0FFF0;
+}
+table.tablesorter tbody tr.even td {
+    background: #E0EEE0 ;
+}
+
+table.tablesorter td.td-image{
+    text-align:center;
+}
+
+.tablesorter-jui tbody > tr.hover > td, .tablesorter-jui tbody > tr:hover > td {
+    opacity:1!important;
+    background-color: #b9edc7 !important;
+}
+
+.tablesorter-header-inner {text-align:center;}
+
+tr.study_groups-row td:nth-child(1),
+tr.study_groups-row td:nth-child(2),
+tr.study_groups-row td:nth-child(3),
+tr.study_groups-row td:nth-child(6) {
+    text-align:center; width:60px;
+}
+tr.study_groups-row td {
+    height:25px; vertical-align: middle!important;
+}
+
+tr.admin-row td:nth-child(1),
+tr.admin-row td:nth-child(2),
+tr.admin-row td:nth-child(3),
+tr.admin-row td:nth-child(6) {
+    text-align:center; width:60px;
+}
+tr.admin-row td {
+    height:25px; vertical-align: middle!important;
+}
+
+
+tr.kurator_survey-row td:nth-child(1) {
+    text-align:center;width:60px;
+}
+tr.kurator_survey-row td:nth-child(2) {
+    text-align:center; width:15%;
+}
+tr.kurator_survey-row td {
+    height:25px; vertical-align: middle!important;
+}
+
+table.kurator_survey .tablesorter-header:nth-child(1n+3){
+    width:10px;
+    max-width:10px;
+    word-wrap: break-word;
+    white-space:pre-wrap;
+}
+
+.cross-image, .check-image{
+    cursor: pointer;
+}
+
+
+.kurator_name,
+.kurator_input{
+    padding:2%;
+    min-width:95%;
+    min-height:95%;
+}
+.kurator_name {
+    border:2px solid transparent;
+    border-radius:2px;
+}
+
+.ui-menu-item {
+    font-size: 0.8em;
+    font-family: Verdana,Arial,sans-serif;
+}
+
+.ui-dialog{
+    font-size:12px!important;
+}
+.student-name-in-modal{
+    font-weight:bold;
+}
+    /*
+    .ui-autocomplete {border-radius: 10px;background:black; padding:5px;}
+    .ui-menu-item {  margin-bottom:10px;font-size: 0.8em;font-family: Verdana,Arial,sans-serif;}
+    .ui-menu-item:hover {  background:#b9edc7; border:none; }
+    */
+
+.ui-autocomplete-loading { background:url('kurator/tpl/images/ui-anim_basic_16x16.gif') no-repeat right center }
+
+#add-kurator-contacts-form{
+    display:none;
+}
+#add-kurator-contacts-form  div{
+    margin-bottom:10px;
+}
+
+#add-kurator-contacts-form  select{
+    width:225px;
+}
+#add-kurator-contacts-form  input {
+    width:220px;
+}
+
+.small-block{
+    width:100px;
+    display:inline-block;
+}
+.modal-input-error{
+    border: 1px solid #FF0000;
+}
+.upper_block{
+    margin-top:10px;
+}
+
+.bold_block {
+    margin-top: 15px;
+    font-weight: bold;
+}
+.underlined_block{
+    width:95%;
+    border-bottom: 1px solid black;
+}
+
+.kurator_name_info{
+    font-size:22px;
+}
+.kurator_name_info,.kurator_credo_text{
+    color: #33b6d2;
+}
+.kurator_credo_text,.kurator_scientific_interest_text,.kurator_publish_URL_link{
+    margin-top:10px;
+    display:block;
+}
+
+.kurator_scientific_interest,
+.kurator_scientific_interest_text{
+    color: #336699;
+}
+.table.kurator_contacts_table{
+    max-width:50%;
+}
+table.kurator_contacts_table td {
+    padding-left: 20px;
+}
+
+.group_page_top_text{
+    font-size: 10px;
+    color: #acada3;
+}
+.group_page_top_text span{
+    border-bottom: 1px solid #acada3;
+}
+
+tr.add_student_row {
+    text-align:center;
+}
+
+tr.add_student_row input {
+    width:400px;
+}
+
+
+#remove-student-from-group-dialog{
+    display:none;
+}
+#remove-student-from-group-dialog  div{
+    margin-bottom:10px;
+}
+    </style>
+
+    </head>
+    <body><div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+    <script type="text/javascript" language="JavaScript" src="classes/overlib.js"></script>
+    <a name="top"></a>
+    
+    <table cellpadding="0" cellspacing="0" border="0" width="100%" class="main_tbl">
+        <tbody><tr nowrap="nowrap">
+            <!--левая боковая-->
+            <th class="left_clmn" valign="top" rowspan="3"></th>
+            <!--центральная (контентная) -->
+            <td valign="top" class="header" nowrap="nowrap">
+                
+                
+                <!--шапка с лого и контролами-->
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tbody><tr>
+                        <td class="content_left logo"><li><a href="osnova.html"><img src="https://campus.kpi.ua/images/logo.png" alt="е-Кампус КПІ"></a></li>
+                        </td>
+                        <td class="content_area">
+                            <table cellpadding="0" cellspacing="0" border="0" class="profile">
+                                <tbody><tr>
+                                    <td class="title"><span>Вітаємо, </span>  Катренич Дмитро Вікторович!</td>
+                                    <td class="switch">
+                                        <select id="role_switch" disabled="disabled">
+                                            <option value="">.: змінити роль :.</option>
+                                                                                    
+                                        </select>
+                                    </td>
+                                    <td class="ctrl"><a href="student/index.php?mode=logout" title="Вихід"><img src="https://campus.kpi.ua/images/ctrl/exit.png" alt="[X]" border="0" title="Вихід"></a>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                            <form action="student/index.php?mode=search" method="post" name="search_form">
+                            <table cellpadding="0" cellspacing="0" border="0" class="searchBox">
+                                <tbody><tr>
+                                    <!--<td class="title"></td>-->
+                                    <td>
+                                    </td>
+                                    <td class="advance">
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                            </form>
+    
+                            <table cellpadding="0" cellspacing="0" border="0" class="navigation">
+                                <tbody><tr>
+                                    <td><li><a href="osnova.html" title="">Головна</a></li>
+                                                                  
+                                  
+                                                                          </td>
+                                </tr>
+                            </tbody></table>
+                                                    <div class="pageHead" style="background-image:url(images/page/kodeks.png);">Кодекс честі</div>
+                                                </td>
+                    </tr>
+                </tbody></table>
+                
+                        </td>
+            
+            
+            <!--правая боковая-->
+            <th class="right_clmn" valign="top" rowspan="3"></th>
+        </tr>
+        
+    
+        <tr>
+            <td class="centre_clmn2">
+            
+                <!--контентная часть страницы-->
+                <table cellpadding="0" cellspacing="0" border="0" width="100%" height="100%">
+                    <tbody><tr valign="top">
+                         <!--навигационное меню-->
+                         <td class="menu" nowrap="">
+                            <table cellpadding="0" cellspacing="3" border="0" width="100%">
+                                    
+        
+                                    <tbody><tr class="lm_item mi_common">
+                                            <td>
+                                                    <li><a href="MyProf.html">Мій профіль</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>							
+        
+                                    <tr class="lm_item mi_common">
+                                            <td>
+                                                    <li><a href="contacti.html">Контакти</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>							
+        
+                                    <tr class="lm_item mi_common">
+                                            <td>
+                                                    <li><a href="dovidka.html" target="_blank">Довідка</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>							
+        
+                                    <tr class="lm_item_active mi_common">
+                                            <td>
+                                                    <li><a href="codex.html">Кодекс честі</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>							
+        <tr><td class="spacer spacer_between"></td></tr>
+    
+        
+                                    <tr class="lm_item">
+                                            <td>
+                                                   <li><a href="povidomlenya.html">Повідомлення</a></li> 
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>	
+                                    <tr class="lm_item">
+                                            <td>
+                                                    <li><a href="curator.html">Куратор</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>	
+                                    <tr class="lm_item">
+                                            <td>
+                                                    <li><a href="PHP.html">РНП</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>	
+                                    <tr class="lm_item">
+                                            <td>
+                                                    <li><a href="medotZab.html">Метод.забезпечення</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>	
+                                    <tr class="lm_item">
+                                            <td>
+                                                    <li><a href="potControl.html">Поточний контроль</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>	
+                                    <tr class="lm_item">
+                                            <td>
+                                                    <li><a href="Opituvanie.html">Опитування</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>	
+                                    <tr class="lm_item">
+                                            <td>
+                                                    <li><a href="RectorControl.html">Ректорський контроль</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>	
+                                    <tr class="lm_item">
+                                            <td>
+                                                    <li><a href="Sesion.html">Сесія</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>	
+                                    <tr class="lm_item">
+                                            <td>
+                                                    <li><a href="Vstup2024mag.html">Вступ 2024 (магістратура)</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>	
+                                    <tr class="lm_item">
+                                            <td>
+                                                    <li><a href="DocumentsStud.html">Документи (студ.)</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>	
+                                    <tr class="lm_item">
+                                            <td>
+                                                    <li><a href="ResAtest.html">Результати атестації</a></li>
+                                            </td>
+                                    </tr>
+    
+                                    <tr><td class="spacer"></td></tr>
+                            </tbody></table>
+                         </td>
+                        <td valign="top">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tbody><tr>
+                                   <td class="cntnt" valign="top" colspan="2">
+                                      
+              <!-- -=- -=- -=- -=- -=- -=- -=- -=- -=- content  -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -->
+
+    
+        <div class="menu_block">
+            <div id="header_menu_block" class="header_menu_block">
+                <a href="/tutor/index.php?mode=vedomoststud&amp;page=page_1" class="header_menu menu_active">Результати сесії</a>
+            </div>
+        </div>
+    
+    
+        
+    <hr>
+    
+        
+        <style>
+            .PIB {
+                text-align: left !important;
+            }
+            
+            .content_block table {
+                border: 1px solid;
+            }
+    
+            .content_block td {
+                border-right: 1px solid #D0D0D0;
+                border-bottom: 1px solid #d0d0d0;
+            }
+    
+            .ListBox td {
+                padding: 5px;
+                vertical-align: middle;
+            }
+    
+            .content_block table input {
+                margin: auto;
+                display: block;
+            }
+    
+            .content_block th {
+                text-align: center;
+                background-color: #eee;
+                padding: 5px;
+                border-right: 1px solid #D0D0D0;
+                border-bottom: 1px solid #d0d0d0;
+            }
+    
+            .content_block tr td{
+                text-align: justify;
+            }
+            
+            .content_block tr:nth-child(even) {
+                background-color: #E4F3FF;
+            }	
+        </style>		
+        
+        
+    <h1>
+        <p style="color:red;">
+            Якщо виникли питання, пишіть в бот Деканату  =&gt; <a href="https://telegra.ph/KANALI-FAKULTET%D0%86V%D0%86NSTITUT%D0%86V-07-27" target="_blank">Телеграм</a>
+        </p>
+    </h1>
+    
+            
+            <div class="content_block">
+                <div class="upper_block">
+                    <div class="inline_block">
+                                    
+                        <table id="filter-table" width="100%" border="1" class="course">
+                            <tbody><tr class="table-data">
+                                <th>#</th>
+                                <th width="12%">Дата заходу</th>
+                                <th width="45%">Назва дисципліни</th>			
+                                <th width="10%">Вид контролю</th>			
+                                <th>Тип відомості</th>
+                                <th width="25%">Викладач</th>			
+                                <th>Оцінка</th>
+                                <th>Статус</th>
+                            </tr>
+                            <tr class="table-filters">
+                                <td><input type="text" size="1/"></td>
+                                <td><input type="text" size="10/"></td>
+                                <td><input type="text" size="50/"></td>
+                                <td><input type="text" size="7/"></td>
+                                <td><input type="text" size="7/"></td>
+                                <td><input type="text" size="10/"></td>
+                                <td><input type="text" size="2/"></td>
+                                <td><input type="text" size="3/"></td>
+                            </tr>		
+                                                    <tr class="table-data">
+                                <td>1</td>
+                                <td style="white-space: nowrap;"></td>
+                                <td>Вища математика. Частина 1. Диференційні числення. Аналітична геометрія. Лінійна алгебра</td>
+                                <td> Екзамен</td>
+                                <td>
+                                    Основна																							</td>			
+                                <td>Не визначен деканатом</td>
+                                <td></td>
+                                <td>
+                                    -																															</td>
+                            </tr>
+                                                    <tr class="table-data">
+                                <td>2</td>
+                                <td style="white-space: nowrap;"></td>
+                                <td>Нарисна геометрія</td>
+                                <td> Екзамен</td>
+                                <td>
+                                    Основна																							</td>			
+                                <td>Не визначен деканатом</td>
+                                <td></td>
+                                <td>
+                                    -																															</td>
+                            </tr>
+                                                    <tr class="table-data">
+                                <td>3</td>
+                                <td style="white-space: nowrap;"></td>
+                                <td>Фізика. Частина 1.Механіка. Молекулярна фізика</td>
+                                <td> Екзамен</td>
+                                <td>
+                                    Основна																							</td>			
+                                <td>Не визначен деканатом</td>
+                                <td></td>
+                                <td>
+                                    -																															</td>
+                            </tr>
+                                                    <tr class="table-data">
+                                <td>4</td>
+                                <td style="white-space: nowrap;"></td>
+                                <td>Інженерні основи авіації і космонавтики</td>
+                                <td>залік</td>
+                                <td>
+                                    Основна																							</td>			
+                                <td>Не визначен деканатом</td>
+                                <td></td>
+                                <td>
+                                    -																															</td>
+                            </tr>
+                                                    <tr class="table-data">
+                                <td>5</td>
+                                <td style="white-space: nowrap;"></td>
+                                <td>Інформаційні технології та загальні методи розробки прикладного ПЗ. Частина 1. Інформаційні технології</td>
+                                <td>залік</td>
+                                <td>
+                                    Основна																							</td>			
+                                <td>Не визначен деканатом</td>
+                                <td></td>
+                                <td>
+                                    -																															</td>
+                            </tr>
+                                                    <tr class="table-data">
+                                <td>6</td>
+                                <td style="white-space: nowrap;"></td>
+                                <td>Історія науки і техніки</td>
+                                <td>залік</td>
+                                <td>
+                                    Основна																							</td>			
+                                <td>Не визначен деканатом</td>
+                                <td></td>
+                                <td>
+                                    -																															</td>
+                            </tr>
+                                                    <tr class="table-data">
+                                <td>7</td>
+                                <td style="white-space: nowrap;"></td>
+                                <td>Хімія</td>
+                                <td>залік</td>
+                                <td>
+                                    Основна																							</td>			
+                                <td>Не визначен деканатом</td>
+                                <td></td>
+                                <td>
+                                    -																															</td>
+                            </tr>
+                                                </tbody></table>
+                    </div>
+                </div>
+            </div>
+    
+    
+
+    
+    <div id="debug" style="display:none"></div>												<br><br>
+                                                    <span style="color:#CCCCCC; font-size:95%"></span>
+              
+                                            <!-- -=- -=- -=- -=- -=- -=- -=- -=- -=- eof content  -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -->
+                                      
+                                  </td>
+                                </tr>
+                            </tbody></table>
+    
+                        </td>
+                        
+                    </tr>
+                </tbody></table>
+                        
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="vertical-align:bottom" class="footer">
+                <!--нижняя часть страницы-->
+                <table cellpadding="0" cellspacing="0" border="0" width="100%" class="footer">
+                    <tbody><tr>
+                        <td>						Національний технічний університет України "КПІ ім. Ігоря Сікорського" © 2011-2024<br>
+                            Усі права застережено. <a href="https://ecampus.kpi.ua/privacy">Правила використання інформації сайту</a>.<br>
+                            Інформаційна підтримка: тел. +38 (044) 204 80 06, e-mail:· ecampus@kpi.ua<br>
+                                </td>
+                        <td class="socials">
+    
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+        
+        
+    </tbody></table>
+    
+    <!--<script type="text/javascript" language="JavaScript" src="js/timer.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/ajax/test_check.js"></script>-->
+    </body></html>

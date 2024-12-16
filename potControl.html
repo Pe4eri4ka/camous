@@ -1,0 +1,1697 @@
+<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml"><head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1251">
+    <meta name="keywords" http-equiv="keywords" content="">
+    <meta name="description" content="">
+    <meta name="classification" content="Education, High school, Campus, Kyiv">
+    <meta http-equiv="Cache-Control" content="no-cache"><meta http-equiv="Pragma" content="no-cache">
+    <meta name="revisit" content="7 days"><meta name="revisit-after" content="7 days"><meta name="robots" content="index, follow">
+    <meta name="distribution" content="Global"><meta name="allow-search" content="yes">
+    <meta http-equiv="reply-to" content="info@campus.kpi.ua">
+    <meta name="document-state" content="dynamic">
+    <meta name="author" content="Design, web-architecture and programming by 3SunS. Data and DB support provided by KBIS and KPI subdivisions">
+
+    <link type="image/ico" href="images/icon.ico" rel="SHORTCUT ICON">
+    
+    <style>
+.rc_del {
+color:#CC0000;
+}
+/*
+.stuBoxA {
+visibility:hidden;
+height:40px;
+}
+*/
+.box4list {
+width:98%; color:#999999; border:1px solid #bbb; padding:3px;
+min-height:40px;
+}
+.accordion div {
+margin:0px;
+padding:0px;
+}
+.addRecipientBtn {
+margin:5px;
+}
+.addRecipientBtn b {
+color:#009933;
+font-size:120%;
+}
+.recipientBox {
+background-color:#FAFAFA;
+}
+
+/*** greyTbl ***/
+.greyTbl {
+padding:0px;
+background-color:#999;
+margin-top:12px;
+}
+.greyTbl th, .greyTbl td {
+background-color:#FFFFFF;
+padding:3px;
+}
+.greyTbl th {
+background-color:#eee;
+}
+
+.greyTbl caption {
+padding:4px;
+font-weight:bold;
+color:#555;
+text-align:left;
+/* background-color:#999999;
+border:1px solid #CCCCCC;
+border-bottom:none;
+*/
+
+}
+
+
+
+
+/*** Campus CSS ***/
+
+.box_gen {
+border:1px solid #7f9db9;
+background-image:url(../images/campus/box/bg_blue.png);
+background-position:bottom;
+background-repeat:repeat-x;
+padding:10px;
+margin-bottom:10px;
+}
+.box_gen, .box_gen h1, .box_gen table {
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.box_gen h1 {
+font-style:italic;
+font-size:15pt;
+font-weight:normal;
+padding:0px;
+margin-top:0px;
+}
+
+.bb_head {
+font-style:italic;
+}
+
+
+.box_info {
+border:1px solid #b5b5b5;
+background-image:url(../images/campus/box/bg_orange.png);
+background-position:bottom;
+background-repeat:repeat-x;
+padding:10px;
+margin-bottom:10px;
+cursor:default;
+}
+.box_info .dt{
+font-weight:bold;
+padding-right:20px;
+color:#999999
+}
+.box_info hr{
+color:#b5b5b5;
+width:100%;
+border:0px;
+border:0px;
+border-bottom:1px;
+border-style:solid;
+}
+.box_info .body {
+cursor:text;
+}
+
+.genBox .box_info {
+max-width:610px;
+width:580px;
+}
+
+
+/* Common CSS Styles Document */
+
+br.h3{
+line-height: 3px;
+}
+br.h7{
+line-height: 7px;
+}
+
+.block{
+display:block;
+}
+.hidden {
+display:none;
+}
+.c_def{
+cursor:default;
+}
+.t90{
+font-size:90%;
+}
+.t110{
+font-size:110%;
+}
+.hand{
+cursor:pointer;
+}
+
+a.no_under{
+text-decoration: none;
+}
+
+
+.w100 {
+width:100%;
+}
+.bg_norepeat {
+background-position:left;
+background-repeat:no-repeat;
+}
+
+form {
+padding:0px;
+margin:0px;
+}
+
+/* -=-=-=-=-=-=-=-=-= Color styles  =-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+.white{
+color:white;
+}
+.red{
+color:#FF0000;
+}
+.violet{
+color:#000088;
+}
+.green{
+color:green;
+}
+.orange{
+color:orange;
+}
+.blue{
+color:#336699;
+}
+
+.bg-white{
+background-color:#FFFFFF;
+}
+.bg-violet{
+background-color:#000088;
+}
+.bg-grey{
+background-color:#D7D7D7;
+}
+.bg-lightgrey{
+background-color:#F7F7F7;
+}
+
+.bg-lightblue{
+background-color:#f4f5f7;
+}
+.bg-darkblue{
+background-color:#edf0f3;
+}
+
+.error{
+color:#E00;
+}
+
+.error .white{
+color:#ccc;
+}
+
+/* -=-=-=-=-=-=-=-=-= Input styles  =-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+.input_hl{
+background-color:#FFEE99;
+border-style:solid;
+}
+
+input.wide,textarea.wide{
+width:97%;
+font-size:12px;
+}
+input.small{
+width:40px;
+font-size:12px;
+}
+
+
+/* -=-=-=-=-=-=-=-=-= Calendar styles  =-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+.cl_sel { font:xx-small Verdana;   background-color:#dddddd; }
+.cl_wek { font:bold xx-small Verdana; color:black; width:100%; height:12px; }
+.cl_day { font:bold xx-small verdana; color:black; width:100%; height:12px; text-decoration:none; cursor:pointer; }
+.cl_day:hover {
+cursor:pointer;
+text-decoration:none;
+color:red;
+}
+.cl_dayns4 { font:bold x-small verdana;   color:black; text-decoration:none; }
+.cl_in { border:inset 1px; padding:0px; font-weight:normal; background-color: #cccccc; width:18px; height:14px; }
+
+.cl_out { border:outset 1px; padding:0px; font-weight:bold; background-color: #cccccc; width:18px; height:14px;
+}
+
+/**
+.cl_day{
+cursor:pointer;
+text-decoration:none;
+}
+
+.cl_day:hover{
+cursor:pointer;
+text-decoration:none;
+color:red;
+}
+.cl_dayns4{
+cursor:pointer;
+text-decoration:none;
+}
+.cl_dayns4:hover{
+cursor:pointer;
+text-decoration:none;
+color:red;
+}
+.cl_out{
+cursor:default;
+}
+
+**/
+
+
+/***
+ *** Navigation styles
+ ***/
+
+.more{
+border:outset 1px;
+color:#555555;
+
+padding:3px;
+padding-left:7px;
+padding-right:7px;
+
+font-weight:normal;
+background-color: #e0e0e0;
+height:21px;
+text-decoration:none;
+}
+.more:hover{
+border:outset 1px;
+color:#555555;
+
+padding:3px;
+padding-left:7px;
+padding-right:7px;
+
+background-color: #f0f0f0;
+height:21px;
+text-decoration:none;
+}
+
+.more_dis{
+border:outset 1px;
+color:#aaaaaa;
+
+padding:3px;
+padding-left:7px;
+padding-right:7px;
+
+font-weight:normal;
+background-color: #e0e0e0;
+height:21px;
+text-decoration:none;
+cursor:default;
+}
+
+.dialog_modal {
+display:none;
+}
+
+
+/*** Quick search results ***/
+/*** jquery.suggest.css **/
+
+  .ac_results {
+ border: 1px solid gray;
+ background-color: #F8F7F5;
+ background-image:url(../images/find/qsr.bg.png);
+ background-repeat:repeat-x;
+ background-position:top;
+ padding: 0;
+ margin: 0;
+ list-style: none;
+ position: absolute;
+ z-index: 10000;
+ display: none;
+/*
+width:200px;
+ height:200px;
+ top:10px;
+ left:20px;
+ */
+  }
+ 
+  .ac_results li {
+font-size:10pt;
+padding: 2px 5px;
+white-space: nowrap;
+color:#111;
+text-align: left;
+  }
+
+  .ac_results li a{
+color:#111;
+text-decoration:none;
+}
+.ac_results li.cc {
+background-color:#333;
+color:#FFF;
+cursor:default;
+text-align:right;
+}
+.ac_results li.cc .count {
+/* display:none;*/
+}
+.ac_results li.cc .count tt {
+font-family:Verdana, Geneva, sans-serif;
+font-size:80%;
+}
+.ac_results li.cc .btnClose {
+font-weight:bold;
+cursor:pointer;
+}
+
+
+.ac_over {
+ cursor: pointer;
+ background-color: #FFF0C8;
+  }
+ 
+  .ac_match {
+ border-bottom:1px #000 dotted;
+ font-style:normal;
+ font-weight:normal;
+/*  color: black;*/
+  }
+
+.dc_a a, .dc_a a:visited{
+ font-size:10pt;
+ color:#3399FF;
+}
+.dc_a span {
+ font-size:8pt;
+ color:#009933;
+}
+
+
+/* CSS Document */
+
+
+html, body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eee;
+
+}
+
+.main_tbl {
+    height: 100%;
+}
+
+/*--------Ñòàðò áîêîâûå êîëîíêè-----------------*/
+.left_clmn {
+    width: 10%;
+}
+
+
+/*----------Ëåâàÿ áîêîâàÿ êîëîíêà---------------*/
+
+/*----------Ïðàâàÿ áîêîâàÿ êîëîíêà---------------*/
+.right_clmn {
+    width: 10%;
+}
+
+/*--------Êîíåö áîêîâûå êîëîíêè-----------------*/
+
+
+table, table tr, table td {
+    vertical-align: top;
+}
+
+.content_area {
+    width: 100%;
+}
+
+img {
+    border-width: 0px;
+}
+
+.clAdmin, .clPrep {
+    color: #3a6ecb;
+    text-transform: capitalize;
+}
+
+
+/*--------Ñòàðò öåíòðàëüíàÿ êîëîíêà-----------------*/
+.header {
+    min-width: 1000px;
+    width: 80%;
+    background-image: url(../images/head/bg.png);
+    background-repeat: repeat-x;
+    background-color: #FFFFFF;
+    height: 160px;
+}
+
+.content_left {
+    width: 182px !important;
+}
+
+.header .logo img {
+    margin-left: -25px;
+    z-index: 1000;
+}
+
+/*** Profile Mgmt ***/
+.header .profile {
+    width: 100%;
+    height: 40px;
+    padding-bottom: 3px;
+}
+
+.header .profile td {
+    vertical-align: bottom;
+}
+
+.header .profile .title {
+    text-align: center;
+    /* font-style:italic;*/
+    padding-bottom: 4px;
+    font-size: 14px;
+    color: #5F5F5F;
+}
+
+/*.header .profile .title span{
+color:#215F7C;
+}*/
+
+.header .profile .switch {
+    width: 170px;
+}
+
+.header .profile .ctrl {
+    width: 40px;
+    text-align: right;
+}
+
+/*** searchBox ***/
+.header .searchBox {
+    padding-top: 4px;
+    padding-left: 18px;
+    width: 100%;
+    height: 34px;
+}
+
+.header .searchBox .title {
+    width: 75px;
+    vertical-align: baseline;
+    padding-bottom: 3px;
+    font-size: 14px;
+    color: #5F5F5F;
+}
+
+.header .searchBox input {
+    width: 360px;
+    /* border:1px solid #999;*/
+}
+
+.header .searchBox button {
+    border: 1px solid #999;
+    background-color: #eeeeee;
+    margin-left: 5px;
+}
+
+.header .searchBox .advance {
+    text-align: left;
+    width: 210px;
+    vertical-align: baseline;
+    padding-bottom: 5px;
+}
+
+.header .searchBox .advance img {
+    padding-right: 3px;
+    margin-bottom: -2px;
+}
+
+.header a {
+    color: #2B6885;
+}
+
+.header a:hover {
+    color: #EF991D;
+}
+
+.header .searchBox .advance a {
+    font-size: 12px;
+}
+
+.pageHead {
+    margin: 2px;
+    margin-top: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    /* margin-left:28px;*/
+    padding: 5px;
+    padding-left: 70px;
+    vertical-align: bottom;
+    /* border:1px solid #c3c3c3;
+        border-right:0px;
+        background-color:#f5f5f5;
+        font-style:italic;
+    */
+    background-image: url(../images/page/default.png);
+    background-position: 18px 1px;
+    background-repeat: no-repeat;
+    font-size: 22px;
+    color: #336699; /*595959*/
+}
+
+/*** navigation ***/
+.navigation {
+    /* font-style:italic;*/
+    height: 36px;
+    font-size: 12px;
+    padding-left: 18px;
+}
+
+.navigation td {
+    vertical-align: middle;
+    color: #EF991D;
+}
+
+.navigation img {
+    padding-left: 3px;
+    padding-right: 5px;
+    vertical-align: middle;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #2B6885;
+}
+
+.centre_clmn2 {
+    width: 1002px !important;
+    min-width: 1000px;
+    max-width: 1004px;
+    background-color: #FFFFFF;
+    min-height: 60%;
+    height: 70%;
+}
+
+/*-------------------------*/
+/*table.head{
+background-image:url(../images/head/head_bg.jpg);
+background-color:#669933;
+background-repeat:no-repeat;
+background-position:left;
+height:222px;
+}*/
+/*** Menu ***/
+.menu {
+    width: 182px;
+    padding-left: 9px;
+    height: 100%;
+}
+
+.menu table {
+}
+
+.menu table td {
+
+}
+
+.menu td {
+    font-size: 12px;
+    cursor: default;
+}
+
+.menu .spacer {
+    height: 16px;
+}
+
+.menu .spacer_between {
+    /* border-top:1px solid #C4D3ED;*/
+    background-image: url(../images/menu/spacer.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.lmi_delim {
+    /* background-image:url(images/lmi_delim_bg.png);*/
+    height: 0px;
+    display: none;
+}
+
+
+.lm_item td, .lm_item_active td, .mi_common td {
+    /* background-color:#faf9f8;*/
+    font-size: 14px;
+    vertical-align: bottom;
+    /* border:1px solid #e2e2e2;*/
+    /* border-bottom:1px solid #000000;
+        border-top:1px solid #873e3e;*/
+}
+
+.lm_item_active td {
+    border-left: 0px;
+    background-color: #FFFFFF;
+    background-image: url(../images/menu/mi_bullet.png);
+    background-repeat: no-repeat;
+    background-position: 2px 8px;
+}
+
+.mi_common td {
+    /* background-color:#f2fff0;*/
+}
+
+.lm_item td a, .mi_common td a, .lm_item_active td a {
+    color: #2B6885;
+    /* background: url(images/lmi_bullet.png) no-repeat top 0px;  */
+    text-align: left;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    height: 15px;
+    vertical-align: bottom;
+    display: block;
+}
+
+.mi_common td a {
+    /* color:#0048cb;*//*7c917a*/
+}
+
+.lm_item td a:hover, .mi_common td a:hover {
+    background: url(images/lmi_bullet_active.png) no-repeat bottom 0px;
+
+    /* text-decoration: underline;*/
+    color: #EF991D;
+}
+
+.lm_item a.dis, .lm_item a.dis:hover {
+    color: #CCCCCC;
+    text-decoration: none;
+}
+
+.lmi {
+    color: #f3f3f3;
+}
+
+.menu A, .menu A:link, .menu A:visited, .menu A:active {
+    text-decoration: none;
+    /*    COLOR: #edd;*/
+}
+
+
+/*-------------------------*/
+/*.btn_active,.btn_passive{
+display:block;
+width:200px;
+height:45px;
+margin-left:17px;
+line-height:45px;
+padding-left:23px;
+font-family:"Arial Narrow", Arial, Helvetica, sans-serif;
+font-size:16px;
+font-weight:bold;
+text-decoration:none;
+color:#000000;
+background-repeat:no-repeat;
+}
+
+.btn_active{
+background-image:url(../images/nav_menu/btn_active.png);
+}
+.btn_passive{
+background-image:url(../images/nav_menu/btn_passive.png);
+}
+.btn_passive:hover{
+background-image:url(../images/nav_menu/btn_hover.png);
+}
+*/
+/*-------------------------*/
+/*
+div.sub_menu{
+padding-top:12px;
+padding-bottom:12px;
+padding-left:13px;
+margin-top:1px;
+margin-left:13px;
+background-image:url(../images/nav_menu/bg_sub_menu.png);
+background-repeat:no-repeat;
+
+}
+.sub_pssv, .sub_pssv2{
+padding-left:13px;
+display:block;
+font-family:"Arial Narrow", Arial, Helvetica, sans-serif;
+font-size:16px;
+text-decoration:none;
+color:#5b5b5b;
+background-image:url(../images/nav_menu/sub_point_pssv.png);
+background-repeat:no-repeat;
+background-position:left center;
+}
+.sub_pssv:hover, .sub_pssv2:hover {
+background-image:url(../images/nav_menu/sub_point_actv.png);
+}
+.sub_pssv2 {
+padding-left:25px;
+background-position:11px 8px;
+}
+*/
+/*-------------------------*/
+/*--------Êîíåö áëîêà ìåíþ -----------------*/
+
+/* ///// START Module List Styles ///// */
+.listOddBold {
+    BACKGROUND-COLOR: #DCDCDC;
+    COLOR: #000000;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN: left;
+    VERTICAL-ALIGN: top
+}
+
+.listOddBold A:link {
+    COLOR: #336699;
+    FONT-WEIGHT: bold
+}
+
+.listOddBold A:visited {
+    COLOR: #336699;
+    FONT-WEIGHT: bold
+}
+
+.listOddBold A:active {
+    COLOR: #336699;
+    FONT-WEIGHT: bold
+}
+
+.listOddBold A:hover {
+    COLOR: #000033;
+    FONT-WEIGHT: bold
+}
+
+.listEvenBold {
+    BACKGROUND-COLOR: #ffffff;
+    COLOR: #000000;
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN: left;
+    VERTICAL-ALIGN: top
+}
+
+.listEvenBold A:link {
+    COLOR: #336699;
+    FONT-WEIGHT: bold
+}
+
+.listEvenBold A:visited {
+    COLOR: #336699;
+    FONT-WEIGHT: bold
+}
+
+.listEvenBold A:active {
+    COLOR: #336699;
+    FONT-WEIGHT: bold
+}
+
+.listEvenBold A:hover {
+    COLOR: #000033;
+    FONT-WEIGHT: bold
+}
+
+.listSelected {
+    background-color: #008A8C;
+    color: White;
+}
+
+.listSelected A:link {
+    color: White;
+}
+
+.listOdd {
+    BACKGROUND-COLOR: #DCDCDC;
+    COLOR: #000000;
+    VERTICAL-ALIGN: top;
+    cursor: default;
+}
+
+.listEven {
+    BACKGROUND-COLOR: #EEEEEE;
+    COLOR: #000000;
+    VERTICAL-ALIGN: top;
+    cursor: default;
+}
+
+.ListGrant {
+    BACKGROUND-COLOR: #EEF9EE;
+    COLOR: #000000;
+    VERTICAL-ALIGN: top;
+    cursor: default;
+}
+
+.ListDeny {
+    BACKGROUND-COLOR: #FFEEEE;
+    COLOR: #000000;
+    VERTICAL-ALIGN: top;
+    cursor: default;
+}
+
+.listOdd A:link, .listOdd A:visited, .listOdd A:active, .listEven A:link, .listEven A:visited, .listEven A:active,
+.ListGrant A:link, .ListGrant A:visited, .ListGrant A:active,
+.ListDeny A:link, .ListDeny A:visited, .ListDeny A:active {
+    COLOR: #700000;
+}
+
+.subListOdd {
+    BACKGROUND-COLOR: #D5D5DF;
+    COLOR: #000000;
+    VERTICAL-ALIGN: top
+}
+
+.subListEven {
+    BACKGROUND-COLOR: #E7E7EF;
+    COLOR: #000000;
+    VERTICAL-ALIGN: top
+}
+
+.subListOdd A, .subListEven A {
+    COLOR: #2255B0
+}
+
+.listOdd A:hover, .listEven A:hover, .subListOdd A:hover, .subListEven A:hover {
+    COLOR: #000033
+}
+
+.ListOdd img, .ListEven img, .subListOdd img, .subListEven img {
+    vertical-align: middle;
+    border: 0;
+    padding-right: 5px;
+    padding-left: 2px;
+
+
+}
+
+/* ///// END Module List Styles ///// */
+
+
+/*--------content -----------------*/
+.cntnt {
+    padding-right: 15px;
+    padding-left: 8px;
+    padding-top: 0px;
+    text-align: justify;
+    font-family: Verdana;
+    font-size: 12px;
+    color: #353535;
+    min-height: 500;
+    color: #555;
+}
+
+.cntnt h2 {
+    /* color:#7c916b;*/
+    font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    margin: 0px;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.cntnt .foto {
+    margin: 5px;
+    padding-bottom: 1px;
+    padding-right: 1px;
+    border-bottom: 1px #eeeeee solid;
+    border-right: 1px #eeeeee solid;
+    float: left;
+}
+
+/*-------------------------*/
+
+td.footer {
+    height: 62px;
+    background-color: #FFFFFF;
+
+}
+
+table.footer {
+    height: 62px;
+    padding-left: 22px;
+    font-size: 13px;
+    border-top: 2px solid #208944;
+    padding-top: 15px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    min-height: 100px;
+}
+
+.footer td {
+    vertical-align: middle;
+}
+
+.footer a {
+    color: #208944;
+    text-decoration: none;
+}
+
+.footer .socials {
+    text-align: right;
+    padding-right: 24px;
+}
+
+.footer .socials a {
+    padding-left: 7px;
+}
+
+a.docs {
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+}
+
+
+/*** Msgs
+ ***/
+.genBox, .msgsBox {
+    width: 100%;
+    /* background-color:#996600*/
+}
+
+.msgsBox .mainFrame {
+    width: 820px;
+    /* background-color:#FF0000*/
+}
+
+.genBox button, .msgsBox button, .rnpButtons a {
+    border: 1px solid #000000;
+    background-color: #eeeeee;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 5px;
+    color: #000000;
+    margin-bottom: 3px;
+    text-decoration: none;
+
+}
+
+.genBox button.active, .msgsBox button.active, .rnpButtons a.active {
+    background-color: #fffcdd;
+    color: #000000;
+}
+
+.rnpButtons a {
+    display: block;
+}
+
+.rnpButtons .groups br {
+    line-height: 9px;
+}
+
+.rnpButtons .groups a {
+    display: inline;
+}
+
+/*** Filter Box ***/
+.genBox .filterBox img, .msgsBox .filterBox img {
+    margin-bottom: -3px;
+    padding-right: 4px;
+}
+
+.genBox .filterBox, .msgsBox .filterBox {
+    padding-left: 9px;
+    width: 170px;
+}
+
+.genBox .filterBox h2, .msgsBox .filterBox h2 {
+    font-size: 14pt;
+    font-weight: bold;
+    color: #3f3f3f;
+    text-align: left;
+    padding-bottom: 0px;
+    margin-bottom: 9px;
+}
+
+.genBox .filterBox button, .msgsBox .filterBox button {
+    width: 162px;
+    text-align: center;
+    height: 42px;
+    margin-bottom: 5px;
+
+}
+
+
+.genBox .ctrl, .msgsBox .ctrl {
+    padding-bottom: 10px;
+}
+
+.genBox label, .msgsBox label {
+    font-weight: bold;
+}
+
+.msgBox {
+    padding: 5px;
+    border: 1px solid #CCCCCC;
+}
+
+.msgBox button {
+    margin: 5px;
+}
+
+.msgBody {
+    padding: 10px;
+    background-color: #f2f2f2;
+    width: 96%;
+    border: 1px dotted #333333;
+    margin-top: 5px;
+}
+
+.msgIsEmpty {
+    font-size: 200%;
+    color: #aaa;
+}
+
+.msg_form, .msg_form .formBox {
+    width: 100%;
+}
+
+.msg_form textarea {
+    width: 90%;
+}
+
+.msg_form .body {
+    height: 300px;
+}
+
+.recipientBox {
+    padding: 3px;
+    background-color: #EEE;
+    border: 1px solid #aaa;
+}
+
+.recipientBox .eduStructBox {
+    padding-bottom: 5px;
+    margin-bottom: 7px;
+    border-bottom: 1px dotted #333333;
+}
+
+.recipientBox th {
+    text-align: left;
+}
+
+.rc_del {
+    color: #CC0000;
+}
+
+.listDyn {
+    width: 98%;
+    color: #999999;
+    border: 1px solid #bbb;
+    padding: 3px;
+    min-height: 40px;
+    background-color: #FAFAFA
+}
+
+.bbBox .subject {
+    font-weight: bold;
+}
+
+.bbBox .delBtn {
+    text-decoration: none;
+    color: #0066CC;
+    padding-right: 3px;
+    font-family: Verdana, Arial, Helvetica, sans-serif
+}
+
+
+@import url("common.css");
+@import url("desktop.css");
+@import url("campus.css");
+@import url("boxes.css");
+
+/*** Plugin styles ***/
+@import url("../js/jquery/tablesorter/style.css");
+    </style>
+
+    </head>
+    <body><div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+    <a name="top"></a>
+    
+    <table cellpadding="0" cellspacing="0" border="0" width="100%" class="main_tbl">
+        <tbody><tr nowrap="nowrap">
+            <!--левая боковая-->
+            <th class="left_clmn" valign="top" rowspan="3"></th>
+            <!--центральная (контентная) -->
+            <td valign="top" class="header" nowrap="nowrap">
+                
+                
+                <!--шапка с лого и контролами-->
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tbody><tr>
+                        <td class="content_left logo"><li><a href="osnova.html"><img src="https://campus.kpi.ua/images/logo.png" alt="е-Кампус КПІ"></a></li>
+                        </td>
+                        <td class="content_area">
+                            <table cellpadding="0" cellspacing="0" border="0" class="profile">
+                                <tbody><tr>
+                                    <td class="title"><span>Вітаємо, </span>  Катренич Дмитро Вікторович!</td>
+                                    <td class="switch">
+                                        <select id="role_switch" disabled="disabled">
+                                            <option value="">.: змінити роль :.</option>
+                                                                                    
+                                        </select>
+                                    </td>
+                                    <td class="ctrl"><a href="student/index.php?mode=logout" title="Вихід"><img src="https://campus.kpi.ua/images/ctrl/exit.png" alt="[X]" border="0" title="Вихід"></a>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                            <form action="student/index.php?mode=search" method="post" name="search_form">
+                            <table cellpadding="0" cellspacing="0" border="0" class="searchBox">
+                                <tbody><tr>
+                                    <!--<td class="title"></td>-->
+                                    <td>
+                                    </td>
+                                    <td class="advance">
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                            </form>
+    
+                            <table cellpadding="0" cellspacing="0" border="0" class="navigation">
+                                <tbody><tr>
+                                    <td><li><a href="osnova.html" title="">Головна</a></li>
+                                                                  
+                                  
+                                                                          </td>
+                                </tr>
+                            </tbody></table>
+                                                    <div class="pageHead" style="background-image:url(images/page/kodeks.png);">Кодекс честі</div>
+                                                </td>
+                    </tr>
+                </tbody></table>
+                
+                        </td>
+            
+            
+            <!--правая боковая-->
+            <th class="right_clmn" valign="top" rowspan="3"></th>
+        </tr>
+        
+    
+        <tr>
+            <td class="centre_clmn2">
+            
+                <!--контентная часть страницы-->
+                <table cellpadding="0" cellspacing="0" border="0" width="100%" height="100%">
+                    <tbody><tr valign="top">
+                         <!--навигационное меню-->
+                         <td class="menu" nowrap="">
+                            <table cellpadding="0" cellspacing="3" border="0" width="100%">
+                                    
+        
+                                    <tbody><tr class="lm_item mi_common">
+                                            <td>
+                                                    <li><a href="MyProf.html">Мій профіль</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>							
+        
+                                    <tr class="lm_item mi_common">
+                                            <td>
+                                                    <li><a href="contacti.html">Контакти</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>							
+        
+                                    <tr class="lm_item mi_common">
+                                            <td>
+                                                    <li><a href="dovidka.html" target="_blank">Довідка</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>							
+        
+                                    <tr class="lm_item_active mi_common">
+                                            <td>
+                                                    <li><a href="codex.html">Кодекс честі</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>							
+        <tr><td class="spacer spacer_between"></td></tr>
+    
+        
+                                    <tr class="lm_item">
+                                            <td>
+                                                   <li><a href="povidomlenya.html">Повідомлення</a></li> 
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>	
+                                    <tr class="lm_item">
+                                            <td>
+                                                    <li><a href="curator.html">Куратор</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>	
+                                    <tr class="lm_item">
+                                            <td>
+                                                    <li><a href="PHP.html">РНП</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>	
+                                    <tr class="lm_item">
+                                            <td>
+                                                    <li><a href="medotZab.html">Метод.забезпечення</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>	
+                                    <tr class="lm_item">
+                                            <td>
+                                                    <li><a href="potControl.html">Поточний контроль</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>	
+                                    <tr class="lm_item">
+                                            <td>
+                                                    <li><a href="Opituvanie.html">Опитування</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>	
+                                    <tr class="lm_item">
+                                            <td>
+                                                    <li><a href="RectorControl.html">Ректорський контроль</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>	
+                                    <tr class="lm_item">
+                                            <td>
+                                                    <li><a href="Sesion.html">Сесія</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>	
+                                    <tr class="lm_item">
+                                            <td>
+                                                    <li><a href="Vstup2024mag.html">Вступ 2024 (магістратура)</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>	
+                                    <tr class="lm_item">
+                                            <td>
+                                                    <li><a href="DocumentsStud.html">Документи (студ.)</a></li>
+                                            </td>
+                                    </tr>
+    
+        <tr class="lmi_delim"><td></td></tr>	
+                                    <tr class="lm_item">
+                                            <td>
+                                                    <li><a href="ResAtest.html">Результати атестації</a></li>
+                                            </td>
+                                    </tr>
+    
+                                    <tr><td class="spacer"></td></tr>
+                            </tbody></table>
+                         </td>
+                        <td valign="top">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tbody><tr>
+                                   <td class="cntnt" valign="top" colspan="2">
+                                      
+              <!-- -=- -=- -=- -=- -=- -=- -=- -=- -=- content  -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -->
+                                                    
+        <style>
+            li{
+                        list-style-type: none;
+
+                        
+                }
+          .ui-widget{
+              font-size: 12px !important;
+          }
+          #sheet td{
+              padding: 5px;
+          }
+          .ui-widget{
+              font-size:14px;
+          }
+          .moBox .buttonSet{
+              text-align: center;
+              margin-top: 40px;
+          }
+          .moBox .buttonSet button{
+              margin: 0px 40px;
+          }
+          .head, .head *{
+              border: 0;
+          }
+          .head{
+              margin-bottom: 20px;
+          }
+          .studySheetBox{
+              min-height: 200px;
+          }
+          .studySheetBox table{
+              border: 1px solid;
+          }
+          td[title] input, td[title] select, td[title] textarea {
+              cursor: pointer
+          }
+          td._del{
+              color: red;
+              text-align: center;
+              font-size: 20px;
+              cursor: pointer;
+          }
+          textarea{
+              resize: vertical;
+              max-height: 200px;
+          }
+          .studySheetBox td{
+              border-right: 1px solid #D0D0D0;
+              border-bottom: 1px solid #d0d0d0;
+          }
+          .ListBox td{
+              padding: 5px;
+              vertical-align: middle;
+          }
+          .studySheetBox table input, .studySheetBox table select, .studySheetBox textarea{
+              width: 96%;
+              padding: 2%;
+              margin: 0;
+              border: 0;
+              background: transparent;
+              display: block;
+          }
+          .error{
+              box-shadow: 0px 0px 2px 1px red;
+          }
+          .studySheetBox th{
+              text-align: center;
+              background-color: #eee;
+              padding: 5px;
+              border-right: 1px solid #D0D0D0;
+              border-bottom: 1px solid #d0d0d0;
+          }
+          .studySheetBox tr:nth-child(even){
+              background-color: #E4F3FF;
+          }
+          .studySheetBox td span.placeholder{
+              color: #999;
+          }
+          .studySheetBox .loader{
+              margin: 20% auto;
+              display: block;
+          }
+          .studySheetBox #tabs{
+              display: none;
+          }
+          .studySheetBox span.addSheet{
+              cursor: pointer;
+              color: #00F;
+          }
+          .studySheetBox span.addSheet:hover{
+              text-decoration: underline;
+          }
+    
+          #cMonitoringRow td input{
+              text-align: center;
+          }
+          #cMonitoringRow .select td{
+              background-color: #91FFA9 !important;
+          }
+          .vertical{
+              transform: rotate(90deg);
+              width: 100px;
+              height: 100px;
+          }
+          .ui-autocomplete {
+              max-height: 150px;
+              overflow-y: auto;
+              overflow-x: hidden;
+          }
+          * html .ui-autocomplete {
+              height: 100px;
+          }
+          #contextmenu{
+              position: absolute;
+              border: 1px solid #DDD;
+              background-color: #FFF;
+              padding: 7px 15px;
+              font-size: 12px;
+              box-shadow: 0px 0px 2px 0px #2B6885;
+              color: #EF991D;
+              cursor: pointer;
+          }
+          #contextmenu:hover{
+              border: 1px solid #FFF;
+              background-color: #6EB2FF;
+              color: #FFF;
+          }
+          span.descript {
+              position: relative;
+              float: left;
+              margin-top: -25px;
+              color: red;
+              font-size: 22px;
+          }
+          .summaAll{
+              color: red;
+              text-align: center;
+          }
+          #cMonitoringRow tr td:last-child{
+              text-align: center;
+          }
+          #cMonitoringRow th span{
+              width: 4em;
+              display: inline-block;
+          }
+          #cMonitoringRow th:first-child span{
+              width: 10px;
+              display: inline-block;
+          }
+          
+          #cMonitoringRow th:nth-child(4) span{
+              width: 30px;
+              display: inline-block;
+          }
+          #cMonitoringRow th:nth-child(5) span{
+              width: 50px;
+              display: inline-block;
+          }
+          
+          #cMonitoringEmployeeName{
+              padding: 5px;
+              border: 1px solid #999;
+          }
+          th.cssHeader {
+              background-image: url(/js/jquery/tablesorter/bg.gif);
+              cursor: pointer;
+              font-weight: bold;
+              background-repeat: no-repeat;
+              background-position: center left;
+              padding-left: 20px;
+              border-right: 1px solid #dad9c7;
+              margin-left: -1px;
+          }
+          th.headerSortUp {
+              background-image: url(/js/jquery/tablesorter/asc.gif);
+              background-color: #D4E0EC;
+          }
+          th.headerSortDown {
+              background-image: url(/js/jquery/tablesorter/desc.gif);
+              background-color: #D4E0EC;
+          }
+          thead small{
+              font-weight: normal;
+          }
+          .studySheetBox  .IsNotSum {
+              background-color: #fff;
+          }
+    
+          #zoom, #export{
+              position: absolute;
+              top: 6px;
+              right: 6px;
+              cursor: pointer;
+          }
+          #export{right:50px}
+          #zoom:after, #export:after{
+              content: '';
+              background-size: cover;
+              background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAB+UlEQVRo3u1aS26EMAxl1RPNKSrEn213HKQn6JF6LhZoGreNZDwh2JCYRCKSRYRmnPfihxMcirZtn03TSG3u+74sArVhGErwKcUB2Avo1HX9rKrq1/b65jp3XRcMvG3gE3zb8TgG2EUEYoF3kUATtolnRYBhUcFTEhxM7AiY66IBHpGoYMxTErIsUbg+tQjAWDEkpELCgg8qIRyRmCTwzJ/OQlhC9H4MEnjmz2ahhRM+s4gEIwG+sG88gT5sLxGwqZLOxpacQpCw4H1SsVGnix2NwCrPUz1C3yz5H8Ye1sZxfEzT9HYUPPwXfGCfMIZPsnidwAScixTNCDBAKNlsNRhjL2lYEpaAd4XFJLQJ+JLFv9TngrOrtDrVIsB9vkQ7YnAIeiUOvsz97zMGPrBPGCNkhls1+sACAMnC4zLw4RsjaqMEtnK5r08JqDZLwGVZEQgpoUsJZB0B7hbYsadKg8AtoasJ3BJKgcAtoasjcEvoSgJZSCjr7XSyLzTGwTsHfLKvlNm/1HPKKqgulGRZxVvYInUhlcKWryq+VdjKv7SIfrxwKsMaxV1HtXwhpP4ISPJ27PK6BIv4hEbrgEOARXZCo33EtLefYktICzwlEVJC2sesZc04KZJKSP2gO5iEtEhIv5c4lIVikZB8YrCSUAqf28CO+OjnNj+LTIIBLXq5iAAAAABJRU5ErkJggg==');
+              width: 25px;
+              height: 25px;
+              float: left;
+          }
+          #export:after{
+              background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkZGQThFMjAzRTRDRjExRTY4QUY4RUMyMDk4RTc0MDI3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkZGQThFMjA0RTRDRjExRTY4QUY4RUMyMDk4RTc0MDI3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RkZBOEUyMDFFNENGMTFFNjhBRjhFQzIwOThFNzQwMjciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RkZBOEUyMDJFNENGMTFFNjhBRjhFQzIwOThFNzQwMjciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7oBOaSAAAKV0lEQVR42uxae3BU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');
+          }
+          #zoom:hover:after{
+              content: '';
+              background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAB+ElEQVRo3u1abW6DMAzl185RvjlA/3GDquoRdpedYEfaufqj2vKmpTJpAAdiByYiWY3aYr9HXpwQk5Vl+V0URajdm6a5ZpEafMFnKA5gz9A5nU5sy/P8XlVVNPC2wSd8h2AB9icBc/GvjfX/TAS8jwSNT27eoP8k4IAcM1HwLgkOpsEIzMjmUde1OHjbTKwbYkaVkJkwH1oEEEtCQiokLPioEqKsJUnQOy+VhcRI0Du/Ngs9tOXkymbsxrnYXiSE9IVswxlK/G5S3moS8MGJBUzARhc7V0KDPO+bTG3bvhs7W+u67tz3/dtS8LgWPqhPxHAlREebrhNUQt5FyiWBALFkM9YQYy59WxKWwOQKS+WkTWBqngEzsGecXaUloUWAmySCdsSYbNAr/c5Mqk8T6GuNwQf1iRgxkoO3uRMWAEK2vz6Dj6kYog3Bx/I3t+8SUG0ugSVkkhOILaEkBA4JpR6BQ0IpCRwS2gKBQ0KpR+CQUEoCu5LQrrfTm32gMY9ll7n/bPqRcvcP9dxjlRQEuMcq3gLGFg62fCS8B1v/5Wjx5QB16qRa43DX/cxJ1WZRfUCyRhBaGxiMALciolXg4FpwgUO7xMQucKSSzRyJmBLSLrNec0alKFRC6oXuaBKi64TWqwZiWUiKRMgrBgMJbeR1m8vS121+ALcpS/GT2JvnAAAAAElFTkSuQmCC');
+          }
+          #export:hover:after{
+              content: '';
+              background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkZGQThFMjA3RTRDRjExRTY4QUY4RUMyMDk4RTc0MDI3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkZGQThFMjA4RTRDRjExRTY4QUY4RUMyMDk4RTc0MDI3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RkZBOEUyMDVFNENGMTFFNjhBRjhFQzIwOThFNzQwMjciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RkZBOEUyMDZFNENGMTFFNjhBRjhFQzIwOThFNzQwMjciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4HMACXAAAKeUlEQVR42tRaeWwU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');
+          }
+          #zoomWindow{
+              background: #fff;
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+          }
+          #zoomWindow .studySheetBox{
+              overflow: auto;
+              overflow-y: hidden;
+              font-size: 12px;
+              max-height: 100%;
+          }
+          #close:after{
+              content: '\2716';
+              position: absolute;
+              right: 0;
+              top: 0;
+              background: rgba(255, 0, 0, 0.71);
+              font-size: 30px;
+              line-height: 25px;
+              padding: 5px;
+              color: rgb(255, 255, 255);
+              border: 1px solid #5A5A5A;
+              opacity: 0.4;
+              cursor: pointer;
+          }
+          #close:hover:after{
+              opacity: 1;
+          }
+        </style>
+        
+    
+    <div class="moBox" style="width: 100%;">
+                      <div class="studySheetBox">
+          <p><b><big>Ваші відомості:</big></b></p>
+          <p>Навчальний рік
+            <select id="selectYear">
+              <option value="0">Всі</option>
+                            <option value="2024-2025">2024-2025</option>
+                      </select>
+            півріччя
+            <select id="selectSem">
+              <option value="0">Всі</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select></p>
+          <table width="100%" border="0" class="ListBox" cellspacing="0">
+            <thead>
+              <tr>
+                <th>Рядок РНП</th>
+                <th>Викладачі</th>
+              </tr>
+            </thead>
+            <tbody>
+                            <tr data-year="2024-2025" data-sem="1" style="display: table-row;">
+                    <td><a href="/student/index.php?mode=studysheet&amp;action=view&amp;id=151299">Історія науки і техніки, Бакалавр, Денна, 2024-2025 (КАРБ ІАТ), 134 Авіаційна та ракетно-космічна техніка, Читає: КІ ФСП</a></td>
+                    <td>Костилєва Світлана Олександрівна, Жовта Ілона Іванівна</td>
+                  </tr>
+                            <tr data-year="2024-2025" data-sem="1" style="display: table-row;">
+                    <td><a href="/student/index.php?mode=studysheet&amp;action=view&amp;id=151551">Вища математика. Частина 1. Диференційні числення. Аналітична геометрія. Лінійна алгебра, Бакалавр, Денна, 2024-2025 (КАРБ ІАТ), 134 Авіаційна та ракетно-космічна техніка, Читає: МАтаТЙ ФМФ</a></td>
+                    <td>Москвичова Катерина Костянтинівна</td>
+                  </tr>
+                            <tr data-year="2024-2025" data-sem="1" style="display: table-row;">
+                    <td><a href="/student/index.php?mode=studysheet&amp;action=view&amp;id=152361">Основи здорового способу життя. Частина 1, Бакалавр, Денна, 2024-2025 (КАРБ ІАТ), 134 Авіаційна та ракетно-космічна техніка, Читає: ТОС ФБМІ</a></td>
+                    <td>Бойко Ганна Леонідівна</td>
+                  </tr>
+                            <tr data-year="2024-2025" data-sem="1" style="display: table-row;">
+                    <td><a href="/student/index.php?mode=studysheet&amp;action=view&amp;id=152469">Практичний курс іноземної мови. Частина 1, Бакалавр, Денна, 2024-2025 (КАРБ ІАТ), 134 Авіаційна та ракетно-космічна техніка, Читає: КАМТС2 ФЛ</a></td>
+                    <td>Жигжитова Людмила Миколаївна</td>
+                  </tr>
+                            <tr data-year="2024-2025" data-sem="1" style="display: table-row;">
+                    <td><a href="/student/index.php?mode=studysheet&amp;action=view&amp;id=153841">Фізика. Частина 1.Механіка. Молекулярна фізика, Бакалавр, Денна, 2024-2025 (КАРБ ІАТ), 134 Авіаційна та ракетно-космічна техніка, Читає: ЗФМФП ФМФ</a></td>
+                    <td>Чурсанова Марина Валеріївна, Голяткіна Марина Олексіївна, Стретович Микола Олександрович</td>
+                  </tr>
+                            <tr data-year="2024-2025" data-sem="1" style="display: table-row;">
+                    <td><a href="/student/index.php?mode=studysheet&amp;action=view&amp;id=156689">Інженерні основи авіації і космонавтики, Бакалавр, Денна, 2024-2025 (КАРБ ІАТ), 134 Авіаційна та ракетно-космічна техніка, Читає: КАРБ ІАТ</a></td>
+                    <td>Кабанячий Володимир Володимирович</td>
+                  </tr>
+                            <tr data-year="2024-2025" data-sem="1" style="display: table-row;">
+                    <td><a href="/student/index.php?mode=studysheet&amp;action=view&amp;id=156436">Нарисна геометрія, Бакалавр, Денна, 2024-2025 (КАРБ ІАТ), 134 Авіаційна та ракетно-космічна техніка, Читає: НГІтаКГ ФМФ</a></td>
+                    <td>Ванін Володимир Володимирович, Овсієнко Людмила Григорівна, Грубич Марія Володимирівна</td>
+                  </tr>
+                            <tr data-year="2024-2025" data-sem="1" style="display: table-row;">
+                    <td><a href="/student/index.php?mode=studysheet&amp;action=view&amp;id=156804">Хімія, Бакалавр, Денна, 2024-2025 (КАРБ ІАТ), 134 Авіаційна та ракетно-космічна техніка, Читає: ЗНХ ХТФ</a></td>
+                    <td>Качоровська Ольга Петрівна, Шпак Арсеній Євгенович, Гуц Неля Анатоліївна, Іванюк Олена Володимирівна</td>
+                  </tr>
+                      </tbody>
+          </table>
+        </div>
+        </div>
+    <div id="debug" style="display:none"></div>												<br><br>
+                                                    <span style="color:#CCCCCC; font-size:95%"></span>
+              
+                                            <!-- -=- -=- -=- -=- -=- -=- -=- -=- -=- eof content  -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -->
+                                      
+                                  </td>
+                                </tr>
+                            </tbody></table>
+    
+                        </td>
+                        
+                    </tr>
+                </tbody></table>
+                        
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="vertical-align:bottom" class="footer">
+                <!--нижняя часть страницы-->
+                <table cellpadding="0" cellspacing="0" border="0" width="100%" class="footer">
+                    <tbody><tr>
+                        <td>						Національний технічний університет України "КПІ ім. Ігоря Сікорського" © 2011-2024<br>
+                            Усі права застережено. <a href="https://ecampus.kpi.ua/privacy">Правила використання інформації сайту</a>.<br>
+                            Інформаційна підтримка: тел. +38 (044) 204 80 06, e-mail:· ecampus@kpi.ua<br>
+                                </td>
+                        <td class="socials">
+    
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+        
+        
+    </tbody></table>
+    
+    
+    <!--<script type="text/javascript" language="JavaScript" src="js/timer.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/ajax/test_check.js"></script>-->
+    </body></html>
